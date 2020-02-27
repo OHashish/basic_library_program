@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/csunix/sc19orss/comp1921/sc19orss/book_management.c
+
+/home/csunix/sc19orss/comp1921/sc19orss/library.c
+
+/home/csunix/sc19orss/comp1921/sc19orss/main.c
+stdio.h
+-
+
+/home/csunix/sc19orss/comp1921/sc19orss/users.c
+

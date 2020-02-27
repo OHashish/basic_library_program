@@ -1,0 +1,1 @@
+/usr/bin/cc  -fdump-rtl-expand -g    CMakeFiles/restaurant.dir/main.c.o CMakeFiles/restaurant.dir/book_management.c.o CMakeFiles/restaurant.dir/library.c.o CMakeFiles/restaurant.dir/users.c.o  -o restaurant -rdynamic 
