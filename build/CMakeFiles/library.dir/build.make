@@ -38,10 +38,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/csunix/sc19orss/comp1921/sc19orss
+CMAKE_SOURCE_DIR = /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/csunix/sc19orss/comp1921/sc19orss/build
+CMAKE_BINARY_DIR = /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/library.dir/depend.make
@@ -54,17 +54,17 @@ include CMakeFiles/library.dir/flags.make
 
 CMakeFiles/library.dir/main.c.o: CMakeFiles/library.dir/flags.make
 CMakeFiles/library.dir/main.c.o: ../main.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/library.dir/main.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/main.c.o   -c /home/csunix/sc19orss/comp1921/sc19orss/main.c
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/main.c.o   -c /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/main.c
 
 CMakeFiles/library.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/library.dir/main.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/csunix/sc19orss/comp1921/sc19orss/main.c > CMakeFiles/library.dir/main.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/main.c > CMakeFiles/library.dir/main.c.i
 
 CMakeFiles/library.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/library.dir/main.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/csunix/sc19orss/comp1921/sc19orss/main.c -o CMakeFiles/library.dir/main.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/main.c -o CMakeFiles/library.dir/main.c.s
 
 CMakeFiles/library.dir/main.c.o.requires:
 .PHONY : CMakeFiles/library.dir/main.c.o.requires
@@ -75,19 +75,42 @@ CMakeFiles/library.dir/main.c.o.provides: CMakeFiles/library.dir/main.c.o.requir
 
 CMakeFiles/library.dir/main.c.o.provides.build: CMakeFiles/library.dir/main.c.o
 
+CMakeFiles/library.dir/interface.c.o: CMakeFiles/library.dir/flags.make
+CMakeFiles/library.dir/interface.c.o: ../interface.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/library.dir/interface.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/interface.c.o   -c /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c
+
+CMakeFiles/library.dir/interface.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/library.dir/interface.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c > CMakeFiles/library.dir/interface.c.i
+
+CMakeFiles/library.dir/interface.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/library.dir/interface.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c -o CMakeFiles/library.dir/interface.c.s
+
+CMakeFiles/library.dir/interface.c.o.requires:
+.PHONY : CMakeFiles/library.dir/interface.c.o.requires
+
+CMakeFiles/library.dir/interface.c.o.provides: CMakeFiles/library.dir/interface.c.o.requires
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/interface.c.o.provides.build
+.PHONY : CMakeFiles/library.dir/interface.c.o.provides
+
+CMakeFiles/library.dir/interface.c.o.provides.build: CMakeFiles/library.dir/interface.c.o
+
 CMakeFiles/library.dir/book_management.c.o: CMakeFiles/library.dir/flags.make
 CMakeFiles/library.dir/book_management.c.o: ../book_management.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/library.dir/book_management.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/book_management.c.o   -c /home/csunix/sc19orss/comp1921/sc19orss/book_management.c
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/book_management.c.o   -c /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c
 
 CMakeFiles/library.dir/book_management.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/library.dir/book_management.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/csunix/sc19orss/comp1921/sc19orss/book_management.c > CMakeFiles/library.dir/book_management.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c > CMakeFiles/library.dir/book_management.c.i
 
 CMakeFiles/library.dir/book_management.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/library.dir/book_management.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/csunix/sc19orss/comp1921/sc19orss/book_management.c -o CMakeFiles/library.dir/book_management.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c -o CMakeFiles/library.dir/book_management.c.s
 
 CMakeFiles/library.dir/book_management.c.o.requires:
 .PHONY : CMakeFiles/library.dir/book_management.c.o.requires
@@ -100,17 +123,17 @@ CMakeFiles/library.dir/book_management.c.o.provides.build: CMakeFiles/library.di
 
 CMakeFiles/library.dir/library.c.o: CMakeFiles/library.dir/flags.make
 CMakeFiles/library.dir/library.c.o: ../library.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/library.dir/library.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/library.c.o   -c /home/csunix/sc19orss/comp1921/sc19orss/library.c
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/library.c.o   -c /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c
 
 CMakeFiles/library.dir/library.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/library.dir/library.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/csunix/sc19orss/comp1921/sc19orss/library.c > CMakeFiles/library.dir/library.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c > CMakeFiles/library.dir/library.c.i
 
 CMakeFiles/library.dir/library.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/library.dir/library.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/csunix/sc19orss/comp1921/sc19orss/library.c -o CMakeFiles/library.dir/library.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c -o CMakeFiles/library.dir/library.c.s
 
 CMakeFiles/library.dir/library.c.o.requires:
 .PHONY : CMakeFiles/library.dir/library.c.o.requires
@@ -123,17 +146,17 @@ CMakeFiles/library.dir/library.c.o.provides.build: CMakeFiles/library.dir/librar
 
 CMakeFiles/library.dir/users.c.o: CMakeFiles/library.dir/flags.make
 CMakeFiles/library.dir/users.c.o: ../users.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/library.dir/users.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/users.c.o   -c /home/csunix/sc19orss/comp1921/sc19orss/users.c
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/users.c.o   -c /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c
 
 CMakeFiles/library.dir/users.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/library.dir/users.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/csunix/sc19orss/comp1921/sc19orss/users.c > CMakeFiles/library.dir/users.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c > CMakeFiles/library.dir/users.c.i
 
 CMakeFiles/library.dir/users.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/library.dir/users.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/csunix/sc19orss/comp1921/sc19orss/users.c -o CMakeFiles/library.dir/users.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c -o CMakeFiles/library.dir/users.c.s
 
 CMakeFiles/library.dir/users.c.o.requires:
 .PHONY : CMakeFiles/library.dir/users.c.o.requires
@@ -147,6 +170,7 @@ CMakeFiles/library.dir/users.c.o.provides.build: CMakeFiles/library.dir/users.c.
 # Object files for target library
 library_OBJECTS = \
 "CMakeFiles/library.dir/main.c.o" \
+"CMakeFiles/library.dir/interface.c.o" \
 "CMakeFiles/library.dir/book_management.c.o" \
 "CMakeFiles/library.dir/library.c.o" \
 "CMakeFiles/library.dir/users.c.o"
@@ -155,6 +179,7 @@ library_OBJECTS = \
 library_EXTERNAL_OBJECTS =
 
 library: CMakeFiles/library.dir/main.c.o
+library: CMakeFiles/library.dir/interface.c.o
 library: CMakeFiles/library.dir/book_management.c.o
 library: CMakeFiles/library.dir/library.c.o
 library: CMakeFiles/library.dir/users.c.o
@@ -168,6 +193,7 @@ CMakeFiles/library.dir/build: library
 .PHONY : CMakeFiles/library.dir/build
 
 CMakeFiles/library.dir/requires: CMakeFiles/library.dir/main.c.o.requires
+CMakeFiles/library.dir/requires: CMakeFiles/library.dir/interface.c.o.requires
 CMakeFiles/library.dir/requires: CMakeFiles/library.dir/book_management.c.o.requires
 CMakeFiles/library.dir/requires: CMakeFiles/library.dir/library.c.o.requires
 CMakeFiles/library.dir/requires: CMakeFiles/library.dir/users.c.o.requires
@@ -178,6 +204,6 @@ CMakeFiles/library.dir/clean:
 .PHONY : CMakeFiles/library.dir/clean
 
 CMakeFiles/library.dir/depend:
-	cd /home/csunix/sc19orss/comp1921/sc19orss/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/csunix/sc19orss/comp1921/sc19orss /home/csunix/sc19orss/comp1921/sc19orss /home/csunix/sc19orss/comp1921/sc19orss/build /home/csunix/sc19orss/comp1921/sc19orss/build /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles/library.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles/library.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/library.dir/depend
 

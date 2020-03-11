@@ -1,0 +1,1054 @@
+
+;; Function user_actions (user_actions, funcdef_no=0, decl_uid=2172, cgraph_uid=0)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+Purged edges from bb 16
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 5->6 to 14 failed.
+Forwarding edge 8->9 to 14 failed.
+Redirecting jump 33 from 15 to 16.
+Redirecting jump 39 from 15 to 16.
+Redirecting jump 45 from 15 to 16.
+Redirecting jump 51 from 15 to 16.
+Merging block 15 into block 14...
+Merged blocks 14 and 15.
+Merged 14 and 15 without moving.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 5->6 to 14 failed.
+Forwarding edge 8->9 to 14 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f3fe990b720 *.LC0>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:11 -1
+     (nil))
+(insn 6 5 7 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:11 -1
+     (nil))
+(call_insn 7 6 8 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f3fe97d9800 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:11 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (nil))))
+(insn 8 7 9 2 (parallel [
+            (set (reg:DI 60)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:12 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 4 si)
+        (reg:DI 60)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:12 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f3fe990b7b8 *.LC1>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:12 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:12 -1
+     (nil))
+(call_insn 12 11 13 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_scanf") [flags 0x41]  <function_decl 0x7f3fe97dd100 scanf>) [0 __builtin_scanf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:12 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+                (nil)))))
+(insn 13 12 14 2 (set (reg:SI 59 [ choice.0 ])
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 choice+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:14 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 59 [ choice.0 ])
+            (const_int 2 [0x2]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:14 -1
+     (nil))
+(jump_insn 15 14 61 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 35)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:14 -1
+     (nil)
+ -> 35)
+(note 61 15 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 61 17 4 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 59 [ choice.0 ])
+            (const_int 2 [0x2]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:14 -1
+     (nil))
+(jump_insn 17 16 62 4 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 22)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:14 -1
+     (nil)
+ -> 22)
+(note 62 17 18 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 18 62 19 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 59 [ choice.0 ])
+            (const_int 1 [0x1]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:14 -1
+     (nil))
+(jump_insn 19 18 63 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 29)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:14 -1
+     (nil)
+ -> 29)
+(note 63 19 20 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 20 63 21 6 (set (pc)
+        (label_ref 53)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:14 -1
+     (nil)
+ -> 53)
+(barrier 21 20 22)
+(code_label 22 21 64 7 4 "" [1 uses])
+(note 64 22 23 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 23 64 24 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 59 [ choice.0 ])
+            (const_int 3 [0x3]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:14 -1
+     (nil))
+(jump_insn 24 23 65 7 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 41)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:14 -1
+     (nil)
+ -> 41)
+(note 65 24 25 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 25 65 26 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 59 [ choice.0 ])
+            (const_int 4 [0x4]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:14 -1
+     (nil))
+(jump_insn 26 25 66 8 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 47)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:14 -1
+     (nil)
+ -> 47)
+(note 66 26 27 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 27 66 28 9 (set (pc)
+        (label_ref 53)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:14 -1
+     (nil)
+ -> 53)
+(barrier 28 27 29)
+(code_label 29 28 30 10 5 "" [1 uses])
+(note 30 29 31 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 32 10 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:17 -1
+     (nil))
+(call_insn 32 31 33 10 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("search_book") [flags 0x41]  <function_decl 0x7f3fe98f3b00 search_book>) [0 search_book S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:17 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (nil)))
+(jump_insn 33 32 34 10 (set (pc)
+        (label_ref:DI 59)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:18 650 {jump}
+     (nil)
+ -> 59)
+(barrier 34 33 35)
+(code_label 35 34 36 11 3 "" [1 uses])
+(note 36 35 37 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 37 36 38 11 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:21 -1
+     (nil))
+(call_insn 38 37 39 11 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("borrow_book") [flags 0x41]  <function_decl 0x7f3fe98f3c00 borrow_book>) [0 borrow_book S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:21 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (nil)))
+(jump_insn 39 38 40 11 (set (pc)
+        (label_ref:DI 59)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:22 650 {jump}
+     (nil)
+ -> 59)
+(barrier 40 39 41)
+(code_label 41 40 42 12 6 "" [1 uses])
+(note 42 41 43 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 43 42 44 12 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:25 -1
+     (nil))
+(call_insn 44 43 45 12 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("return_book") [flags 0x41]  <function_decl 0x7f3fe98f3d00 return_book>) [0 return_book S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:25 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (nil)))
+(jump_insn 45 44 46 12 (set (pc)
+        (label_ref:DI 59)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:26 650 {jump}
+     (nil)
+ -> 59)
+(barrier 46 45 47)
+(code_label 47 46 48 13 7 "" [1 uses])
+(note 48 47 49 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 49 48 50 13 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f3fe990b850 *.LC2>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:29 -1
+     (nil))
+(call_insn 50 49 51 13 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f3fe97d9d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:29 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(jump_insn 51 50 52 13 (set (pc)
+        (label_ref:DI 59)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:30 650 {jump}
+     (nil)
+ -> 59)
+(barrier 52 51 53)
+(code_label 53 52 54 14 2 "" [2 uses])
+(note 54 53 55 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 55 54 56 14 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f3fe990b8e8 *.LC3>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:32 -1
+     (nil))
+(call_insn 56 55 59 14 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f3fe97d9d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:32 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(code_label 59 56 60 16 1 "" [4 uses])
+(note 60 59 0 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+
+;; Function register_user_interface (register_user_interface, funcdef_no=1, decl_uid=2181, cgraph_uid=1)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:DI 5 di)
+        (const_int 20 [0x14])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:38 -1
+     (nil))
+(call_insn 6 5 7 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f3fe97f4f00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:38 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 7 6 8 2 (set (reg/f:DI 63)
+        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:38 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 63)
+        (nil)))
+(insn 8 7 9 2 (set (reg/f:DI 59 [ D.2236 ])
+        (reg/f:DI 63)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:38 -1
+     (nil))
+(insn 9 8 10 2 (set (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 u.username+0 S8 A64])
+        (reg/f:DI 59 [ D.2236 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:38 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 5 di)
+        (const_int 20 [0x14])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:39 -1
+     (nil))
+(call_insn 11 10 12 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f3fe97f4f00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:39 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 12 11 13 2 (set (reg/f:DI 64)
+        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:39 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 64)
+        (nil)))
+(insn 13 12 14 2 (set (reg/f:DI 60 [ D.2236 ])
+        (reg/f:DI 64)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:39 -1
+     (nil))
+(insn 14 13 15 2 (set (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 u.password+0 S8 A64])
+        (reg/f:DI 60 [ D.2236 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:39 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f3fe991a720 *.LC4>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:41 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:41 -1
+     (nil))
+(call_insn 17 16 18 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f3fe97d9800 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:41 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (nil))))
+(insn 18 17 19 2 (set (reg/f:DI 61 [ D.2237 ])
+        (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 u.username+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:43 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:DI 4 si)
+        (reg/f:DI 61 [ D.2237 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:43 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f3fe991a7b8 *.LC5>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:43 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:43 -1
+     (nil))
+(call_insn 22 21 23 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_scanf") [flags 0x41]  <function_decl 0x7f3fe97dd100 scanf>) [0 __builtin_scanf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:43 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+                (nil)))))
+(insn 23 22 24 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f3fe991a850 *.LC6>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:46 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:46 -1
+     (nil))
+(call_insn 25 24 26 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f3fe97d9800 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:46 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (nil))))
+(insn 26 25 27 2 (set (reg/f:DI 62 [ D.2237 ])
+        (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 u.password+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:48 -1
+     (nil))
+(insn 27 26 28 2 (set (reg:DI 4 si)
+        (reg/f:DI 62 [ D.2237 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:48 -1
+     (nil))
+(insn 28 27 29 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f3fe991a7b8 *.LC5>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:48 -1
+     (nil))
+(insn 29 28 30 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:48 -1
+     (nil))
+(call_insn 30 29 31 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_scanf") [flags 0x41]  <function_decl 0x7f3fe97dd100 scanf>) [0 __builtin_scanf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:48 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+                (nil)))))
+(insn 31 30 32 2 (set (reg:DI 65)
+        (mem/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 u+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:50 -1
+     (nil))
+(insn 32 31 33 2 (set (reg:DI 66)
+        (mem/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 u+8 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:50 -1
+     (nil))
+(insn 33 32 34 2 (set (reg:DI 5 di)
+        (reg:DI 65)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:50 -1
+     (nil))
+(insn 34 33 35 2 (set (reg:DI 4 si)
+        (reg:DI 66)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:50 -1
+     (nil))
+(call_insn 35 34 0 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("register_user") [flags 0x41]  <function_decl 0x7f3fe98d1a00 register_user>) [0 register_user S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:50 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:DI 4 si))
+        (expr_list:REG_DEP_TRUE (use (reg:DI 5 di))
+            (nil))))
+
+;; Function login_interface (login_interface, funcdef_no=2, decl_uid=2184, cgraph_uid=2)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+Purged edges from bb 15
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 5->6 to 13 failed.
+Forwarding edge 8->9 to 10 failed.
+Merging block 10 into block 9...
+Merged blocks 9 and 10.
+Merged 9 and 10 without moving.
+Redirecting jump 64 from 14 to 15.
+Redirecting jump 84 from 14 to 15.
+Redirecting jump 90 from 14 to 15.
+Merging block 14 into block 13...
+Merged blocks 13 and 14.
+Merged 13 and 14 without moving.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 5->6 to 13 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x7f3fe991ada8 *.LC7>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:55 -1
+     (nil))
+(insn 6 5 7 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:55 -1
+     (nil))
+(call_insn 7 6 8 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f3fe97d9800 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:55 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (nil))))
+(insn 8 7 9 2 (parallel [
+            (set (reg:DI 65)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:56 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 4 si)
+        (reg:DI 65)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:56 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f3fe990b7b8 *.LC1>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:56 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:56 -1
+     (nil))
+(call_insn 12 11 13 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_scanf") [flags 0x41]  <function_decl 0x7f3fe97dd100 scanf>) [0 __builtin_scanf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:56 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+                (nil)))))
+(insn 13 12 14 2 (set (reg:SI 59 [ choice.1 ])
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [0 choice+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:58 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 59 [ choice.1 ])
+            (const_int 2 [0x2]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:58 -1
+     (nil))
+(jump_insn 15 14 100 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 66)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:58 -1
+     (nil)
+ -> 66)
+(note 100 15 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 100 17 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 59 [ choice.1 ])
+            (const_int 3 [0x3]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:58 -1
+     (nil))
+(jump_insn 17 16 101 4 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 86)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:58 -1
+     (nil)
+ -> 86)
+(note 101 17 18 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 18 101 19 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 59 [ choice.1 ])
+            (const_int 1 [0x1]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:58 -1
+     (nil))
+(jump_insn 19 18 102 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 22)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:58 -1
+     (nil)
+ -> 22)
+(note 102 19 20 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 20 102 21 6 (set (pc)
+        (label_ref 92)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:58 -1
+     (nil)
+ -> 92)
+(barrier 21 20 22)
+(code_label 22 21 23 7 14 "" [1 uses])
+(note 23 22 24 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 25 7 (set (reg:DI 5 di)
+        (const_int 20 [0x14])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:61 -1
+     (nil))
+(call_insn 25 24 26 7 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f3fe97f4f00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:61 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 26 25 27 7 (set (reg/f:DI 66)
+        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:61 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 66)
+        (nil)))
+(insn 27 26 28 7 (set (reg/f:DI 60 [ D.2241 ])
+        (reg/f:DI 66)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:61 -1
+     (nil))
+(insn 28 27 29 7 (set (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 u.username+0 S8 A64])
+        (reg/f:DI 60 [ D.2241 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:61 -1
+     (nil))
+(insn 29 28 30 7 (set (reg:DI 5 di)
+        (const_int 20 [0x14])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:62 -1
+     (nil))
+(call_insn 30 29 31 7 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f3fe97f4f00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:62 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 31 30 32 7 (set (reg/f:DI 67)
+        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:62 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 67)
+        (nil)))
+(insn 32 31 33 7 (set (reg/f:DI 61 [ D.2241 ])
+        (reg/f:DI 67)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:62 -1
+     (nil))
+(insn 33 32 34 7 (set (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 u.password+0 S8 A64])
+        (reg/f:DI 61 [ D.2241 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:62 -1
+     (nil))
+(insn 34 33 35 7 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f3fe991a720 *.LC4>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:64 -1
+     (nil))
+(insn 35 34 36 7 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:64 -1
+     (nil))
+(call_insn 36 35 37 7 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f3fe97d9800 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:64 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (nil))))
+(insn 37 36 38 7 (set (reg/f:DI 62 [ D.2242 ])
+        (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 u.username+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:66 -1
+     (nil))
+(insn 38 37 39 7 (set (reg:DI 4 si)
+        (reg/f:DI 62 [ D.2242 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:66 -1
+     (nil))
+(insn 39 38 40 7 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f3fe991a7b8 *.LC5>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:66 -1
+     (nil))
+(insn 40 39 41 7 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:66 -1
+     (nil))
+(call_insn 41 40 42 7 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_scanf") [flags 0x41]  <function_decl 0x7f3fe97dd100 scanf>) [0 __builtin_scanf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:66 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+                (nil)))))
+(insn 42 41 43 7 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f3fe991a850 *.LC6>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:69 -1
+     (nil))
+(insn 43 42 44 7 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:69 -1
+     (nil))
+(call_insn 44 43 45 7 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f3fe97d9800 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:69 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (nil))))
+(insn 45 44 46 7 (set (reg/f:DI 63 [ D.2242 ])
+        (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 u.password+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:71 -1
+     (nil))
+(insn 46 45 47 7 (set (reg:DI 4 si)
+        (reg/f:DI 63 [ D.2242 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:71 -1
+     (nil))
+(insn 47 46 48 7 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f3fe991a7b8 *.LC5>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:71 -1
+     (nil))
+(insn 48 47 49 7 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:71 -1
+     (nil))
+(call_insn 49 48 50 7 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_scanf") [flags 0x41]  <function_decl 0x7f3fe97dd100 scanf>) [0 __builtin_scanf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:71 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+                (nil)))))
+(insn 50 49 51 7 (set (reg:DI 68)
+        (mem/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 u+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:74 -1
+     (nil))
+(insn 51 50 52 7 (set (reg:DI 69)
+        (mem/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 u+8 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:74 -1
+     (nil))
+(insn 52 51 53 7 (set (reg:DI 5 di)
+        (reg:DI 68)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:74 -1
+     (nil))
+(insn 53 52 54 7 (set (reg:DI 4 si)
+        (reg:DI 69)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:74 -1
+     (nil))
+(call_insn 54 53 55 7 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("login_user") [flags 0x41]  <function_decl 0x7f3fe98d1b00 login_user>) [0 login_user S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:74 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:DI 4 si))
+        (expr_list:REG_DEP_TRUE (use (reg:DI 5 di))
+            (nil))))
+(insn 55 54 56 7 (set (reg:SI 64 [ D.2243 ])
+        (reg:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:74 -1
+     (nil))
+(insn 56 55 57 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 64 [ D.2243 ])
+            (const_int 1 [0x1]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:74 -1
+     (nil))
+(jump_insn 57 56 58 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 61)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:74 -1
+     (nil)
+ -> 61)
+(note 58 57 59 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 59 58 60 8 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:75 -1
+     (nil))
+(call_insn 60 59 61 8 (call (mem:QI (symbol_ref:DI ("user_actions") [flags 0x3]  <function_decl 0x7f3fe98f3e00 user_actions>) [0 user_actions S1 A8])
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:75 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (nil)))
+(code_label 61 60 62 9 15 "" [1 uses])
+(note 62 61 103 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 103 62 64 9 (const_int 0 [0]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:78 -1
+     (nil))
+(jump_insn 64 103 65 9 (set (pc)
+        (label_ref:DI 98)) 650 {jump}
+     (nil)
+ -> 98)
+(barrier 65 64 66)
+(code_label 66 65 67 11 12 "" [1 uses])
+(note 67 66 68 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 68 67 69 11 (set (reg:DI 5 di)
+        (const_int 5 [0x5])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:83 -1
+     (nil))
+(call_insn 69 68 70 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f3fe97f4f00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:83 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 70 69 71 11 (set (reg/f:DI 70)
+        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:83 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 70)
+        (nil)))
+(insn 71 70 72 11 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 pass+0 S8 A64])
+        (reg/f:DI 70)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:83 -1
+     (nil))
+(insn 72 71 73 11 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f3fe991a850 *.LC6>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:84 -1
+     (nil))
+(insn 73 72 74 11 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:84 -1
+     (nil))
+(call_insn 74 73 75 11 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f3fe97d9800 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:84 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (nil))))
+(insn 75 74 76 11 (set (reg:DI 71)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 pass+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:86 -1
+     (nil))
+(insn 76 75 77 11 (set (reg:DI 4 si)
+        (reg:DI 71)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:86 -1
+     (nil))
+(insn 77 76 78 11 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f3fe991a7b8 *.LC5>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:86 -1
+     (nil))
+(insn 78 77 79 11 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:86 -1
+     (nil))
+(call_insn 79 78 80 11 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_scanf") [flags 0x41]  <function_decl 0x7f3fe97dd100 scanf>) [0 __builtin_scanf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:86 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+                (nil)))))
+(insn 80 79 81 11 (set (reg:DI 72)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 pass+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:87 -1
+     (nil))
+(insn 81 80 82 11 (set (reg:DI 5 di)
+        (reg:DI 72)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:87 -1
+     (nil))
+(insn 82 81 83 11 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:87 -1
+     (nil))
+(call_insn 83 82 84 11 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("login_librarian") [flags 0x41]  <function_decl 0x7f3fe98d1c00 login_librarian>) [0 login_librarian S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:87 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (nil))))
+(jump_insn 84 83 85 11 (set (pc)
+        (label_ref:DI 98)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:88 650 {jump}
+     (nil)
+ -> 98)
+(barrier 85 84 86)
+(code_label 86 85 87 12 13 "" [1 uses])
+(note 87 86 88 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 88 87 89 12 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f3fe990b850 *.LC2>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:91 -1
+     (nil))
+(call_insn 89 88 90 12 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f3fe97d9d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:91 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(jump_insn 90 89 91 12 (set (pc)
+        (label_ref:DI 98)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:92 650 {jump}
+     (nil)
+ -> 98)
+(barrier 91 90 92)
+(code_label 92 91 93 13 11 "" [1 uses])
+(note 93 92 94 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 94 93 95 13 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f3fe990b8e8 *.LC3>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:94 -1
+     (nil))
+(call_insn 95 94 98 13 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f3fe97d9d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:94 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(code_label 98 95 99 15 10 "" [3 uses])
+(note 99 98 0 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+
+;; Function main_menu (main_menu, funcdef_no=3, decl_uid=2194, cgraph_uid=3)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+Purged edges from bb 15
+
+
+try_optimize_cfg iteration 1
+
+Forwarding edge 5->6 to 10 failed.
+Merging block 13 into block 12...
+Merged blocks 12 and 13.
+Merged 12 and 13 without moving.
+Merging block 14 into block 12...
+Merged blocks 12 and 14.
+Merged 12 and 14 without moving.
+Merging block 15 into block 12...
+Merged blocks 12 and 15.
+Merged 12 and 15 without moving.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 5->6 to 10 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 47 2 NOTE_INSN_FUNCTION_BEG)
+(code_label 47 2 4 3 24 "" [1 uses])
+(note 4 47 5 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 5 4 6 3 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x7f3fe99247b8 *.LC8>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:105 -1
+     (nil))
+(insn 6 5 7 3 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:105 -1
+     (nil))
+(call_insn 7 6 8 3 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f3fe97d9800 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:105 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (nil))))
+(insn 8 7 9 3 (parallel [
+            (set (reg:DI 61)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:106 -1
+     (nil))
+(insn 9 8 10 3 (set (reg:DI 4 si)
+        (reg:DI 61)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:106 -1
+     (nil))
+(insn 10 9 11 3 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f3fe990b7b8 *.LC1>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:106 -1
+     (nil))
+(insn 11 10 12 3 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:106 -1
+     (nil))
+(call_insn 12 11 13 3 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_scanf") [flags 0x41]  <function_decl 0x7f3fe97dd100 scanf>) [0 __builtin_scanf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:106 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+                (nil)))))
+(insn 13 12 14 3 (set (reg:SI 59 [ choice.2 ])
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 choice+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:108 -1
+     (nil))
+(insn 14 13 15 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 59 [ choice.2 ])
+            (const_int 2 [0x2]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:108 -1
+     (nil))
+(jump_insn 15 14 56 3 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 28)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:108 -1
+     (nil)
+ -> 28)
+(note 56 15 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 56 17 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 59 [ choice.2 ])
+            (const_int 3 [0x3]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:108 -1
+     (nil))
+(jump_insn 17 16 57 4 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 34)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:108 -1
+     (nil)
+ -> 34)
+(note 57 17 18 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 18 57 19 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 59 [ choice.2 ])
+            (const_int 1 [0x1]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:108 -1
+     (nil))
+(jump_insn 19 18 58 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 22)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:108 -1
+     (nil)
+ -> 22)
+(note 58 19 20 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 20 58 21 6 (set (pc)
+        (label_ref 40)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:108 -1
+     (nil)
+ -> 40)
+(barrier 21 20 22)
+(code_label 22 21 23 7 22 "" [1 uses])
+(note 23 22 24 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 25 7 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:110 -1
+     (nil))
+(call_insn 25 24 26 7 (call (mem:QI (symbol_ref:DI ("register_user_interface") [flags 0x3]  <function_decl 0x7f3fe98f3f00 register_user_interface>) [0 register_user_interface S1 A8])
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:110 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (nil)))
+(jump_insn 26 25 27 7 (set (pc)
+        (label_ref 44)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:111 -1
+     (nil)
+ -> 44)
+(barrier 27 26 28)
+(code_label 28 27 29 8 20 "" [1 uses])
+(note 29 28 30 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 8 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:113 -1
+     (nil))
+(call_insn 31 30 32 8 (call (mem:QI (symbol_ref:DI ("login_interface") [flags 0x3]  <function_decl 0x7f3fe9900000 login_interface>) [0 login_interface S1 A8])
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:113 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (nil)))
+(jump_insn 32 31 33 8 (set (pc)
+        (label_ref 44)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:114 -1
+     (nil)
+ -> 44)
+(barrier 33 32 34)
+(code_label 34 33 35 9 21 "" [1 uses])
+(note 35 34 36 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 36 35 37 9 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f3fe990b850 *.LC2>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:119 -1
+     (nil))
+(call_insn 37 36 38 9 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f3fe97d9d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:119 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(jump_insn 38 37 39 9 (set (pc)
+        (label_ref 44)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:120 -1
+     (nil)
+ -> 44)
+(barrier 39 38 40)
+(code_label 40 39 41 10 19 "" [1 uses])
+(note 41 40 42 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 42 41 43 10 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f3fe990b8e8 *.LC3>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:122 -1
+     (nil))
+(call_insn 43 42 44 10 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f3fe97d9d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:122 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(code_label 44 43 45 11 23 "" [3 uses])
+(note 45 44 46 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 46 45 48 11 (set (reg:SI 60 [ choice.3 ])
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 choice+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:125 -1
+     (nil))
+(insn 48 46 49 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 60 [ choice.3 ])
+            (const_int 3 [0x3]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:125 -1
+     (nil))
+(jump_insn 49 48 50 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 47)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:125 -1
+     (nil)
+ -> 47)
+(note 50 49 59 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 59 50 0 12 (const_int 0 [0]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:127 -1
+     (nil))
+
+;; Function run_interface (run_interface, funcdef_no=4, decl_uid=1593, cgraph_uid=4)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 2->4 to 5 failed.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:131 -1
+     (nil))
+(call_insn 6 5 11 2 (call (mem:QI (symbol_ref:DI ("main_menu") [flags 0x3]  <function_decl 0x7f3fe9900100 main_menu>) [0 main_menu S1 A8])
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:131 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (nil)))
+(insn 11 6 0 2 (const_int 0 [0]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c:134 -1
+     (nil))

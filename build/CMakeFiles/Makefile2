@@ -50,10 +50,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/csunix/sc19orss/comp1921/sc19orss
+CMAKE_SOURCE_DIR = /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/csunix/sc19orss/comp1921/sc19orss/build
+CMAKE_BINARY_DIR = /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/library.dir
@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = /home/csunix/sc19orss/comp1921/sc19orss/build
 CMakeFiles/library.dir/all:
 	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/depend
 	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles  1 2 3 4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles  1 2 3 4 5
 	@echo "Built target library"
 .PHONY : CMakeFiles/library.dir/all
 
@@ -72,9 +72,9 @@ all: CMakeFiles/library.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/library.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/library.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles 0
 .PHONY : CMakeFiles/library.dir/rule
 
 # Convenience name for target.
@@ -97,7 +97,7 @@ clean: CMakeFiles/library.dir/clean
 CMakeFiles/unit_tests.dir/all:
 	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/depend
 	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles  5 6 7
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles  6 7 8
 	@echo "Built target unit_tests"
 .PHONY : CMakeFiles/unit_tests.dir/all
 
@@ -107,9 +107,9 @@ all: CMakeFiles/unit_tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/unit_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/unit_tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles 0
 .PHONY : CMakeFiles/unit_tests.dir/rule
 
 # Convenience name for target.

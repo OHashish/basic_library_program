@@ -38,10 +38,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/csunix/sc19orss/comp1921/sc19orss
+CMAKE_SOURCE_DIR = /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/csunix/sc19orss/comp1921/sc19orss/build
+CMAKE_BINARY_DIR = /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/unit_tests.dir/depend.make
@@ -54,17 +54,17 @@ include CMakeFiles/unit_tests.dir/flags.make
 
 CMakeFiles/unit_tests.dir/unit_tests.c.o: CMakeFiles/unit_tests.dir/flags.make
 CMakeFiles/unit_tests.dir/unit_tests.c.o: ../unit_tests.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/unit_tests.dir/unit_tests.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/unit_tests.dir/unit_tests.c.o   -c /home/csunix/sc19orss/comp1921/sc19orss/unit_tests.c
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/unit_tests.dir/unit_tests.c.o   -c /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unit_tests.c
 
 CMakeFiles/unit_tests.dir/unit_tests.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unit_tests.dir/unit_tests.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/csunix/sc19orss/comp1921/sc19orss/unit_tests.c > CMakeFiles/unit_tests.dir/unit_tests.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unit_tests.c > CMakeFiles/unit_tests.dir/unit_tests.c.i
 
 CMakeFiles/unit_tests.dir/unit_tests.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unit_tests.dir/unit_tests.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/csunix/sc19orss/comp1921/sc19orss/unit_tests.c -o CMakeFiles/unit_tests.dir/unit_tests.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unit_tests.c -o CMakeFiles/unit_tests.dir/unit_tests.c.s
 
 CMakeFiles/unit_tests.dir/unit_tests.c.o.requires:
 .PHONY : CMakeFiles/unit_tests.dir/unit_tests.c.o.requires
@@ -77,17 +77,17 @@ CMakeFiles/unit_tests.dir/unit_tests.c.o.provides.build: CMakeFiles/unit_tests.d
 
 CMakeFiles/unit_tests.dir/book_management.c.o: CMakeFiles/unit_tests.dir/flags.make
 CMakeFiles/unit_tests.dir/book_management.c.o: ../book_management.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/unit_tests.dir/book_management.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/unit_tests.dir/book_management.c.o   -c /home/csunix/sc19orss/comp1921/sc19orss/book_management.c
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/unit_tests.dir/book_management.c.o   -c /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c
 
 CMakeFiles/unit_tests.dir/book_management.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unit_tests.dir/book_management.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/csunix/sc19orss/comp1921/sc19orss/book_management.c > CMakeFiles/unit_tests.dir/book_management.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c > CMakeFiles/unit_tests.dir/book_management.c.i
 
 CMakeFiles/unit_tests.dir/book_management.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unit_tests.dir/book_management.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/csunix/sc19orss/comp1921/sc19orss/book_management.c -o CMakeFiles/unit_tests.dir/book_management.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c -o CMakeFiles/unit_tests.dir/book_management.c.s
 
 CMakeFiles/unit_tests.dir/book_management.c.o.requires:
 .PHONY : CMakeFiles/unit_tests.dir/book_management.c.o.requires
@@ -100,17 +100,17 @@ CMakeFiles/unit_tests.dir/book_management.c.o.provides.build: CMakeFiles/unit_te
 
 CMakeFiles/unit_tests.dir/unity/src/unity.c.o: CMakeFiles/unit_tests.dir/flags.make
 CMakeFiles/unit_tests.dir/unity/src/unity.c.o: ../unity/src/unity.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/unit_tests.dir/unity/src/unity.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/unit_tests.dir/unity/src/unity.c.o   -c /home/csunix/sc19orss/comp1921/sc19orss/unity/src/unity.c
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/unit_tests.dir/unity/src/unity.c.o   -c /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unity/src/unity.c
 
 CMakeFiles/unit_tests.dir/unity/src/unity.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unit_tests.dir/unity/src/unity.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/csunix/sc19orss/comp1921/sc19orss/unity/src/unity.c > CMakeFiles/unit_tests.dir/unity/src/unity.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unity/src/unity.c > CMakeFiles/unit_tests.dir/unity/src/unity.c.i
 
 CMakeFiles/unit_tests.dir/unity/src/unity.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unit_tests.dir/unity/src/unity.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/csunix/sc19orss/comp1921/sc19orss/unity/src/unity.c -o CMakeFiles/unit_tests.dir/unity/src/unity.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unity/src/unity.c -o CMakeFiles/unit_tests.dir/unity/src/unity.c.s
 
 CMakeFiles/unit_tests.dir/unity/src/unity.c.o.requires:
 .PHONY : CMakeFiles/unit_tests.dir/unity/src/unity.c.o.requires
@@ -152,6 +152,6 @@ CMakeFiles/unit_tests.dir/clean:
 .PHONY : CMakeFiles/unit_tests.dir/clean
 
 CMakeFiles/unit_tests.dir/depend:
-	cd /home/csunix/sc19orss/comp1921/sc19orss/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/csunix/sc19orss/comp1921/sc19orss /home/csunix/sc19orss/comp1921/sc19orss /home/csunix/sc19orss/comp1921/sc19orss/build /home/csunix/sc19orss/comp1921/sc19orss/build /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles/unit_tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles/unit_tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/unit_tests.dir/depend
 

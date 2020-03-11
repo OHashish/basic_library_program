@@ -4,10 +4,11 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/home/csunix/sc19orss/comp1921/sc19orss/book_management.c" "/home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles/library.dir/book_management.c.o"
-  "/home/csunix/sc19orss/comp1921/sc19orss/library.c" "/home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles/library.dir/library.c.o"
-  "/home/csunix/sc19orss/comp1921/sc19orss/main.c" "/home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles/library.dir/main.c.o"
-  "/home/csunix/sc19orss/comp1921/sc19orss/users.c" "/home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles/library.dir/users.c.o"
+  "/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c" "/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles/library.dir/book_management.c.o"
+  "/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c" "/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles/library.dir/interface.c.o"
+  "/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c" "/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles/library.dir/library.c.o"
+  "/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/main.c" "/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles/library.dir/main.c.o"
+  "/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c" "/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles/library.dir/users.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 

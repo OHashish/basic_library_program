@@ -4,9 +4,9 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/home/csunix/sc19orss/comp1921/sc19orss/book_management.c" "/home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles/unit_tests.dir/book_management.c.o"
-  "/home/csunix/sc19orss/comp1921/sc19orss/unit_tests.c" "/home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles/unit_tests.dir/unit_tests.c.o"
-  "/home/csunix/sc19orss/comp1921/sc19orss/unity/src/unity.c" "/home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles/unit_tests.dir/unity/src/unity.c.o"
+  "/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c" "/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles/unit_tests.dir/book_management.c.o"
+  "/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unit_tests.c" "/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles/unit_tests.dir/unit_tests.c.o"
+  "/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unity/src/unity.c" "/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles/unit_tests.dir/unity/src/unity.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 

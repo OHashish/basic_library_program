@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/csunix/sc19orss/comp1921/sc19orss/book_management.c
-
-/home/csunix/sc19orss/comp1921/sc19orss/library.c
-
-/home/csunix/sc19orss/comp1921/sc19orss/main.c
+/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c
+book_management.h
+/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.h
 stdio.h
 -
 
-/home/csunix/sc19orss/comp1921/sc19orss/users.c
+/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.h
+stdio.h
+-
 

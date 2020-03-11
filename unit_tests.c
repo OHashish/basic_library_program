@@ -1,12 +1,18 @@
 
 #include "unity.h"
 
+#include "assert.h"
+#include "stdio.h"
+#include "book_management.h"
 
 
 void test_a_function() {
+		//  FILE *fp;
 
-
-
+		//  fp=fopen("lmao","w");
+		// int r =store_books(fp);
+		// TEST_ASSERT_NOT_NULL_MESSAGE (fp,"file returened a null pointer")
+		// TEST_ASSERT_EQUAL_INT_MESSAGE (0, r,"error occured");
 }
 
 void setUp() {

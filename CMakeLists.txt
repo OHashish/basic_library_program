@@ -4,11 +4,11 @@ project(library)
 
 set( CMAKE_BUILD_TYPE Debug)
 
-set(CMAKE_C_FLAGS "-fdump-rtl-expand")
+set(CMAKE_C_FLAGS "-std=c99 -fdump-rtl-expand")
 
 include_directories(unity/include)
 
-add_executable(library main.c book_management.c library.c users.c)
+add_executable(library main.c interface.c book_management.c library.c users.c)
 
 add_executable(unit_tests unit_tests.c book_management.c unity/src/unity.c)
 

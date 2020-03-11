@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/csunix/sc19orss/comp1921/sc19orss
+CMAKE_SOURCE_DIR = /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/csunix/sc19orss/comp1921/sc19orss/build
+CMAKE_BINARY_DIR = /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -113,9 +113,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19orss/comp1921/sc19orss/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -194,6 +194,30 @@ book_management.c.s:
 	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/book_management.c.s
 	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/book_management.c.s
 .PHONY : book_management.c.s
+
+interface.o: interface.c.o
+.PHONY : interface.o
+
+# target to build an object file
+interface.c.o:
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/interface.c.o
+.PHONY : interface.c.o
+
+interface.i: interface.c.i
+.PHONY : interface.i
+
+# target to preprocess a source file
+interface.c.i:
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/interface.c.i
+.PHONY : interface.c.i
+
+interface.s: interface.c.s
+.PHONY : interface.s
+
+# target to generate assembly for a file
+interface.c.s:
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/interface.c.s
+.PHONY : interface.c.s
 
 library.o: library.c.o
 .PHONY : library.o
@@ -332,6 +356,9 @@ help:
 	@echo "... book_management.o"
 	@echo "... book_management.i"
 	@echo "... book_management.s"
+	@echo "... interface.o"
+	@echo "... interface.i"
+	@echo "... interface.s"
 	@echo "... library.o"
 	@echo "... library.i"
 	@echo "... library.s"
