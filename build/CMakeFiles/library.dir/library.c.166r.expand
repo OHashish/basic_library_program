@@ -1,11 +1,8 @@
 
-;; Function search_book (search_book, funcdef_no=0, decl_uid=2138, cgraph_uid=0)
+;; Function library_init (library_init, funcdef_no=0, decl_uid=2142, cgraph_uid=0)
 
 
 ;; Generating RTL for gimple basic block 2
-
-;; Generating RTL for gimple basic block 3
-deleting block 5
 
 
 try_optimize_cfg iteration 1
@@ -31,63 +28,41 @@ try_optimize_cfg iteration 2
 (note 1 0 3 NOTE_INSN_DELETED)
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
-(insn 5 2 8 2 (set (reg:SI 59 [ D.2157 ])
-        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:7 -1
+(insn 5 2 6 2 (set (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7fd599c16428 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:10 -1
      (nil))
-(insn 8 5 12 2 (set (reg:SI 60 [ <retval> ])
-        (reg:SI 59 [ D.2157 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:7 -1
+(insn 6 5 7 2 (set (reg:DI 5 di)
+        (const_int 1200 [0x4b0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:11 -1
      (nil))
-(insn 12 8 15 2 (set (reg/i:SI 0 ax)
-        (reg:SI 60 [ <retval> ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:8 -1
+(call_insn 7 6 8 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7fd599b16f00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:11 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 8 7 9 2 (set (reg/f:DI 61)
+        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:11 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 61)
+        (nil)))
+(insn 9 8 10 2 (set (reg/f:DI 59 [ D.2192 ])
+        (reg/f:DI 61)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:11 -1
      (nil))
-(insn 15 12 0 2 (use (reg/i:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:8 -1
+(insn 10 9 13 2 (set (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7fd599c16428 library>) [0 library.array+0 S8 A64])
+        (reg/f:DI 59 [ D.2192 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:11 -1
      (nil))
-
-;; Function borrow_book (borrow_book, funcdef_no=1, decl_uid=2139, cgraph_uid=1)
-
-
-;; Generating RTL for gimple basic block 2
-
-;; Generating RTL for gimple basic block 3
-deleting block 5
-
-
-try_optimize_cfg iteration 1
-
-Merging block 3 into block 2...
-Merged blocks 2 and 3.
-Merged 2 and 3 without moving.
-Merging block 4 into block 2...
-Merged blocks 2 and 4.
-Merged 2 and 4 without moving.
-Merging block 5 into block 2...
-Merged blocks 2 and 5.
-Merged 2 and 5 without moving.
-
-
-try_optimize_cfg iteration 2
-
-
-
-;;
-;; Full RTL generated for this function:
-;;
-(note 1 0 3 NOTE_INSN_DELETED)
-(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
-(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
-(insn 5 2 8 2 (set (reg:SI 59 [ D.2158 ])
-        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:11 -1
+(insn 13 10 14 2 (clobber (reg/i:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:12 -1
      (nil))
-(insn 8 5 12 2 (set (reg:SI 60 [ <retval> ])
-        (reg:SI 59 [ D.2158 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:11 -1
+(insn 14 13 12 2 (clobber (reg:SI 60 [ <retval> ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:12 -1
      (nil))
-(insn 12 8 15 2 (set (reg/i:SI 0 ax)
+(insn 12 14 15 2 (set (reg/i:SI 0 ax)
         (reg:SI 60 [ <retval> ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:12 -1
      (nil))
 (insn 15 12 0 2 (use (reg/i:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:12 -1
      (nil))
 
-;; Function return_book (return_book, funcdef_no=2, decl_uid=2140, cgraph_uid=2)
+;; Function borrow_book (borrow_book, funcdef_no=1, decl_uid=2145, cgraph_uid=1)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -116,17 +91,69 @@ try_optimize_cfg iteration 2
 ;;
 ;; Full RTL generated for this function:
 ;;
-(note 1 0 3 NOTE_INSN_DELETED)
-(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
-(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
-(insn 5 2 8 2 (set (reg:SI 59 [ D.2159 ])
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 user+0 S8 A64])
+        (reg:DI 5 di [ user ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:14 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 9 2 (set (reg:SI 59 [ D.2193 ])
         (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:15 -1
      (nil))
-(insn 8 5 12 2 (set (reg:SI 60 [ <retval> ])
-        (reg:SI 59 [ D.2159 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:15 -1
+(insn 9 6 13 2 (set (reg:SI 60 [ <retval> ])
+        (reg:SI 59 [ D.2193 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:15 -1
      (nil))
-(insn 12 8 15 2 (set (reg/i:SI 0 ax)
+(insn 13 9 16 2 (set (reg/i:SI 0 ax)
         (reg:SI 60 [ <retval> ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:16 -1
      (nil))
-(insn 15 12 0 2 (use (reg/i:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:16 -1
+(insn 16 13 0 2 (use (reg/i:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:16 -1
+     (nil))
+
+;; Function return_book (return_book, funcdef_no=2, decl_uid=2148, cgraph_uid=2)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+deleting block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 user+0 S8 A64])
+        (reg:DI 5 di [ user ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:18 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 9 2 (set (reg:SI 59 [ D.2194 ])
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:19 -1
+     (nil))
+(insn 9 6 13 2 (set (reg:SI 60 [ <retval> ])
+        (reg:SI 59 [ D.2194 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:19 -1
+     (nil))
+(insn 13 9 16 2 (set (reg/i:SI 0 ax)
+        (reg:SI 60 [ <retval> ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:20 -1
+     (nil))
+(insn 16 13 0 2 (use (reg/i:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.c:20 -1
      (nil))

@@ -3,6 +3,8 @@
 #define BOOK_MANAGEMENT_GUARD__H
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 struct Book {
 		char *title; //book title
@@ -13,9 +15,10 @@ struct Book {
 
 struct BookArray {
 	 struct Book* array; // pointer to array of struct Book.
-	 unsigned int length; // number of elements in the struct Book * BookArray::find_book_by_author(const char* title)
+	unsigned int length; // number of elements in the struct Book * BookArray::find_book_by_author(const char* title)
 };
 
+struct BookArray library;
 
 //saves the database of books in the specified file
 //returns 0 if books were stored correctly, or an error code otherwise

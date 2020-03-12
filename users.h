@@ -1,6 +1,8 @@
 #ifndef USERS_GUARD_H
 #define USERS_GUARD_H
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 struct User {
      char *username;

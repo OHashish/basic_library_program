@@ -6,23 +6,82 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-static void user_actions(){
+extern struct BookArray library;
+static void search_book_interface(){
 	int choice;
-	printf("\nPlease enter next action:\n1) Search for book\n2) Return book\n3) Borrow Book\nchoice: ");
+	do{
+	printf("\nPlease enter next action:\n1) Search by title\n2) Search by author\n3) Search by year\n4) Quit\nchoice: ");
 		scanf("%d",&choice);
-
+	
 		switch (choice) {
 			case 1:{
+				char *titleb;
+				struct BookArray newbookarray;
+   				newbookarray.length=0;
+   				newbookarray.array= malloc(sizeof(struct Book)); 
+				titleb=(char*) malloc(15*sizeof(char));
 
-				 search_book();
+				printf("Please enter title of book:");
+				scanf("%s",titleb);
+
+				newbookarray=find_book_by_title(titleb);
+				if(newbookarray.array[0].title==NULL){
+					printf("Book not found!");
+				}
+				else
+				{
+				printf("Book title: %s\n",newbookarray.array[0].title);
+				printf("Book author: %s\n",newbookarray.array[0].authors);
+				printf("Book year of production: %u\n",newbookarray.array[0].year);
+				}
+				free(titleb);
+				free(newbookarray.array);
 				break;
 			}
 			case 2:{
-				 borrow_book();
+				char *author;
+				author=(char*) malloc(50*sizeof(char));
+
+				struct BookArray newbookarray;
+   				newbookarray.length=0;
+   				newbookarray.array= malloc(sizeof(struct Book)); 
+
+				printf("Please enter author of book:");
+				scanf("%s",author);
+				
+				newbookarray=find_book_by_author(author);
+				if(newbookarray.array[0].title==NULL){
+					printf("Book not found!");
+				}
+				else
+				{
+				printf("Book title: %s\n",newbookarray.array[0].title);
+				printf("Book author: %s\n",newbookarray.array[0].authors);
+				printf("Book year of production: %u\n",newbookarray.array[0].year);
+				}
 				break;
 			}
-			case 3:{			
-				 return_book();
+			case 3:{
+				unsigned int year;
+
+				struct BookArray newbookarray;
+   				newbookarray.length=0;
+   				newbookarray.array= malloc(sizeof(struct Book)); 
+
+				printf("Please enter year of book:");
+				scanf("%u",&year);
+
+				newbookarray=find_book_by_year(year);
+
+				if(newbookarray.array[0].title==NULL){
+					printf("Book not found!");
+				}
+				else
+				{
+				printf("Book title: %s\n",newbookarray.array[0].title);
+				printf("Book author: %s\n",newbookarray.array[0].authors);
+				printf("Book year of production: %u\n",newbookarray.array[0].year);
+				}
 			 	break;
 			}
 			case 4:
@@ -31,6 +90,107 @@ static void user_actions(){
 			default:
 				printf("Sorry, that doesn't seem to be an option\n");
 		}
+	}while(choice!=4);
+}	
+static void user_actions_interface(){
+	int choice;
+	printf("\nPlease enter next action:\n1) Search for book\n2) Return book\n3) Borrow Book\nchoice: ");
+		scanf("%d",&choice);
+
+		switch (choice) {
+			case 1:{
+
+				 search_book_interface();
+				break;
+			}
+			case 2:{
+				struct BookU book;
+				char *username;
+				book.title=(char*) malloc(30*sizeof(char));
+				username=(char*) malloc(20*sizeof(char));
+				
+
+				printf("Enter book title you want to borrow:");
+				scanf("%s",book.title);
+
+				printf("Enter your username:");
+				scanf("%s",username);
+
+				borrow_book(username,book);
+				break;
+			}
+			case 3:{	
+				struct BookU book;
+				char *username;
+				book.title=(char*) malloc(30*sizeof(char));
+				username=(char*) malloc(20*sizeof(char));
+				
+
+				printf("Enter book title you want to return:");
+				scanf("%s",book.title);
+
+				printf("Enter your username:");
+				scanf("%s",username);		
+				return_book(username,book);
+			 	break;
+			}
+
+			default:
+				printf("Sorry, that doesn't seem to be an option\n");
+		}
+}	
+static void librarian_actions_interface(){
+	int choice;
+	do{
+	printf("\nPlease enter next action:\n1) Add book\n2) Remove book\n3) Quit\nchoice: ");
+		scanf("%d",&choice);
+
+		switch (choice) {
+			case 1:{
+				struct Book book;
+				book.authors=(char*) malloc(30*sizeof(char));
+				book.title=(char*) malloc(30*sizeof(char));
+				
+
+				printf("Enter book title:");
+				scanf("%s",book.title);
+
+				printf("Enter book author:");
+				scanf("%s",book.authors);
+
+				printf("Enter year of production:");
+				scanf("%u",&book.year);
+
+				printf("Enter number of copies:");
+				scanf("%u",&book.copies);
+				 add_book(book);
+				break;
+			}
+			case 2:{
+				struct Book book;
+				book.authors=(char*) malloc(30*sizeof(char));
+				book.title=(char*) malloc(30*sizeof(char));
+				
+				
+				printf("Enter book title:");
+				scanf("%s",book.title);
+
+				printf("Enter book author:");
+				scanf("%s",book.authors);
+
+				printf("Enter year of production:");
+				scanf("%d",book.year);
+
+				remove_book(book);
+				break;
+			}
+			case 3:
+			break;
+
+			default:
+				printf("Sorry, that doesn't seem to be an option\n");
+		}
+	}while(choice!=3);
 }	
  static void register_user_interface(){
 
@@ -72,9 +232,10 @@ static void user_actions(){
 	 
 
 				if(login_user(u)==1){
-					user_actions();
+					user_actions_interface();
 				}
-				
+				free(u.username);
+				free(u.password);
 				break;
 			}
 				case 2:
@@ -84,7 +245,10 @@ static void user_actions(){
 				printf("Please enter Password:");
 
 	 			scanf("%s",pass);
-				login_librarian(pass);
+				if(login_librarian(pass)){
+				librarian_actions_interface();
+				}
+				free(pass);
 				break;
 				}
 			    case 3:
@@ -96,7 +260,7 @@ static void user_actions(){
  }	
 
      
-static void main_menu() {
+ void main_menu(){
 
 	int choice; //exit
 
@@ -112,12 +276,11 @@ static void main_menu() {
 			case 2:
 				login_interface();
 				break;
-			// case 3:
-			// 	search_book_interface();
-			// 	break;
 			case 3:
-				printf("goodbye\n");
+			{
+				printf("goodbye");
 				break;
+			}
 			default:
 				printf("Sorry, that doesn't seem to be an option\n");
 		}
@@ -127,9 +290,11 @@ static void main_menu() {
 	return;
 }
 void run_interface() {
-
+	library_init();
+	FILE *file;
+	load_books(file);
 	main_menu();
-	
+	store_books(file);
 
 	return;
 }

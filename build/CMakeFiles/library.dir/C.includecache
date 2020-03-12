@@ -6,13 +6,45 @@
 
 #IncludeRegexTransform: 
 
-/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c
-book_management.h
 /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.h
 stdio.h
 -
+stdlib.h
+-
+string.h
+-
 
+/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.c
+interface.h
+/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.h
+book_management.h
 /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.h
+users.h
+/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.h
+library.h
+/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.h
 stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/interface.h
+
+/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/library.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.h
+stdio.h
+-
+stdlib.h
+-
+string.h
 -
 

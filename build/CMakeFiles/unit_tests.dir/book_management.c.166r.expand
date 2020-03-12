@@ -1,5 +1,5 @@
 
-;; Function store_books (store_books, funcdef_no=0, decl_uid=1945, cgraph_uid=0)
+;; Function store_books (store_books, funcdef_no=0, decl_uid=2148, cgraph_uid=0)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -38,171 +38,2363 @@ try_optimize_cfg iteration 2
 (note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -24 [0xffffffffffffffe8])) [0 file+0 S8 A64])
-        (reg:DI 5 di [ file ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:6 -1
+        (reg:DI 5 di [ file ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:12 -1
      (nil))
 (note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
 (insn 6 3 7 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fc15e56f980 *.LC0>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:8 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f50d5af02f8 *.LC0>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
      (nil))
 (insn 7 6 8 2 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7fc15e56fa18 *.LC1>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:8 -1
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f50d5af0390 *.LC1>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
      (nil))
 (call_insn 8 7 9 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7fc15e553000 fopen>) [0 fopen S1 A8])
-            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:8 -1
+        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f50d5a83000 fopen>) [0 fopen S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
             (nil))))
-(insn 9 8 10 2 (set (reg:DI 68)
-        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:8 -1
+(insn 9 8 10 2 (set (reg:DI 83)
+        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
      (nil))
 (insn 10 9 11 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -16 [0xfffffffffffffff0])) [0 file+0 S8 A64])
-        (reg:DI 68)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:8 -1
+        (reg:DI 83)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
      (nil))
 (insn 11 10 12 2 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
-        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:9 -1
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:14 -1
      (nil))
 (jump_insn 12 11 13 2 (set (pc)
-        (label_ref 33)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:9 -1
+        (label_ref 69)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:14 -1
      (nil)
- -> 33)
-(barrier 13 12 37)
-(code_label 37 13 14 4 3 "" [1 uses])
-(note 14 37 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
-(insn 15 14 16 4 (set (reg/f:DI 61 [ D.1978 ])
-        (mem/f/j/c:DI (symbol_ref:DI ("thebookarray")  <var_decl 0x7fc15e53be40 thebookarray>) [0 thebookarray.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
+ -> 69)
+(barrier 13 12 73)
+(code_label 73 13 14 4 3 "" [1 uses])
+(note 14 73 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 4 (set (reg/f:DI 61 [ D.2382 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
      (nil))
-(insn 16 15 17 4 (set (reg:SI 69)
+(insn 16 15 17 4 (set (reg:SI 84)
         (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
      (nil))
-(insn 17 16 18 4 (set (reg:DI 62 [ D.1979 ])
-        (sign_extend:DI (reg:SI 69))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
+(insn 17 16 18 4 (set (reg:DI 62 [ D.2383 ])
+        (sign_extend:DI (reg:SI 84))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
      (nil))
-(insn 18 17 19 4 (set (reg:DI 70)
-        (reg:DI 62 [ D.1979 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
+(insn 18 17 19 4 (set (reg:DI 85)
+        (reg:DI 62 [ D.2383 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
      (nil))
 (insn 19 18 20 4 (parallel [
-            (set (reg:DI 70)
-                (ashift:DI (reg:DI 70)
+            (set (reg:DI 85)
+                (ashift:DI (reg:DI 85)
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
      (nil))
 (insn 20 19 21 4 (parallel [
-            (set (reg:DI 70)
-                (plus:DI (reg:DI 70)
-                    (reg:DI 62 [ D.1979 ])))
+            (set (reg:DI 85)
+                (plus:DI (reg:DI 85)
+                    (reg:DI 62 [ D.2383 ])))
             (clobber (reg:CC 17 flags))
-        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
-     (expr_list:REG_EQUAL (mult:DI (reg:DI 62 [ D.1979 ])
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 62 [ D.2383 ])
             (const_int 3 [0x3]))
         (nil)))
 (insn 21 20 22 4 (parallel [
-            (set (reg:DI 71)
-                (ashift:DI (reg:DI 70)
+            (set (reg:DI 86)
+                (ashift:DI (reg:DI 85)
                     (const_int 3 [0x3])))
             (clobber (reg:CC 17 flags))
-        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
      (nil))
-(insn 22 21 23 4 (set (reg:DI 70)
-        (reg:DI 71)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
-     (expr_list:REG_EQUAL (mult:DI (reg:DI 62 [ D.1979 ])
+(insn 22 21 23 4 (set (reg:DI 85)
+        (reg:DI 86)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 62 [ D.2383 ])
             (const_int 24 [0x18]))
         (nil)))
-(insn 23 22 24 4 (set (reg:DI 63 [ D.1979 ])
-        (reg:DI 70)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
+(insn 23 22 24 4 (set (reg:DI 63 [ D.2383 ])
+        (reg:DI 85)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
      (nil))
 (insn 24 23 25 4 (parallel [
-            (set (reg/f:DI 64 [ D.1978 ])
-                (plus:DI (reg/f:DI 61 [ D.1978 ])
-                    (reg:DI 63 [ D.1979 ])))
+            (set (reg/f:DI 64 [ D.2382 ])
+                (plus:DI (reg/f:DI 61 [ D.2382 ])
+                    (reg:DI 63 [ D.2383 ])))
             (clobber (reg:CC 17 flags))
-        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
      (nil))
-(insn 25 24 26 4 (set (reg/f:DI 65 [ D.1980 ])
-        (mem/f/j:DI (reg/f:DI 64 [ D.1978 ]) [0 _9->title+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
+(insn 25 24 26 4 (set (reg:SI 65 [ D.2381 ])
+        (mem/j:SI (plus:DI (reg/f:DI 64 [ D.2382 ])
+                (const_int 20 [0x14])) [0 _9->copies+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
      (nil))
-(insn 26 25 27 4 (set (reg:DI 72)
+(insn 26 25 27 4 (set (reg/f:DI 66 [ D.2382 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 27 26 28 4 (set (reg:SI 87)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:DI 67 [ D.2383 ])
+        (sign_extend:DI (reg:SI 87))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 29 28 30 4 (set (reg:DI 88)
+        (reg:DI 67 [ D.2383 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 30 29 31 4 (parallel [
+            (set (reg:DI 88)
+                (ashift:DI (reg:DI 88)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 31 30 32 4 (parallel [
+            (set (reg:DI 88)
+                (plus:DI (reg:DI 88)
+                    (reg:DI 67 [ D.2383 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 67 [ D.2383 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 32 31 33 4 (parallel [
+            (set (reg:DI 89)
+                (ashift:DI (reg:DI 88)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 33 32 34 4 (set (reg:DI 88)
+        (reg:DI 89)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 67 [ D.2383 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 34 33 35 4 (set (reg:DI 68 [ D.2383 ])
+        (reg:DI 88)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 35 34 36 4 (parallel [
+            (set (reg/f:DI 69 [ D.2382 ])
+                (plus:DI (reg/f:DI 66 [ D.2382 ])
+                    (reg:DI 68 [ D.2383 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 36 35 37 4 (set (reg:SI 70 [ D.2381 ])
+        (mem/j:SI (plus:DI (reg/f:DI 69 [ D.2382 ])
+                (const_int 16 [0x10])) [0 _14->year+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 37 36 38 4 (set (reg/f:DI 71 [ D.2382 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 38 37 39 4 (set (reg:SI 90)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 39 38 40 4 (set (reg:DI 72 [ D.2383 ])
+        (sign_extend:DI (reg:SI 90))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 40 39 41 4 (set (reg:DI 91)
+        (reg:DI 72 [ D.2383 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 41 40 42 4 (parallel [
+            (set (reg:DI 91)
+                (ashift:DI (reg:DI 91)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 42 41 43 4 (parallel [
+            (set (reg:DI 91)
+                (plus:DI (reg:DI 91)
+                    (reg:DI 72 [ D.2383 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 72 [ D.2383 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 43 42 44 4 (parallel [
+            (set (reg:DI 92)
+                (ashift:DI (reg:DI 91)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 44 43 45 4 (set (reg:DI 91)
+        (reg:DI 92)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 72 [ D.2383 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 45 44 46 4 (set (reg:DI 73 [ D.2383 ])
+        (reg:DI 91)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 46 45 47 4 (parallel [
+            (set (reg/f:DI 74 [ D.2382 ])
+                (plus:DI (reg/f:DI 71 [ D.2382 ])
+                    (reg:DI 73 [ D.2383 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 47 46 48 4 (set (reg/f:DI 75 [ D.2384 ])
+        (mem/f/j:DI (plus:DI (reg/f:DI 74 [ D.2382 ])
+                (const_int 8 [0x8])) [0 _19->authors+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 48 47 49 4 (set (reg/f:DI 76 [ D.2382 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 49 48 50 4 (set (reg:SI 93)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 50 49 51 4 (set (reg:DI 77 [ D.2383 ])
+        (sign_extend:DI (reg:SI 93))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 51 50 52 4 (set (reg:DI 94)
+        (reg:DI 77 [ D.2383 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 52 51 53 4 (parallel [
+            (set (reg:DI 94)
+                (ashift:DI (reg:DI 94)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 53 52 54 4 (parallel [
+            (set (reg:DI 94)
+                (plus:DI (reg:DI 94)
+                    (reg:DI 77 [ D.2383 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 77 [ D.2383 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 54 53 55 4 (parallel [
+            (set (reg:DI 95)
+                (ashift:DI (reg:DI 94)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 55 54 56 4 (set (reg:DI 94)
+        (reg:DI 95)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 77 [ D.2383 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 56 55 57 4 (set (reg:DI 78 [ D.2383 ])
+        (reg:DI 94)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 57 56 58 4 (parallel [
+            (set (reg/f:DI 79 [ D.2382 ])
+                (plus:DI (reg/f:DI 76 [ D.2382 ])
+                    (reg:DI 78 [ D.2383 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 58 57 59 4 (set (reg/f:DI 80 [ D.2384 ])
+        (mem/f/j:DI (reg/f:DI 79 [ D.2382 ]) [0 _24->title+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 59 58 60 4 (set (reg:DI 96)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -16 [0xfffffffffffffff0])) [0 file+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
+                (const_int -16 [0xfffffffffffffff0])) [0 file+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
      (nil))
-(insn 27 26 28 4 (set (reg:DI 1 dx)
-        (reg/f:DI 65 [ D.1980 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
+(insn 60 59 61 4 (set (reg:SI 38 r9)
+        (reg:SI 65 [ D.2381 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
      (nil))
-(insn 28 27 29 4 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7fc15e56fab0 *.LC2>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
+(insn 61 60 62 4 (set (reg:SI 37 r8)
+        (reg:SI 70 [ D.2381 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
      (nil))
-(insn 29 28 30 4 (set (reg:DI 5 di)
-        (reg:DI 72)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
+(insn 62 61 63 4 (set (reg:DI 2 cx)
+        (reg/f:DI 75 [ D.2384 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
      (nil))
-(insn 30 29 31 4 (set (reg:QI 0 ax)
-        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
+(insn 63 62 64 4 (set (reg:DI 1 dx)
+        (reg/f:DI 80 [ D.2384 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
      (nil))
-(call_insn 31 30 32 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fprintf") [flags 0x41]  <function_decl 0x7fc15e46f700 fprintf>) [0 __builtin_fprintf S1 A8])
-            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:13 -1
+(insn 64 63 65 4 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f50d5af0428 *.LC2>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 65 64 66 4 (set (reg:DI 5 di)
+        (reg:DI 96)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(insn 66 65 67 4 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+     (nil))
+(call_insn 67 66 68 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fprintf") [flags 0x41]  <function_decl 0x7f50d599f700 fprintf>) [0 __builtin_fprintf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
         (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
             (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
                 (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 1 dx))
-                    (nil))))))
-(insn 32 31 33 4 (parallel [
+                    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 2 cx))
+                        (expr_list:REG_BR_PRED (use (reg:SI 37 r8))
+                            (expr_list:REG_BR_PRED (use (reg:SI 38 r9))
+                                (nil)))))))))
+(insn 68 67 69 4 (parallel [
             (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                         (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
                 (plus:SI (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                             (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:9 -1
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:14 -1
      (nil))
-(code_label 33 32 34 5 2 "" [1 uses])
-(note 34 33 35 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
-(insn 35 34 36 5 (set (reg:SI 59 [ i.0 ])
+(code_label 69 68 70 5 2 "" [1 uses])
+(note 70 69 71 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 71 70 72 5 (set (reg:SI 59 [ i.0 ])
         (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:9 -1
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:14 -1
      (nil))
-(insn 36 35 38 5 (set (reg:SI 60 [ D.1977 ])
-        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("thebookarray")  <var_decl 0x7fc15e53be40 thebookarray>)
-                    (const_int 8 [0x8]))) [0 thebookarray.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:9 -1
+(insn 72 71 74 5 (set (reg:SI 60 [ D.2381 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:14 -1
      (nil))
-(insn 38 36 39 5 (set (reg:CC 17 flags)
+(insn 74 72 75 5 (set (reg:CC 17 flags)
         (compare:CC (reg:SI 59 [ i.0 ])
-            (reg:SI 60 [ D.1977 ]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:9 -1
+            (reg:SI 60 [ D.2381 ]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:14 -1
      (nil))
-(jump_insn 39 38 40 5 (set (pc)
+(jump_insn 75 74 76 5 (set (pc)
         (if_then_else (ltu (reg:CC 17 flags)
                 (const_int 0 [0]))
-            (label_ref 37)
-            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:9 -1
+            (label_ref 73)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:14 -1
      (nil)
- -> 37)
-(note 40 39 41 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
-(insn 41 40 42 6 (set (reg:DI 73)
+ -> 73)
+(note 76 75 77 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 77 76 78 6 (set (reg:DI 97)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -16 [0xfffffffffffffff0])) [0 file+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:15 -1
+                (const_int -16 [0xfffffffffffffff0])) [0 file+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:19 -1
      (nil))
-(insn 42 41 43 6 (set (reg:DI 5 di)
-        (reg:DI 73)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:15 -1
+(insn 78 77 79 6 (set (reg:DI 5 di)
+        (reg:DI 97)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:19 -1
      (nil))
-(call_insn 43 42 44 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7fc15e54ce00 fclose>) [0 fclose S1 A8])
-            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:15 -1
+(call_insn 79 78 80 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f50d5a7ce00 fclose>) [0 fclose S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:19 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
-(insn 44 43 47 6 (set (reg:SI 66 [ D.1981 ])
-        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+(insn 80 79 83 6 (set (reg:SI 81 [ D.2385 ])
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:20 -1
      (nil))
-(insn 47 44 51 6 (set (reg:SI 67 [ <retval> ])
-        (reg:SI 66 [ D.1981 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:16 -1
+(insn 83 80 87 6 (set (reg:SI 82 [ <retval> ])
+        (reg:SI 81 [ D.2385 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:20 -1
      (nil))
-(insn 51 47 54 6 (set (reg/i:SI 0 ax)
-        (reg:SI 67 [ <retval> ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:18 -1
+(insn 87 83 90 6 (set (reg/i:SI 0 ax)
+        (reg:SI 82 [ <retval> ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:22 -1
      (nil))
-(insn 54 51 0 6 (use (reg/i:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:18 -1
+(insn 90 87 0 6 (use (reg/i:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:22 -1
+     (nil))
+
+;; Function load_books (load_books, funcdef_no=1, decl_uid=2150, cgraph_uid=1)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+deleting block 8
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+Merging block 8 into block 6...
+Merged blocks 6 and 8.
+Merged 6 and 8 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -72 [0xffffffffffffffb8])) [0 file+0 S8 A64])
+        (reg:DI 5 di [ file ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:24 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f50d5af0da8 *.LC3>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:25 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f50d5af0390 *.LC1>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:25 -1
+     (nil))
+(call_insn 8 7 9 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f50d5a83000 fopen>) [0 fopen S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:25 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 9 8 10 2 (set (reg:DI 98)
+        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:25 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 file+0 S8 A64])
+        (reg:DI 98)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:25 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 5 di)
+        (const_int 20 [0x14])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:27 -1
+     (nil))
+(call_insn 12 11 13 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f50d59bdf00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:27 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 13 12 14 2 (set (reg/f:DI 99)
+        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:27 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 99)
+        (nil)))
+(insn 14 13 15 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 token+0 S8 A64])
+        (reg/f:DI 99)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:27 -1
+     (nil))
+(jump_insn 15 14 16 2 (set (pc)
+        (label_ref 111)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:29 -1
+     (nil)
+ -> 111)
+(barrier 16 15 120)
+(code_label 120 16 17 4 7 "" [1 uses])
+(note 17 120 18 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 19 4 (parallel [
+            (set (reg:DI 100)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -64 [0xffffffffffffffc0])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:31 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50d5af0e40 *.LC4>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:31 -1
+     (nil))
+(insn 20 19 21 4 (set (reg:DI 5 di)
+        (reg:DI 100)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:31 -1
+     (nil))
+(call_insn 21 20 22 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f50d5ab5b00 strtok>) [0 strtok S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:31 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 22 21 23 4 (set (reg:DI 101)
+        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:31 -1
+     (nil))
+(insn 23 22 24 4 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 token+0 S8 A64])
+        (reg:DI 101)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:31 -1
+     (nil))
+(insn 24 23 25 4 (set (reg/f:DI 60 [ D.2390 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:32 -1
+     (nil))
+(insn 25 24 26 4 (set (reg:SI 61 [ D.2391 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:32 -1
+     (nil))
+(insn 26 25 27 4 (set (reg:DI 62 [ D.2392 ])
+        (zero_extend:DI (reg:SI 61 [ D.2391 ]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:32 -1
+     (nil))
+(insn 27 26 28 4 (set (reg:DI 102)
+        (reg:DI 62 [ D.2392 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:32 -1
+     (nil))
+(insn 28 27 29 4 (parallel [
+            (set (reg:DI 102)
+                (ashift:DI (reg:DI 102)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:32 -1
+     (nil))
+(insn 29 28 30 4 (parallel [
+            (set (reg:DI 102)
+                (plus:DI (reg:DI 102)
+                    (reg:DI 62 [ D.2392 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:32 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 62 [ D.2392 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 30 29 31 4 (parallel [
+            (set (reg:DI 103)
+                (ashift:DI (reg:DI 102)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:32 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:DI 102)
+        (reg:DI 103)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:32 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 62 [ D.2392 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 32 31 33 4 (set (reg:DI 63 [ D.2392 ])
+        (reg:DI 102)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:32 -1
+     (nil))
+(insn 33 32 34 4 (parallel [
+            (set (reg/f:DI 64 [ D.2390 ])
+                (plus:DI (reg/f:DI 60 [ D.2390 ])
+                    (reg:DI 63 [ D.2392 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:32 -1
+     (nil))
+(insn 34 33 35 4 (set (reg/f:DI 104)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 token+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:32 -1
+     (nil))
+(insn 35 34 36 4 (set (mem/f/j:DI (reg/f:DI 64 [ D.2390 ]) [0 _9->title+0 S8 A64])
+        (reg/f:DI 104)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:32 -1
+     (nil))
+(insn 36 35 37 4 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50d5af0e40 *.LC4>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:33 -1
+     (nil))
+(insn 37 36 38 4 (set (reg:DI 5 di)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:33 -1
+     (nil))
+(call_insn 38 37 39 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f50d5ab5b00 strtok>) [0 strtok S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:33 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 39 38 40 4 (set (reg:DI 105)
+        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:33 -1
+     (nil))
+(insn 40 39 41 4 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 token+0 S8 A64])
+        (reg:DI 105)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:33 -1
+     (nil))
+(insn 41 40 42 4 (set (reg/f:DI 65 [ D.2390 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:34 -1
+     (nil))
+(insn 42 41 43 4 (set (reg:SI 66 [ D.2391 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:34 -1
+     (nil))
+(insn 43 42 44 4 (set (reg:DI 67 [ D.2392 ])
+        (zero_extend:DI (reg:SI 66 [ D.2391 ]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:34 -1
+     (nil))
+(insn 44 43 45 4 (set (reg:DI 106)
+        (reg:DI 67 [ D.2392 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:34 -1
+     (nil))
+(insn 45 44 46 4 (parallel [
+            (set (reg:DI 106)
+                (ashift:DI (reg:DI 106)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:34 -1
+     (nil))
+(insn 46 45 47 4 (parallel [
+            (set (reg:DI 106)
+                (plus:DI (reg:DI 106)
+                    (reg:DI 67 [ D.2392 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:34 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 67 [ D.2392 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 47 46 48 4 (parallel [
+            (set (reg:DI 107)
+                (ashift:DI (reg:DI 106)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:34 -1
+     (nil))
+(insn 48 47 49 4 (set (reg:DI 106)
+        (reg:DI 107)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:34 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 67 [ D.2392 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 49 48 50 4 (set (reg:DI 68 [ D.2392 ])
+        (reg:DI 106)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:34 -1
+     (nil))
+(insn 50 49 51 4 (parallel [
+            (set (reg/f:DI 69 [ D.2390 ])
+                (plus:DI (reg/f:DI 65 [ D.2390 ])
+                    (reg:DI 68 [ D.2392 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:34 -1
+     (nil))
+(insn 51 50 52 4 (set (reg/f:DI 108)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 token+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:34 -1
+     (nil))
+(insn 52 51 53 4 (set (mem/f/j:DI (plus:DI (reg/f:DI 69 [ D.2390 ])
+                (const_int 8 [0x8])) [0 _15->authors+0 S8 A64])
+        (reg/f:DI 108)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:34 -1
+     (nil))
+(insn 53 52 54 4 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50d5af0e40 *.LC4>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:35 -1
+     (nil))
+(insn 54 53 55 4 (set (reg:DI 5 di)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:35 -1
+     (nil))
+(call_insn 55 54 56 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f50d5ab5b00 strtok>) [0 strtok S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:35 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 56 55 57 4 (set (reg:DI 109)
+        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:35 -1
+     (nil))
+(insn 57 56 58 4 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 token+0 S8 A64])
+        (reg:DI 109)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:35 -1
+     (nil))
+(insn 58 57 59 4 (set (reg/f:DI 70 [ D.2390 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:36 -1
+     (nil))
+(insn 59 58 60 4 (set (reg:SI 71 [ D.2391 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:36 -1
+     (nil))
+(insn 60 59 61 4 (set (reg:DI 72 [ D.2392 ])
+        (zero_extend:DI (reg:SI 71 [ D.2391 ]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:36 -1
+     (nil))
+(insn 61 60 62 4 (set (reg:DI 110)
+        (reg:DI 72 [ D.2392 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:36 -1
+     (nil))
+(insn 62 61 63 4 (parallel [
+            (set (reg:DI 110)
+                (ashift:DI (reg:DI 110)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:36 -1
+     (nil))
+(insn 63 62 64 4 (parallel [
+            (set (reg:DI 110)
+                (plus:DI (reg:DI 110)
+                    (reg:DI 72 [ D.2392 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:36 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 72 [ D.2392 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 64 63 65 4 (parallel [
+            (set (reg:DI 111)
+                (ashift:DI (reg:DI 110)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:36 -1
+     (nil))
+(insn 65 64 66 4 (set (reg:DI 110)
+        (reg:DI 111)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:36 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 72 [ D.2392 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 66 65 67 4 (set (reg:DI 73 [ D.2392 ])
+        (reg:DI 110)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:36 -1
+     (nil))
+(insn 67 66 68 4 (parallel [
+            (set (reg/f:DI 74 [ D.2390 ])
+                (plus:DI (reg/f:DI 70 [ D.2390 ])
+                    (reg:DI 73 [ D.2392 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:36 -1
+     (nil))
+(insn 68 67 69 4 (set (reg:DI 112)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 token+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:36 -1
+     (nil))
+(insn 69 68 70 4 (set (reg:DI 5 di)
+        (reg:DI 112)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:36 -1
+     (nil))
+(call_insn/i 70 69 71 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f50d5a9a400 atoi>) [0 atoi S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:36 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 71 70 72 4 (set (reg:SI 75 [ D.2393 ])
+        (reg:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:36 -1
+     (nil))
+(insn 72 71 73 4 (set (reg:SI 76 [ D.2391 ])
+        (reg:SI 75 [ D.2393 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:36 -1
+     (nil))
+(insn 73 72 74 4 (set (mem/j:SI (plus:DI (reg/f:DI 74 [ D.2390 ])
+                (const_int 16 [0x10])) [0 _21->year+0 S4 A64])
+        (reg:SI 76 [ D.2391 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:36 -1
+     (nil))
+(insn 74 73 75 4 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f50d5af0e40 *.LC4>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:37 -1
+     (nil))
+(insn 75 74 76 4 (set (reg:DI 5 di)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:37 -1
+     (nil))
+(call_insn 76 75 77 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f50d5ab5b00 strtok>) [0 strtok S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:37 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 77 76 78 4 (set (reg:DI 113)
+        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:37 -1
+     (nil))
+(insn 78 77 79 4 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 token+0 S8 A64])
+        (reg:DI 113)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:37 -1
+     (nil))
+(insn 79 78 80 4 (set (reg/f:DI 77 [ D.2390 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:38 -1
+     (nil))
+(insn 80 79 81 4 (set (reg:SI 78 [ D.2391 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:38 -1
+     (nil))
+(insn 81 80 82 4 (set (reg:DI 79 [ D.2392 ])
+        (zero_extend:DI (reg:SI 78 [ D.2391 ]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:38 -1
+     (nil))
+(insn 82 81 83 4 (set (reg:DI 114)
+        (reg:DI 79 [ D.2392 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:38 -1
+     (nil))
+(insn 83 82 84 4 (parallel [
+            (set (reg:DI 114)
+                (ashift:DI (reg:DI 114)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:38 -1
+     (nil))
+(insn 84 83 85 4 (parallel [
+            (set (reg:DI 114)
+                (plus:DI (reg:DI 114)
+                    (reg:DI 79 [ D.2392 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:38 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 79 [ D.2392 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 85 84 86 4 (parallel [
+            (set (reg:DI 115)
+                (ashift:DI (reg:DI 114)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:38 -1
+     (nil))
+(insn 86 85 87 4 (set (reg:DI 114)
+        (reg:DI 115)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:38 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 79 [ D.2392 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 87 86 88 4 (set (reg:DI 80 [ D.2392 ])
+        (reg:DI 114)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:38 -1
+     (nil))
+(insn 88 87 89 4 (parallel [
+            (set (reg/f:DI 81 [ D.2390 ])
+                (plus:DI (reg/f:DI 77 [ D.2390 ])
+                    (reg:DI 80 [ D.2392 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:38 -1
+     (nil))
+(insn 89 88 90 4 (set (reg:DI 116)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 token+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:38 -1
+     (nil))
+(insn 90 89 91 4 (set (reg:DI 5 di)
+        (reg:DI 116)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:38 -1
+     (nil))
+(call_insn/i 91 90 92 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f50d5a9a400 atoi>) [0 atoi S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:38 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 92 91 93 4 (set (reg:SI 82 [ D.2393 ])
+        (reg:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:38 -1
+     (nil))
+(insn 93 92 94 4 (set (reg:SI 83 [ D.2391 ])
+        (reg:SI 82 [ D.2393 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:38 -1
+     (nil))
+(insn 94 93 95 4 (set (mem/j:SI (plus:DI (reg/f:DI 81 [ D.2390 ])
+                (const_int 20 [0x14])) [0 _29->copies+0 S4 A32])
+        (reg:SI 83 [ D.2391 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:38 -1
+     (nil))
+(insn 95 94 96 4 (set (reg/f:DI 84 [ D.2390 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:39 -1
+     (nil))
+(insn 96 95 97 4 (set (reg:SI 85 [ D.2391 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:39 -1
+     (nil))
+(insn 97 96 98 4 (set (reg:DI 86 [ D.2392 ])
+        (zero_extend:DI (reg:SI 85 [ D.2391 ]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:39 -1
+     (nil))
+(insn 98 97 99 4 (set (reg:DI 117)
+        (reg:DI 86 [ D.2392 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:39 -1
+     (nil))
+(insn 99 98 100 4 (parallel [
+            (set (reg:DI 117)
+                (ashift:DI (reg:DI 117)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:39 -1
+     (nil))
+(insn 100 99 101 4 (parallel [
+            (set (reg:DI 117)
+                (plus:DI (reg:DI 117)
+                    (reg:DI 86 [ D.2392 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:39 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 86 [ D.2392 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 101 100 102 4 (parallel [
+            (set (reg:DI 118)
+                (ashift:DI (reg:DI 117)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:39 -1
+     (nil))
+(insn 102 101 103 4 (set (reg:DI 117)
+        (reg:DI 118)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:39 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 86 [ D.2392 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 103 102 104 4 (set (reg:DI 87 [ D.2392 ])
+        (reg:DI 117)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:39 -1
+     (nil))
+(insn 104 103 105 4 (parallel [
+            (set (reg/f:DI 88 [ D.2390 ])
+                (plus:DI (reg/f:DI 84 [ D.2390 ])
+                    (reg:DI 87 [ D.2392 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:39 -1
+     (nil))
+(insn 105 104 106 4 (set (reg/f:DI 89 [ D.2389 ])
+        (mem/f/j:DI (reg/f:DI 88 [ D.2390 ]) [0 _36->title+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:39 -1
+     (nil))
+(insn 106 105 107 4 (set (reg:DI 5 di)
+        (reg/f:DI 89 [ D.2389 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:39 -1
+     (nil))
+(call_insn 107 106 108 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f50d59a2d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:39 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 108 107 109 4 (set (reg:SI 90 [ D.2391 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:40 -1
+     (nil))
+(insn 109 108 110 4 (parallel [
+            (set (reg:SI 91 [ D.2391 ])
+                (plus:SI (reg:SI 90 [ D.2391 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:40 -1
+     (nil))
+(insn 110 109 111 4 (set (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])
+        (reg:SI 91 [ D.2391 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:40 -1
+     (nil))
+(code_label 111 110 112 5 6 "" [1 uses])
+(note 112 111 113 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 113 112 114 5 (set (reg:DI 119)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 file+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:29 -1
+     (nil))
+(insn 114 113 115 5 (parallel [
+            (set (reg:DI 120)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -64 [0xffffffffffffffc0])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:29 -1
+     (nil))
+(insn 115 114 116 5 (set (reg:DI 1 dx)
+        (reg:DI 119)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:29 -1
+     (nil))
+(insn 116 115 117 5 (set (reg:SI 4 si)
+        (const_int 40 [0x28])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:29 -1
+     (nil))
+(insn 117 116 118 5 (set (reg:DI 5 di)
+        (reg:DI 120)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:29 -1
+     (nil))
+(call_insn 118 117 119 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fgets") [flags 0x41]  <function_decl 0x7f50d5a94200 fgets>) [0 fgets S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:29 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_BR_PRED (use (reg:SI 4 si))
+            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 1 dx))
+                (nil)))))
+(insn 119 118 121 5 (set (reg/f:DI 59 [ D.2389 ])
+        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:29 -1
+     (nil))
+(insn 121 119 122 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 59 [ D.2389 ])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:29 -1
+     (nil))
+(jump_insn 122 121 123 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 120)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:29 -1
+     (nil)
+ -> 120)
+(note 123 122 124 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 124 123 125 6 (set (reg:SI 92 [ D.2391 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:42 -1
+     (nil))
+(insn 125 124 126 6 (set (reg:SI 4 si)
+        (reg:SI 92 [ D.2391 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:42 -1
+     (nil))
+(insn 126 125 127 6 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f50d5af0ed8 *.LC5>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:42 -1
+     (nil))
+(insn 127 126 128 6 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:42 -1
+     (nil))
+(call_insn 128 127 129 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f50d59a2800 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:42 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (expr_list:REG_BR_PRED (use (reg:SI 4 si))
+                (nil)))))
+(insn 129 128 130 6 (set (reg/f:DI 93 [ D.2390 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:43 -1
+     (nil))
+(insn 130 129 131 6 (parallel [
+            (set (reg/f:DI 94 [ D.2390 ])
+                (plus:DI (reg/f:DI 93 [ D.2390 ])
+                    (const_int 24 [0x18])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:43 -1
+     (nil))
+(insn 131 130 132 6 (set (reg/f:DI 95 [ D.2389 ])
+        (mem/f/j:DI (reg/f:DI 94 [ D.2390 ]) [0 _42->title+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:43 -1
+     (nil))
+(insn 132 131 133 6 (set (reg:DI 5 di)
+        (reg/f:DI 95 [ D.2389 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:43 -1
+     (nil))
+(call_insn 133 132 134 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f50d59a2d00 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:43 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 134 133 135 6 (set (reg:DI 121)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 file+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:44 -1
+     (nil))
+(insn 135 134 136 6 (set (reg:DI 5 di)
+        (reg:DI 121)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:44 -1
+     (nil))
+(call_insn 136 135 137 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f50d5a7ce00 fclose>) [0 fclose S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:44 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 137 136 140 6 (set (reg:SI 96 [ D.2393 ])
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:45 -1
+     (nil))
+(insn 140 137 144 6 (set (reg:SI 97 [ <retval> ])
+        (reg:SI 96 [ D.2393 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:45 -1
+     (nil))
+(insn 144 140 147 6 (set (reg/i:SI 0 ax)
+        (reg:SI 97 [ <retval> ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:46 -1
+     (nil))
+(insn 147 144 0 6 (use (reg/i:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:46 -1
+     (nil))
+
+;; Function find_book_by_author (find_book_by_author, funcdef_no=2, decl_uid=2158, cgraph_uid=2)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+deleting block 10
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 9 into block 8...
+Merged blocks 8 and 9.
+Merged 8 and 9 without moving.
+Merging block 10 into block 8...
+Merged blocks 8 and 10.
+Merged 8 and 10 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [0 author+0 S8 A64])
+        (reg:DI 5 di [ author ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:48 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (mem/j/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 newbookarray.length+0 S4 A64])
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:51 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 5 di)
+        (const_int 24 [0x18])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:52 -1
+     (nil))
+(call_insn 8 7 9 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f50d59bdf00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:52 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 9 8 10 2 (set (reg/f:DI 81)
+        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:52 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 81)
+        (nil)))
+(insn 10 9 11 2 (set (reg/f:DI 59 [ D.2397 ])
+        (reg/f:DI 81)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:52 -1
+     (nil))
+(insn 11 10 12 2 (set (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 newbookarray.array+0 S8 A64])
+        (reg/f:DI 59 [ D.2397 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:52 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:54 -1
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (label_ref 67)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:54 -1
+     (nil)
+ -> 67)
+(barrier 14 13 71)
+(code_label 71 14 15 4 12 "" [1 uses])
+(note 15 71 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 17 4 (set (reg/f:DI 62 [ D.2399 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:SI 82)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:DI 63 [ D.2400 ])
+        (sign_extend:DI (reg:SI 82))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:DI 83)
+        (reg:DI 63 [ D.2400 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (nil))
+(insn 20 19 21 4 (parallel [
+            (set (reg:DI 83)
+                (ashift:DI (reg:DI 83)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (nil))
+(insn 21 20 22 4 (parallel [
+            (set (reg:DI 83)
+                (plus:DI (reg:DI 83)
+                    (reg:DI 63 [ D.2400 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 63 [ D.2400 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 22 21 23 4 (parallel [
+            (set (reg:DI 84)
+                (ashift:DI (reg:DI 83)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (nil))
+(insn 23 22 24 4 (set (reg:DI 83)
+        (reg:DI 84)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 63 [ D.2400 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 24 23 25 4 (set (reg:DI 64 [ D.2400 ])
+        (reg:DI 83)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (nil))
+(insn 25 24 26 4 (parallel [
+            (set (reg/f:DI 65 [ D.2399 ])
+                (plus:DI (reg/f:DI 62 [ D.2399 ])
+                    (reg:DI 64 [ D.2400 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (nil))
+(insn 26 25 27 4 (set (reg/f:DI 66 [ D.2401 ])
+        (mem/f/j:DI (plus:DI (reg/f:DI 65 [ D.2399 ])
+                (const_int 8 [0x8])) [0 _9->authors+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (nil))
+(insn 27 26 28 4 (set (reg:DI 85)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [0 author+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:DI 4 si)
+        (reg:DI 85)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (nil))
+(insn 29 28 30 4 (set (reg:DI 5 di)
+        (reg/f:DI 66 [ D.2401 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (nil))
+(call_insn/i 30 29 31 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f50d5999e00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 31 30 32 4 (set (reg:SI 67 [ D.2402 ])
+        (reg:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (nil))
+(insn 32 31 33 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 67 [ D.2402 ])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (nil))
+(jump_insn 33 32 34 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 64)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:56 -1
+     (nil)
+ -> 64)
+(note 34 33 35 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 36 5 (set (reg/f:DI 68 [ D.2399 ])
+        (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 newbookarray.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 36 35 37 5 (set (reg:SI 69 [ D.2398 ])
+        (mem/j/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 newbookarray.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 37 36 38 5 (set (reg:DI 70 [ D.2400 ])
+        (zero_extend:DI (reg:SI 69 [ D.2398 ]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 38 37 39 5 (set (reg:DI 86)
+        (reg:DI 70 [ D.2400 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 39 38 40 5 (parallel [
+            (set (reg:DI 86)
+                (ashift:DI (reg:DI 86)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 40 39 41 5 (parallel [
+            (set (reg:DI 86)
+                (plus:DI (reg:DI 86)
+                    (reg:DI 70 [ D.2400 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 70 [ D.2400 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 41 40 42 5 (parallel [
+            (set (reg:DI 87)
+                (ashift:DI (reg:DI 86)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 42 41 43 5 (set (reg:DI 86)
+        (reg:DI 87)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 70 [ D.2400 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 43 42 44 5 (set (reg:DI 71 [ D.2400 ])
+        (reg:DI 86)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 44 43 45 5 (parallel [
+            (set (reg/f:DI 72 [ D.2399 ])
+                (plus:DI (reg/f:DI 68 [ D.2399 ])
+                    (reg:DI 71 [ D.2400 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 45 44 46 5 (set (reg/f:DI 73 [ D.2399 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 46 45 47 5 (set (reg:SI 88)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 47 46 48 5 (set (reg:DI 74 [ D.2400 ])
+        (sign_extend:DI (reg:SI 88))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 48 47 49 5 (set (reg:DI 89)
+        (reg:DI 74 [ D.2400 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 49 48 50 5 (parallel [
+            (set (reg:DI 89)
+                (ashift:DI (reg:DI 89)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 50 49 51 5 (parallel [
+            (set (reg:DI 89)
+                (plus:DI (reg:DI 89)
+                    (reg:DI 74 [ D.2400 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 74 [ D.2400 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 51 50 52 5 (parallel [
+            (set (reg:DI 90)
+                (ashift:DI (reg:DI 89)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 52 51 53 5 (set (reg:DI 89)
+        (reg:DI 90)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 74 [ D.2400 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 53 52 54 5 (set (reg:DI 75 [ D.2400 ])
+        (reg:DI 89)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 54 53 55 5 (parallel [
+            (set (reg/f:DI 76 [ D.2399 ])
+                (plus:DI (reg/f:DI 73 [ D.2399 ])
+                    (reg:DI 75 [ D.2400 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 55 54 56 5 (set (reg:DI 91)
+        (mem:DI (reg/f:DI 76 [ D.2399 ]) [0 *_21+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 56 55 57 5 (set (mem:DI (reg/f:DI 72 [ D.2399 ]) [0 *_17+0 S8 A64])
+        (reg:DI 91)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 57 56 58 5 (set (reg:DI 92)
+        (mem:DI (plus:DI (reg/f:DI 76 [ D.2399 ])
+                (const_int 8 [0x8])) [0 *_21+8 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 58 57 59 5 (set (mem:DI (plus:DI (reg/f:DI 72 [ D.2399 ])
+                (const_int 8 [0x8])) [0 *_17+8 S8 A64])
+        (reg:DI 92)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 59 58 60 5 (set (reg:DI 93)
+        (mem:DI (plus:DI (reg/f:DI 76 [ D.2399 ])
+                (const_int 16 [0x10])) [0 *_21+16 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 60 59 61 5 (set (mem:DI (plus:DI (reg/f:DI 72 [ D.2399 ])
+                (const_int 16 [0x10])) [0 *_17+16 S8 A64])
+        (reg:DI 93)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:57 -1
+     (nil))
+(insn 61 60 62 5 (set (reg:SI 77 [ D.2398 ])
+        (mem/j/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 newbookarray.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:58 -1
+     (nil))
+(insn 62 61 63 5 (parallel [
+            (set (reg:SI 78 [ D.2398 ])
+                (plus:SI (reg:SI 77 [ D.2398 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:58 -1
+     (nil))
+(insn 63 62 64 5 (set (mem/j/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 newbookarray.length+0 S4 A64])
+        (reg:SI 78 [ D.2398 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:58 -1
+     (nil))
+(code_label 64 63 65 6 11 "" [1 uses])
+(note 65 64 66 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 66 65 67 6 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:54 -1
+     (nil))
+(code_label 67 66 68 7 10 "" [1 uses])
+(note 68 67 69 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 70 7 (set (reg:SI 60 [ i.1 ])
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:54 -1
+     (nil))
+(insn 70 69 72 7 (set (reg:SI 61 [ D.2398 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:54 -1
+     (nil))
+(insn 72 70 73 7 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 60 [ i.1 ])
+            (reg:SI 61 [ D.2398 ]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:54 -1
+     (nil))
+(jump_insn 73 72 74 7 (set (pc)
+        (if_then_else (ltu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 71)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:54 -1
+     (nil)
+ -> 71)
+(note 74 73 75 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 75 74 78 8 (set (reg:TI 79 [ D.2294 ])
+        (mem/c:TI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 newbookarray+0 S16 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:61 -1
+     (nil))
+(insn 78 75 82 8 (set (reg:TI 80 [ <retval> ])
+        (reg:TI 79 [ D.2294 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:61 -1
+     (nil))
+(insn 82 78 85 8 (set (reg/i:TI 0 ax)
+        (reg:TI 80 [ <retval> ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:62 -1
+     (nil))
+(insn 85 82 0 8 (use (reg/i:TI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:62 -1
+     (nil))
+
+;; Function find_book_by_title (find_book_by_title, funcdef_no=3, decl_uid=2156, cgraph_uid=3)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+deleting block 10
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 9 into block 8...
+Merged blocks 8 and 9.
+Merged 8 and 9 without moving.
+Merging block 10 into block 8...
+Merged blocks 8 and 10.
+Merged 8 and 10 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [0 title+0 S8 A64])
+        (reg:DI 5 di [ title ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:65 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (mem/j/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 newbookarray.length+0 S4 A64])
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:68 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 5 di)
+        (const_int 24 [0x18])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:69 -1
+     (nil))
+(call_insn 8 7 9 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f50d59bdf00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:69 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 9 8 10 2 (set (reg/f:DI 81)
+        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:69 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 81)
+        (nil)))
+(insn 10 9 11 2 (set (reg/f:DI 59 [ D.2403 ])
+        (reg/f:DI 81)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:69 -1
+     (nil))
+(insn 11 10 12 2 (set (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 newbookarray.array+0 S8 A64])
+        (reg/f:DI 59 [ D.2403 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:69 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:71 -1
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (label_ref 67)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:71 -1
+     (nil)
+ -> 67)
+(barrier 14 13 71)
+(code_label 71 14 15 4 17 "" [1 uses])
+(note 15 71 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 17 4 (set (reg/f:DI 62 [ D.2405 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:SI 82)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:DI 63 [ D.2406 ])
+        (sign_extend:DI (reg:SI 82))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:DI 83)
+        (reg:DI 63 [ D.2406 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (nil))
+(insn 20 19 21 4 (parallel [
+            (set (reg:DI 83)
+                (ashift:DI (reg:DI 83)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (nil))
+(insn 21 20 22 4 (parallel [
+            (set (reg:DI 83)
+                (plus:DI (reg:DI 83)
+                    (reg:DI 63 [ D.2406 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 63 [ D.2406 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 22 21 23 4 (parallel [
+            (set (reg:DI 84)
+                (ashift:DI (reg:DI 83)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (nil))
+(insn 23 22 24 4 (set (reg:DI 83)
+        (reg:DI 84)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 63 [ D.2406 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 24 23 25 4 (set (reg:DI 64 [ D.2406 ])
+        (reg:DI 83)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (nil))
+(insn 25 24 26 4 (parallel [
+            (set (reg/f:DI 65 [ D.2405 ])
+                (plus:DI (reg/f:DI 62 [ D.2405 ])
+                    (reg:DI 64 [ D.2406 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (nil))
+(insn 26 25 27 4 (set (reg/f:DI 66 [ D.2407 ])
+        (mem/f/j:DI (reg/f:DI 65 [ D.2405 ]) [0 _9->title+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (nil))
+(insn 27 26 28 4 (set (reg:DI 85)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [0 title+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:DI 4 si)
+        (reg:DI 85)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (nil))
+(insn 29 28 30 4 (set (reg:DI 5 di)
+        (reg/f:DI 66 [ D.2407 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (nil))
+(call_insn/i 30 29 31 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f50d5999e00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 31 30 32 4 (set (reg:SI 67 [ D.2408 ])
+        (reg:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (nil))
+(insn 32 31 33 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 67 [ D.2408 ])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (nil))
+(jump_insn 33 32 34 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 64)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:73 -1
+     (nil)
+ -> 64)
+(note 34 33 35 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 36 5 (set (reg/f:DI 68 [ D.2405 ])
+        (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 newbookarray.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 36 35 37 5 (set (reg:SI 69 [ D.2404 ])
+        (mem/j/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 newbookarray.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 37 36 38 5 (set (reg:DI 70 [ D.2406 ])
+        (zero_extend:DI (reg:SI 69 [ D.2404 ]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 38 37 39 5 (set (reg:DI 86)
+        (reg:DI 70 [ D.2406 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 39 38 40 5 (parallel [
+            (set (reg:DI 86)
+                (ashift:DI (reg:DI 86)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 40 39 41 5 (parallel [
+            (set (reg:DI 86)
+                (plus:DI (reg:DI 86)
+                    (reg:DI 70 [ D.2406 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 70 [ D.2406 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 41 40 42 5 (parallel [
+            (set (reg:DI 87)
+                (ashift:DI (reg:DI 86)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 42 41 43 5 (set (reg:DI 86)
+        (reg:DI 87)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 70 [ D.2406 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 43 42 44 5 (set (reg:DI 71 [ D.2406 ])
+        (reg:DI 86)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 44 43 45 5 (parallel [
+            (set (reg/f:DI 72 [ D.2405 ])
+                (plus:DI (reg/f:DI 68 [ D.2405 ])
+                    (reg:DI 71 [ D.2406 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 45 44 46 5 (set (reg/f:DI 73 [ D.2405 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 46 45 47 5 (set (reg:SI 88)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 47 46 48 5 (set (reg:DI 74 [ D.2406 ])
+        (sign_extend:DI (reg:SI 88))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 48 47 49 5 (set (reg:DI 89)
+        (reg:DI 74 [ D.2406 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 49 48 50 5 (parallel [
+            (set (reg:DI 89)
+                (ashift:DI (reg:DI 89)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 50 49 51 5 (parallel [
+            (set (reg:DI 89)
+                (plus:DI (reg:DI 89)
+                    (reg:DI 74 [ D.2406 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 74 [ D.2406 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 51 50 52 5 (parallel [
+            (set (reg:DI 90)
+                (ashift:DI (reg:DI 89)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 52 51 53 5 (set (reg:DI 89)
+        (reg:DI 90)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 74 [ D.2406 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 53 52 54 5 (set (reg:DI 75 [ D.2406 ])
+        (reg:DI 89)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 54 53 55 5 (parallel [
+            (set (reg/f:DI 76 [ D.2405 ])
+                (plus:DI (reg/f:DI 73 [ D.2405 ])
+                    (reg:DI 75 [ D.2406 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 55 54 56 5 (set (reg:DI 91)
+        (mem:DI (reg/f:DI 76 [ D.2405 ]) [0 *_21+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 56 55 57 5 (set (mem:DI (reg/f:DI 72 [ D.2405 ]) [0 *_17+0 S8 A64])
+        (reg:DI 91)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 57 56 58 5 (set (reg:DI 92)
+        (mem:DI (plus:DI (reg/f:DI 76 [ D.2405 ])
+                (const_int 8 [0x8])) [0 *_21+8 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 58 57 59 5 (set (mem:DI (plus:DI (reg/f:DI 72 [ D.2405 ])
+                (const_int 8 [0x8])) [0 *_17+8 S8 A64])
+        (reg:DI 92)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 59 58 60 5 (set (reg:DI 93)
+        (mem:DI (plus:DI (reg/f:DI 76 [ D.2405 ])
+                (const_int 16 [0x10])) [0 *_21+16 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 60 59 61 5 (set (mem:DI (plus:DI (reg/f:DI 72 [ D.2405 ])
+                (const_int 16 [0x10])) [0 *_17+16 S8 A64])
+        (reg:DI 93)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:74 -1
+     (nil))
+(insn 61 60 62 5 (set (reg:SI 77 [ D.2404 ])
+        (mem/j/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 newbookarray.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:75 -1
+     (nil))
+(insn 62 61 63 5 (parallel [
+            (set (reg:SI 78 [ D.2404 ])
+                (plus:SI (reg:SI 77 [ D.2404 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:75 -1
+     (nil))
+(insn 63 62 64 5 (set (mem/j/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 newbookarray.length+0 S4 A64])
+        (reg:SI 78 [ D.2404 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:75 -1
+     (nil))
+(code_label 64 63 65 6 16 "" [1 uses])
+(note 65 64 66 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 66 65 67 6 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:71 -1
+     (nil))
+(code_label 67 66 68 7 15 "" [1 uses])
+(note 68 67 69 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 70 7 (set (reg:SI 60 [ i.2 ])
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:71 -1
+     (nil))
+(insn 70 69 72 7 (set (reg:SI 61 [ D.2404 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:71 -1
+     (nil))
+(insn 72 70 73 7 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 60 [ i.2 ])
+            (reg:SI 61 [ D.2404 ]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:71 -1
+     (nil))
+(jump_insn 73 72 74 7 (set (pc)
+        (if_then_else (ltu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 71)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:71 -1
+     (nil)
+ -> 71)
+(note 74 73 75 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 75 74 78 8 (set (reg:TI 79 [ D.2319 ])
+        (mem/c:TI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 newbookarray+0 S16 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:78 -1
+     (nil))
+(insn 78 75 82 8 (set (reg:TI 80 [ <retval> ])
+        (reg:TI 79 [ D.2319 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:78 -1
+     (nil))
+(insn 82 78 85 8 (set (reg/i:TI 0 ax)
+        (reg:TI 80 [ <retval> ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:79 -1
+     (nil))
+(insn 85 82 0 8 (use (reg/i:TI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:79 -1
+     (nil))
+
+;; Function find_book_by_year (find_book_by_year, funcdef_no=4, decl_uid=2160, cgraph_uid=4)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+deleting block 10
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 9 into block 8...
+Merged blocks 8 and 9.
+Merged 8 and 9 without moving.
+Merging block 10 into block 8...
+Merged blocks 8 and 10.
+Merged 8 and 10 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -36 [0xffffffffffffffdc])) [0 year+0 S4 A32])
+        (reg:SI 5 di [ year ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:82 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (mem/j/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 newbookarray.length+0 S4 A64])
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:85 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 5 di)
+        (const_int 24 [0x18])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:86 -1
+     (nil))
+(call_insn 8 7 9 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f50d59bdf00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:86 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 9 8 10 2 (set (reg/f:DI 80)
+        (reg:DI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:86 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 80)
+        (nil)))
+(insn 10 9 11 2 (set (reg/f:DI 59 [ D.2409 ])
+        (reg/f:DI 80)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:86 -1
+     (nil))
+(insn 11 10 12 2 (set (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 newbookarray.array+0 S8 A64])
+        (reg/f:DI 59 [ D.2409 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:86 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:88 -1
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (label_ref 62)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:88 -1
+     (nil)
+ -> 62)
+(barrier 14 13 66)
+(code_label 66 14 15 4 22 "" [1 uses])
+(note 15 66 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 17 4 (set (reg/f:DI 62 [ D.2411 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:90 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:SI 81)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:90 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:DI 63 [ D.2412 ])
+        (sign_extend:DI (reg:SI 81))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:90 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:DI 82)
+        (reg:DI 63 [ D.2412 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:90 -1
+     (nil))
+(insn 20 19 21 4 (parallel [
+            (set (reg:DI 82)
+                (ashift:DI (reg:DI 82)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:90 -1
+     (nil))
+(insn 21 20 22 4 (parallel [
+            (set (reg:DI 82)
+                (plus:DI (reg:DI 82)
+                    (reg:DI 63 [ D.2412 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:90 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 63 [ D.2412 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 22 21 23 4 (parallel [
+            (set (reg:DI 83)
+                (ashift:DI (reg:DI 82)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:90 -1
+     (nil))
+(insn 23 22 24 4 (set (reg:DI 82)
+        (reg:DI 83)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:90 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 63 [ D.2412 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 24 23 25 4 (set (reg:DI 64 [ D.2412 ])
+        (reg:DI 82)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:90 -1
+     (nil))
+(insn 25 24 26 4 (parallel [
+            (set (reg/f:DI 65 [ D.2411 ])
+                (plus:DI (reg/f:DI 62 [ D.2411 ])
+                    (reg:DI 64 [ D.2412 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:90 -1
+     (nil))
+(insn 26 25 27 4 (set (reg:SI 66 [ D.2410 ])
+        (mem/j:SI (plus:DI (reg/f:DI 65 [ D.2411 ])
+                (const_int 16 [0x10])) [0 _9->year+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:90 -1
+     (nil))
+(insn 27 26 28 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 66 [ D.2410 ])
+            (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -36 [0xffffffffffffffdc])) [0 year+0 S4 A32]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:90 -1
+     (nil))
+(jump_insn 28 27 29 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 59)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:90 -1
+     (nil)
+ -> 59)
+(note 29 28 30 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 5 (set (reg/f:DI 67 [ D.2411 ])
+        (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 newbookarray.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 31 30 32 5 (set (reg:SI 68 [ D.2410 ])
+        (mem/j/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 newbookarray.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 32 31 33 5 (set (reg:DI 69 [ D.2412 ])
+        (zero_extend:DI (reg:SI 68 [ D.2410 ]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 33 32 34 5 (set (reg:DI 84)
+        (reg:DI 69 [ D.2412 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 34 33 35 5 (parallel [
+            (set (reg:DI 84)
+                (ashift:DI (reg:DI 84)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 35 34 36 5 (parallel [
+            (set (reg:DI 84)
+                (plus:DI (reg:DI 84)
+                    (reg:DI 69 [ D.2412 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 69 [ D.2412 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 36 35 37 5 (parallel [
+            (set (reg:DI 85)
+                (ashift:DI (reg:DI 84)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 37 36 38 5 (set (reg:DI 84)
+        (reg:DI 85)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 69 [ D.2412 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 38 37 39 5 (set (reg:DI 70 [ D.2412 ])
+        (reg:DI 84)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 39 38 40 5 (parallel [
+            (set (reg/f:DI 71 [ D.2411 ])
+                (plus:DI (reg/f:DI 67 [ D.2411 ])
+                    (reg:DI 70 [ D.2412 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 40 39 41 5 (set (reg/f:DI 72 [ D.2411 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 41 40 42 5 (set (reg:SI 86)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 42 41 43 5 (set (reg:DI 73 [ D.2412 ])
+        (sign_extend:DI (reg:SI 86))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 43 42 44 5 (set (reg:DI 87)
+        (reg:DI 73 [ D.2412 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 44 43 45 5 (parallel [
+            (set (reg:DI 87)
+                (ashift:DI (reg:DI 87)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 45 44 46 5 (parallel [
+            (set (reg:DI 87)
+                (plus:DI (reg:DI 87)
+                    (reg:DI 73 [ D.2412 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 73 [ D.2412 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 46 45 47 5 (parallel [
+            (set (reg:DI 88)
+                (ashift:DI (reg:DI 87)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 47 46 48 5 (set (reg:DI 87)
+        (reg:DI 88)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 73 [ D.2412 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 48 47 49 5 (set (reg:DI 74 [ D.2412 ])
+        (reg:DI 87)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 49 48 50 5 (parallel [
+            (set (reg/f:DI 75 [ D.2411 ])
+                (plus:DI (reg/f:DI 72 [ D.2411 ])
+                    (reg:DI 74 [ D.2412 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 50 49 51 5 (set (reg:DI 89)
+        (mem:DI (reg/f:DI 75 [ D.2411 ]) [0 *_20+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 51 50 52 5 (set (mem:DI (reg/f:DI 71 [ D.2411 ]) [0 *_16+0 S8 A64])
+        (reg:DI 89)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 52 51 53 5 (set (reg:DI 90)
+        (mem:DI (plus:DI (reg/f:DI 75 [ D.2411 ])
+                (const_int 8 [0x8])) [0 *_20+8 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 53 52 54 5 (set (mem:DI (plus:DI (reg/f:DI 71 [ D.2411 ])
+                (const_int 8 [0x8])) [0 *_16+8 S8 A64])
+        (reg:DI 90)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 54 53 55 5 (set (reg:DI 91)
+        (mem:DI (plus:DI (reg/f:DI 75 [ D.2411 ])
+                (const_int 16 [0x10])) [0 *_20+16 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 55 54 56 5 (set (mem:DI (plus:DI (reg/f:DI 71 [ D.2411 ])
+                (const_int 16 [0x10])) [0 *_16+16 S8 A64])
+        (reg:DI 91)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:91 -1
+     (nil))
+(insn 56 55 57 5 (set (reg:SI 76 [ D.2410 ])
+        (mem/j/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 newbookarray.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:92 -1
+     (nil))
+(insn 57 56 58 5 (parallel [
+            (set (reg:SI 77 [ D.2410 ])
+                (plus:SI (reg:SI 76 [ D.2410 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:92 -1
+     (nil))
+(insn 58 57 59 5 (set (mem/j/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 newbookarray.length+0 S4 A64])
+        (reg:SI 77 [ D.2410 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:92 -1
+     (nil))
+(code_label 59 58 60 6 21 "" [1 uses])
+(note 60 59 61 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 61 60 62 6 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:88 -1
+     (nil))
+(code_label 62 61 63 7 20 "" [1 uses])
+(note 63 62 64 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 64 63 65 7 (set (reg:SI 60 [ i.3 ])
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:88 -1
+     (nil))
+(insn 65 64 67 7 (set (reg:SI 61 [ D.2410 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:88 -1
+     (nil))
+(insn 67 65 68 7 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 60 [ i.3 ])
+            (reg:SI 61 [ D.2410 ]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:88 -1
+     (nil))
+(jump_insn 68 67 69 7 (set (pc)
+        (if_then_else (ltu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 66)
+            (pc))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:88 -1
+     (nil)
+ -> 66)
+(note 69 68 70 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 70 69 73 8 (set (reg:TI 78 [ D.2343 ])
+        (mem/c:TI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 newbookarray+0 S16 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:95 -1
+     (nil))
+(insn 73 70 77 8 (set (reg:TI 79 [ <retval> ])
+        (reg:TI 78 [ D.2343 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:95 -1
+     (nil))
+(insn 77 73 80 8 (set (reg/i:TI 0 ax)
+        (reg:TI 79 [ <retval> ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:96 -1
+     (nil))
+(insn 80 77 0 8 (use (reg/i:TI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:96 -1
+     (nil))
+
+;; Function add_book (add_book, funcdef_no=5, decl_uid=2152, cgraph_uid=5)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:DI 59 [ D.2413 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:100 -1
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 60 [ D.2414 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:100 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 61 [ D.2415 ])
+        (zero_extend:DI (reg:SI 60 [ D.2414 ]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:100 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:DI 86)
+        (reg:DI 61 [ D.2415 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:100 -1
+     (nil))
+(insn 9 8 10 2 (parallel [
+            (set (reg:DI 86)
+                (ashift:DI (reg:DI 86)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:100 -1
+     (nil))
+(insn 10 9 11 2 (parallel [
+            (set (reg:DI 86)
+                (plus:DI (reg:DI 86)
+                    (reg:DI 61 [ D.2415 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:100 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 61 [ D.2415 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 11 10 12 2 (parallel [
+            (set (reg:DI 87)
+                (ashift:DI (reg:DI 86)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:100 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 86)
+        (reg:DI 87)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:100 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 61 [ D.2415 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 13 12 14 2 (set (reg:DI 62 [ D.2415 ])
+        (reg:DI 86)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:100 -1
+     (nil))
+(insn 14 13 15 2 (parallel [
+            (set (reg/f:DI 63 [ D.2413 ])
+                (plus:DI (reg/f:DI 59 [ D.2413 ])
+                    (reg:DI 62 [ D.2415 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:100 -1
+     (nil))
+(insn 15 14 16 2 (set (reg/f:DI 64 [ D.2416 ])
+        (mem/f/j/c:DI (reg/f:DI 53 virtual-incoming-args) [0 book.title+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:100 -1
+     (nil))
+(insn 16 15 17 2 (set (mem/f/j:DI (reg/f:DI 63 [ D.2413 ]) [0 _5->title+0 S8 A64])
+        (reg/f:DI 64 [ D.2416 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:100 -1
+     (nil))
+(insn 17 16 18 2 (set (reg/f:DI 65 [ D.2413 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:101 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 66 [ D.2414 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:101 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:DI 67 [ D.2415 ])
+        (zero_extend:DI (reg:SI 66 [ D.2414 ]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:101 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:DI 88)
+        (reg:DI 67 [ D.2415 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:101 -1
+     (nil))
+(insn 21 20 22 2 (parallel [
+            (set (reg:DI 88)
+                (ashift:DI (reg:DI 88)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:101 -1
+     (nil))
+(insn 22 21 23 2 (parallel [
+            (set (reg:DI 88)
+                (plus:DI (reg:DI 88)
+                    (reg:DI 67 [ D.2415 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:101 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 67 [ D.2415 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 23 22 24 2 (parallel [
+            (set (reg:DI 89)
+                (ashift:DI (reg:DI 88)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:101 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:DI 88)
+        (reg:DI 89)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:101 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 67 [ D.2415 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 25 24 26 2 (set (reg:DI 68 [ D.2415 ])
+        (reg:DI 88)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:101 -1
+     (nil))
+(insn 26 25 27 2 (parallel [
+            (set (reg/f:DI 69 [ D.2413 ])
+                (plus:DI (reg/f:DI 65 [ D.2413 ])
+                    (reg:DI 68 [ D.2415 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:101 -1
+     (nil))
+(insn 27 26 28 2 (set (reg/f:DI 70 [ D.2416 ])
+        (mem/f/j/c:DI (plus:DI (reg/f:DI 53 virtual-incoming-args)
+                (const_int 8 [0x8])) [0 book.authors+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:101 -1
+     (nil))
+(insn 28 27 29 2 (set (mem/f/j:DI (plus:DI (reg/f:DI 69 [ D.2413 ])
+                (const_int 8 [0x8])) [0 _11->authors+0 S8 A64])
+        (reg/f:DI 70 [ D.2416 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:101 -1
+     (nil))
+(insn 29 28 30 2 (set (reg/f:DI 71 [ D.2413 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:102 -1
+     (nil))
+(insn 30 29 31 2 (set (reg:SI 72 [ D.2414 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:102 -1
+     (nil))
+(insn 31 30 32 2 (set (reg:DI 73 [ D.2415 ])
+        (zero_extend:DI (reg:SI 72 [ D.2414 ]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:102 -1
+     (nil))
+(insn 32 31 33 2 (set (reg:DI 90)
+        (reg:DI 73 [ D.2415 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:102 -1
+     (nil))
+(insn 33 32 34 2 (parallel [
+            (set (reg:DI 90)
+                (ashift:DI (reg:DI 90)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:102 -1
+     (nil))
+(insn 34 33 35 2 (parallel [
+            (set (reg:DI 90)
+                (plus:DI (reg:DI 90)
+                    (reg:DI 73 [ D.2415 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:102 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 73 [ D.2415 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 35 34 36 2 (parallel [
+            (set (reg:DI 91)
+                (ashift:DI (reg:DI 90)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:102 -1
+     (nil))
+(insn 36 35 37 2 (set (reg:DI 90)
+        (reg:DI 91)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:102 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 73 [ D.2415 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 37 36 38 2 (set (reg:DI 74 [ D.2415 ])
+        (reg:DI 90)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:102 -1
+     (nil))
+(insn 38 37 39 2 (parallel [
+            (set (reg/f:DI 75 [ D.2413 ])
+                (plus:DI (reg/f:DI 71 [ D.2413 ])
+                    (reg:DI 74 [ D.2415 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:102 -1
+     (nil))
+(insn 39 38 40 2 (set (reg:SI 76 [ D.2414 ])
+        (mem/j/c:SI (plus:DI (reg/f:DI 53 virtual-incoming-args)
+                (const_int 16 [0x10])) [0 book.year+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:102 -1
+     (nil))
+(insn 40 39 41 2 (set (mem/j:SI (plus:DI (reg/f:DI 75 [ D.2413 ])
+                (const_int 16 [0x10])) [0 _17->year+0 S4 A64])
+        (reg:SI 76 [ D.2414 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:102 -1
+     (nil))
+(insn 41 40 42 2 (set (reg/f:DI 77 [ D.2413 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>) [0 library.array+0 S8 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:103 -1
+     (nil))
+(insn 42 41 43 2 (set (reg:SI 78 [ D.2414 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:103 -1
+     (nil))
+(insn 43 42 44 2 (set (reg:DI 79 [ D.2415 ])
+        (zero_extend:DI (reg:SI 78 [ D.2414 ]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:103 -1
+     (nil))
+(insn 44 43 45 2 (set (reg:DI 92)
+        (reg:DI 79 [ D.2415 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:103 -1
+     (nil))
+(insn 45 44 46 2 (parallel [
+            (set (reg:DI 92)
+                (ashift:DI (reg:DI 92)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:103 -1
+     (nil))
+(insn 46 45 47 2 (parallel [
+            (set (reg:DI 92)
+                (plus:DI (reg:DI 92)
+                    (reg:DI 79 [ D.2415 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:103 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 79 [ D.2415 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 47 46 48 2 (parallel [
+            (set (reg:DI 93)
+                (ashift:DI (reg:DI 92)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:103 -1
+     (nil))
+(insn 48 47 49 2 (set (reg:DI 92)
+        (reg:DI 93)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:103 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 79 [ D.2415 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 49 48 50 2 (set (reg:DI 80 [ D.2415 ])
+        (reg:DI 92)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:103 -1
+     (nil))
+(insn 50 49 51 2 (parallel [
+            (set (reg/f:DI 81 [ D.2413 ])
+                (plus:DI (reg/f:DI 77 [ D.2413 ])
+                    (reg:DI 80 [ D.2415 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:103 -1
+     (nil))
+(insn 51 50 52 2 (set (reg:SI 82 [ D.2414 ])
+        (mem/j/c:SI (plus:DI (reg/f:DI 53 virtual-incoming-args)
+                (const_int 20 [0x14])) [0 book.copies+0 S4 A32])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:103 -1
+     (nil))
+(insn 52 51 53 2 (set (mem/j:SI (plus:DI (reg/f:DI 81 [ D.2413 ])
+                (const_int 20 [0x14])) [0 _23->copies+0 S4 A32])
+        (reg:SI 82 [ D.2414 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:103 -1
+     (nil))
+(insn 53 52 54 2 (set (reg:SI 83 [ D.2414 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:104 -1
+     (nil))
+(insn 54 53 55 2 (parallel [
+            (set (reg:SI 84 [ D.2414 ])
+                (plus:SI (reg:SI 83 [ D.2414 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:104 -1
+     (nil))
+(insn 55 54 58 2 (set (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("library")  <var_decl 0x7f50d5abd260 library>)
+                    (const_int 8 [0x8]))) [0 library.length+0 S4 A64])
+        (reg:SI 84 [ D.2414 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:104 -1
+     (nil))
+(insn 58 55 59 2 (clobber (reg/i:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:105 -1
+     (nil))
+(insn 59 58 57 2 (clobber (reg:SI 85 [ <retval> ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:105 -1
+     (nil))
+(insn 57 59 60 2 (set (reg/i:SI 0 ax)
+        (reg:SI 85 [ <retval> ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:105 -1
+     (nil))
+(insn 60 57 0 2 (use (reg/i:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:105 -1
+     (nil))
+
+;; Function remove_book (remove_book, funcdef_no=6, decl_uid=2154, cgraph_uid=6)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+deleting block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 8 2 (set (reg:SI 59 [ D.2417 ])
+        (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:109 -1
+     (nil))
+(insn 8 5 12 2 (set (reg:SI 60 [ <retval> ])
+        (reg:SI 59 [ D.2417 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:109 -1
+     (nil))
+(insn 12 8 15 2 (set (reg/i:SI 0 ax)
+        (reg:SI 60 [ <retval> ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:110 -1
+     (nil))
+(insn 15 12 0 2 (use (reg/i:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c:110 -1
      (nil))

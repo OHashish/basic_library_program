@@ -1,6 +1,7 @@
 
 #include "unity.h"
-
+#include <stdlib.h>
+#include <string.h>
 #include "assert.h"
 #include "stdio.h"
 #include "book_management.h"

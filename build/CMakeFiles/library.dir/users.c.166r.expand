@@ -1,5 +1,5 @@
 
-;; Function register_user (register_user, funcdef_no=0, decl_uid=1940, cgraph_uid=0)
+;; Function register_user (register_user, funcdef_no=0, decl_uid=2142, cgraph_uid=0)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -48,13 +48,13 @@ try_optimize_cfg iteration 2
      (nil))
 (note 7 6 10 2 NOTE_INSN_FUNCTION_BEG)
 (insn 10 7 11 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7efd8fe525f0 *.LC0>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:13 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f88bfedf5f0 *.LC0>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:13 -1
      (nil))
 (insn 11 10 12 2 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7efd8fe52688 *.LC1>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:13 -1
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f88bfedf688 *.LC1>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:13 -1
      (nil))
 (call_insn 12 11 13 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7efd8fe09000 fopen>) [0 fopen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f88bfe96000 fopen>) [0 fopen S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:13 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -86,7 +86,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 60 [ D.2195 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:14 -1
      (nil))
 (insn 20 19 21 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7efd8fe52720 *.LC2>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:14 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f88bfedf720 *.LC2>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:14 -1
      (nil))
 (insn 21 20 22 2 (set (reg:DI 5 di)
         (reg:DI 67)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:14 -1
@@ -95,7 +95,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:14 -1
      (nil))
 (call_insn 23 22 24 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fprintf") [flags 0x41]  <function_decl 0x7efd8fd25700 fprintf>) [0 __builtin_fprintf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fprintf") [flags 0x41]  <function_decl 0x7f88bfdb2700 fprintf>) [0 __builtin_fprintf S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:14 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -112,19 +112,19 @@ try_optimize_cfg iteration 2
         (reg:DI 68)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:15 -1
      (nil))
 (call_insn 26 25 27 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7efd8fe02e00 fclose>) [0 fclose S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f88bfe8fe00 fclose>) [0 fclose S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:15 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
 (insn 27 26 28 2 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7efd8fe527b8 *.LC3>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:16 -1
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f88bfedf7b8 *.LC3>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:16 -1
      (nil))
 (insn 28 27 29 2 (set (reg:QI 0 ax)
         (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:16 -1
      (nil))
 (call_insn 29 28 30 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7efd8fd28800 printf>) [0 __builtin_printf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f88bfdb5800 printf>) [0 __builtin_printf S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:16 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -142,7 +142,7 @@ try_optimize_cfg iteration 2
 (insn 40 37 0 2 (use (reg/i:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:19 -1
      (nil))
 
-;; Function login_user (login_user, funcdef_no=1, decl_uid=1942, cgraph_uid=1)
+;; Function login_user (login_user, funcdef_no=1, decl_uid=2144, cgraph_uid=1)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -207,7 +207,7 @@ try_optimize_cfg iteration 2
         (const_int 20 [0x14])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:24 -1
      (nil))
 (call_insn 11 10 12 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7efd8fd43f00 malloc>) [0 __builtin_malloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f88bfdd0f00 malloc>) [0 __builtin_malloc S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:24 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -228,7 +228,7 @@ try_optimize_cfg iteration 2
         (const_int 20 [0x14])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:25 -1
      (nil))
 (call_insn 16 15 17 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7efd8fd43f00 malloc>) [0 __builtin_malloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f88bfdd0f00 malloc>) [0 __builtin_malloc S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:25 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -246,13 +246,13 @@ try_optimize_cfg iteration 2
         (reg/f:DI 61 [ D.2202 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:25 -1
      (nil))
 (insn 20 19 21 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7efd8fe52e40 *.LC4>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:26 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f88bfedfe40 *.LC4>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:26 -1
      (nil))
 (insn 21 20 22 2 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7efd8fe52688 *.LC1>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:26 -1
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f88bfedf688 *.LC1>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:26 -1
      (nil))
 (call_insn 22 21 23 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7efd8fe09000 fopen>) [0 fopen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f88bfe96000 fopen>) [0 fopen S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:26 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -291,7 +291,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 64 [ D.2203 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:30 -1
      (nil))
 (insn 33 32 34 4 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7efd8fe52ed8 *.LC5>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:30 -1
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f88bfedfed8 *.LC5>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:30 -1
      (nil))
 (insn 34 33 35 4 (set (reg:DI 5 di)
         (reg:DI 78)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:30 -1
@@ -300,7 +300,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:30 -1
      (nil))
 (call_insn 36 35 37 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("*__isoc99_fscanf") [flags 0x41]  <function_decl 0x7efd8fd28300 fscanf>) [0 __builtin_fscanf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_fscanf") [flags 0x41]  <function_decl 0x7f88bfdb5300 fscanf>) [0 __builtin_fscanf S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:30 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -324,7 +324,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 66 [ D.2203 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:32 -1
      (nil))
 (call_insn/i 41 40 42 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7efd8fd1fe00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f88bfdace00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:32 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -361,7 +361,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 69 [ D.2203 ])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:32 -1
      (nil))
 (call_insn/i 50 49 51 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7efd8fd1fe00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f88bfdace00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:32 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -384,13 +384,13 @@ try_optimize_cfg iteration 2
  -> 61)
 (note 54 53 55 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
 (insn 55 54 56 6 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7efd8fe60000 *.LC6>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:34 -1
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f88bfeed000 *.LC6>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:34 -1
      (nil))
 (insn 56 55 57 6 (set (reg:QI 0 ax)
         (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:34 -1
      (nil))
 (call_insn 57 56 58 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7efd8fd28800 printf>) [0 __builtin_printf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f88bfdb5800 printf>) [0 __builtin_printf S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:34 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -427,7 +427,7 @@ try_optimize_cfg iteration 2
         (reg:DI 80)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:28 -1
      (nil))
 (call_insn 68 67 69 7 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fgets") [flags 0x41]  <function_decl 0x7efd8fe1a200 fgets>) [0 fgets S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fgets") [flags 0x41]  <function_decl 0x7f88bfea7200 fgets>) [0 fgets S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:28 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -457,19 +457,19 @@ try_optimize_cfg iteration 2
         (reg:DI 81)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:41 -1
      (nil))
 (call_insn 76 75 77 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7efd8fe02e00 fclose>) [0 fclose S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f88bfe8fe00 fclose>) [0 fclose S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:41 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
 (insn 77 76 78 8 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x7efd8fe60098 *.LC7>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:42 -1
+        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x7f88bfeed098 *.LC7>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:42 -1
      (nil))
 (insn 78 77 79 8 (set (reg:QI 0 ax)
         (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:42 -1
      (nil))
 (call_insn 79 78 80 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7efd8fd28800 printf>) [0 __builtin_printf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f88bfdb5800 printf>) [0 __builtin_printf S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:42 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -489,7 +489,7 @@ try_optimize_cfg iteration 2
 (insn 92 89 0 10 (use (reg/i:SI 0 ax)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:45 -1
      (nil))
 
-;; Function login_librarian (login_librarian, funcdef_no=2, decl_uid=1943, cgraph_uid=2)
+;; Function login_librarian (login_librarian, funcdef_no=2, decl_uid=2145, cgraph_uid=2)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -530,7 +530,7 @@ try_optimize_cfg iteration 2
         (const_int 20 [0x14])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:49 -1
      (nil))
 (call_insn 7 6 8 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7efd8fd43f00 malloc>) [0 __builtin_malloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f88bfdd0f00 malloc>) [0 __builtin_malloc S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:49 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -545,13 +545,13 @@ try_optimize_cfg iteration 2
         (reg/f:DI 62)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:49 -1
      (nil))
 (insn 10 9 11 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7efd8fe52e40 *.LC4>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:50 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f88bfedfe40 *.LC4>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:50 -1
      (nil))
 (insn 11 10 12 2 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x7efd8fe60850 *.LC8>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:50 -1
+        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x7f88bfeed850 *.LC8>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:50 -1
      (nil))
 (call_insn 12 11 13 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7efd8fe09000 fopen>) [0 fopen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f88bfe96000 fopen>) [0 fopen S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:50 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -576,7 +576,7 @@ try_optimize_cfg iteration 2
         (reg:DI 64)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:52 -1
      (nil))
 (insn 18 17 19 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x7efd8fe608e8 *.LC9>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:52 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x7f88bfeed8e8 *.LC9>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:52 -1
      (nil))
 (insn 19 18 20 2 (set (reg:DI 5 di)
         (reg:DI 65)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:52 -1
@@ -585,7 +585,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:52 -1
      (nil))
 (call_insn 21 20 22 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("*__isoc99_fscanf") [flags 0x41]  <function_decl 0x7efd8fd28300 fscanf>) [0 __builtin_fscanf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_fscanf") [flags 0x41]  <function_decl 0x7f88bfdb5300 fscanf>) [0 __builtin_fscanf S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:52 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -608,7 +608,7 @@ try_optimize_cfg iteration 2
         (reg:DI 67)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:54 -1
      (nil))
 (call_insn/i 26 25 27 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7efd8fd1fe00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f88bfdace00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:54 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -631,13 +631,13 @@ try_optimize_cfg iteration 2
  -> 37)
 (note 30 29 31 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (insn 31 30 32 4 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x7efd8fe60980 *.LC10>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:56 -1
+        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x7f88bfeed980 *.LC10>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:56 -1
      (nil))
 (insn 32 31 33 4 (set (reg:QI 0 ax)
         (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:56 -1
      (nil))
 (call_insn 33 32 34 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7efd8fd28800 printf>) [0 __builtin_printf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f88bfdb5800 printf>) [0 __builtin_printf S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:56 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -661,19 +661,19 @@ try_optimize_cfg iteration 2
         (reg:DI 68)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:60 -1
      (nil))
 (call_insn 41 40 42 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7efd8fe02e00 fclose>) [0 fclose S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f88bfe8fe00 fclose>) [0 fclose S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:60 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
 (insn 42 41 43 5 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7efd8fe60a18 *.LC11>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:61 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f88bfeeda18 *.LC11>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:61 -1
      (nil))
 (insn 43 42 44 5 (set (reg:QI 0 ax)
         (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:61 -1
      (nil))
 (call_insn 44 43 45 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7efd8fd28800 printf>) [0 __builtin_printf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f88bfdb5800 printf>) [0 __builtin_printf S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/users.c:61 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))

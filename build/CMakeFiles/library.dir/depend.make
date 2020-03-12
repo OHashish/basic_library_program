@@ -10,6 +10,7 @@ CMakeFiles/library.dir/interface.c.o: ../interface.h
 CMakeFiles/library.dir/interface.c.o: ../library.h
 CMakeFiles/library.dir/interface.c.o: ../users.h
 
+CMakeFiles/library.dir/library.c.o: ../book_management.h
 CMakeFiles/library.dir/library.c.o: ../library.c
 CMakeFiles/library.dir/library.c.o: ../library.h
 

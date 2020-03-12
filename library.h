@@ -4,11 +4,15 @@
 #include <stdlib.h>
 #include <string.h>
 
-int search_book();
+struct BookU {
+		char *title; 
+		char *authors; 
+		unsigned int year;
+};
+int library_init();
+int borrow_book(char *user,struct BookU book);
 
-int borrow_book();
-
-int return_book();
+int return_book(char *user,struct BookU book);
 
 
 #endif
