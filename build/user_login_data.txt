@@ -8,6 +8,4 @@ test test
 1 1
 3 3
 urmum dad
-1 `
-` `
 fgsd dsf

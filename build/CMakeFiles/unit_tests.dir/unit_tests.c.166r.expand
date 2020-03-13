@@ -113,9 +113,9 @@ try_optimize_cfg iteration 2
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (insn 5 2 6 2 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7ff882045be0 *.LC0>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unit_tests.c:28 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fcb60582be0 *.LC0>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unit_tests.c:28 -1
      (nil))
-(call_insn 6 5 7 2 (call (mem:QI (symbol_ref:DI ("UnityBegin") [flags 0x41]  <function_decl 0x7ff881f7a500 UnityBegin>) [0 UnityBegin S1 A8])
+(call_insn 6 5 7 2 (call (mem:QI (symbol_ref:DI ("UnityBegin") [flags 0x41]  <function_decl 0x7fcb604b7500 UnityBegin>) [0 UnityBegin S1 A8])
         (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unit_tests.c:28 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -124,12 +124,12 @@ try_optimize_cfg iteration 2
         (const_int 31 [0x1f])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unit_tests.c:31 -1
      (nil))
 (insn 8 7 9 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7ff882045c78 *.LC1>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unit_tests.c:31 -1
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7fcb60582c78 *.LC1>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unit_tests.c:31 -1
      (nil))
 (insn 9 8 10 2 (set (reg:DI 5 di)
-        (symbol_ref:DI ("test_a_function") [flags 0x3]  <function_decl 0x7ff882039f00 test_a_function>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unit_tests.c:31 -1
+        (symbol_ref:DI ("test_a_function") [flags 0x3]  <function_decl 0x7fcb60576f00 test_a_function>)) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unit_tests.c:31 -1
      (nil))
-(call_insn 10 9 11 2 (call (mem:QI (symbol_ref:DI ("UnityDefaultTestRun") [flags 0x41]  <function_decl 0x7ff881f7a900 UnityDefaultTestRun>) [0 UnityDefaultTestRun S1 A8])
+(call_insn 10 9 11 2 (call (mem:QI (symbol_ref:DI ("UnityDefaultTestRun") [flags 0x41]  <function_decl 0x7fcb604b7900 UnityDefaultTestRun>) [0 UnityDefaultTestRun S1 A8])
         (const_int 0 [0])) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unit_tests.c:31 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -137,7 +137,7 @@ try_optimize_cfg iteration 2
             (expr_list:REG_BR_PRED (use (reg:SI 1 dx))
                 (nil)))))
 (call_insn 11 10 12 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("UnityEnd") [flags 0x41]  <function_decl 0x7ff881f7a600 UnityEnd>) [0 UnityEnd S1 A8])
+        (call (mem:QI (symbol_ref:DI ("UnityEnd") [flags 0x41]  <function_decl 0x7fcb604b7600 UnityEnd>) [0 UnityEnd S1 A8])
             (const_int 0 [0]))) /home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/unit_tests.c:33 -1
      (nil)
     (nil))

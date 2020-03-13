@@ -25,17 +25,19 @@ static void search_book_interface(){
 				scanf("%s",titleb);
 
 				newbookarray=find_book_by_title(titleb);
+				
 				if(newbookarray.array[0].title==NULL){
 					printf("Book not found!");
 				}
 				else
 				{
-				printf("Book title: %s\n",newbookarray.array[0].title);
-				printf("Book author: %s\n",newbookarray.array[0].authors);
-				printf("Book year of production: %u\n",newbookarray.array[0].year);
+					for (int i=0;i<newbookarray.length;i++){
+				printf("Book title: %s\n",newbookarray.array[i].title);
+				printf("Book author: %s\n",newbookarray.array[i].authors);
+				printf("Book year of production: %u\n",newbookarray.array[i].year);
+					}
 				}
-				free(titleb);
-				free(newbookarray.array);
+				
 				break;
 			}
 			case 2:{
@@ -85,7 +87,7 @@ static void search_book_interface(){
 			 	break;
 			}
 			case 4:
-				printf("goodbye\n");
+				printf("goodbye");
 				break;
 			default:
 				printf("Sorry, that doesn't seem to be an option\n");
@@ -94,7 +96,7 @@ static void search_book_interface(){
 }	
 static void user_actions_interface(){
 	int choice;
-	printf("\nPlease enter next action:\n1) Search for book\n2) Return book\n3) Borrow Book\nchoice: ");
+	printf("\nPlease enter next action:\n1) Search for book\n2) Borrow book\n3) Return Book\nchoice: ");
 		scanf("%d",&choice);
 
 		switch (choice) {
@@ -164,6 +166,7 @@ static void librarian_actions_interface(){
 				printf("Enter number of copies:");
 				scanf("%u",&book.copies);
 				 add_book(book);
+				 
 				break;
 			}
 			case 2:{
@@ -179,7 +182,7 @@ static void librarian_actions_interface(){
 				scanf("%s",book.authors);
 
 				printf("Enter year of production:");
-				scanf("%d",book.year);
+				scanf("%d",&book.year);
 
 				remove_book(book);
 				break;
@@ -234,8 +237,7 @@ static void librarian_actions_interface(){
 				if(login_user(u)==1){
 					user_actions_interface();
 				}
-				free(u.username);
-				free(u.password);
+				
 				break;
 			}
 				case 2:
@@ -248,11 +250,11 @@ static void librarian_actions_interface(){
 				if(login_librarian(pass)){
 				librarian_actions_interface();
 				}
-				free(pass);
+				
 				break;
 				}
 			    case 3:
-				printf("goodbye\n");
+				printf("goodbye");
 				break;
 				default:
 				printf("Sorry, that doesn't seem to be an option\n");
@@ -293,6 +295,10 @@ void run_interface() {
 	library_init();
 	FILE *file;
 	load_books(file);
+	// printf("0:%s    ",library.array[0].title);
+    //       printf("1:%s    ",library.array[1].title);
+    //        printf("2:%s    ",library.array[2].title);
+    //         printf("3:%s    \n",library.array[3].title);
 	main_menu();
 	store_books(file);
 

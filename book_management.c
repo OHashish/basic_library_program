@@ -3,14 +3,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-
-
-// struct BookArray library;
-// library.array[0].title="lmaolmafaoaooa";
-// library.length=1;
 extern struct BookArray library;
  int store_books( FILE *file){
-         file=fopen("books.txt","a");
+         file=fopen("books.txt","w");
 		for (int i=0;i<library.length;i++)
         {
             fprintf(file,"%s,%s,%d,%d\n",library.array[i].title,library.array[i].authors,library.array[i].year,library.array[i].copies);
@@ -22,34 +17,41 @@ extern struct BookArray library;
  }
 
 int load_books(FILE *file){
-    file=fopen("books.txt", "r");
+    file=fopen("/home/csunix/sc19orss/comp1921/sc19orss/build/books.txt", "r");
     char *token;
-    token=(char*) malloc(20*sizeof(char));
+    token=(char*) malloc(30*sizeof(char));
     char line[40];
-         while(fgets(line, sizeof line, file) != NULL)
-         {
+       
+         while(fgets(line, sizeof(line), file) )
+         {  
+             
+             token=(char*) malloc(20*sizeof(char));
             token = strtok(line,",");
-            library.array[library.length].title=token;
+            strcpy(library.array[library.length].title,token);
             token = strtok(NULL,",");
-            library.array[library.length].authors=token;
+            strcpy(library.array[library.length].authors,token);
             token = strtok(NULL,",");
             library.array[library.length].year=atoi(token);
             token = strtok(NULL,",");
             library.array[library.length].copies=atoi(token);
-            printf("%s\n",library.array[library.length].title);
             library.length++;
+             
          }
-         printf("%d\n",library.length);
-         printf("%s\n",library.array[1].title);
         fclose(file);
     return 0;
 }
 
 struct BookArray find_book_by_author(const char *author){
     
-    struct BookArray newbookarray;
+     struct BookArray newbookarray;
     newbookarray.length=0;
-    newbookarray.array= malloc(sizeof(struct Book)); 
+    newbookarray.array= malloc(10*sizeof(struct Book)); 
+    for(int i=0;i<10;i++)
+        {
+
+        newbookarray.array[i].title= (char*)malloc(20*sizeof(char));   
+        newbookarray.array[i].authors= (char*)malloc(20*sizeof(char));     
+        }
 
     for (int i=0;i<library.length;i++)
         {
@@ -66,7 +68,13 @@ struct BookArray find_book_by_title(const char *title){
     
     struct BookArray newbookarray;
     newbookarray.length=0;
-    newbookarray.array= malloc(sizeof(struct Book)); 
+    newbookarray.array= malloc(10*sizeof(struct Book)); 
+    for(int i=0;i<10;i++)
+        {
+
+        newbookarray.array[i].title= (char*)malloc(20*sizeof(char));   
+        newbookarray.array[i].authors= (char*)malloc(20*sizeof(char));     
+        }
 
     for (int i=0;i<library.length;i++)
         {
@@ -75,16 +83,22 @@ struct BookArray find_book_by_title(const char *title){
             newbookarray.length++;
            }
         }
+        printf("%d",newbookarray.length);
     return newbookarray;
 }
 
 
 struct BookArray find_book_by_year(unsigned int year){
     
-    struct BookArray newbookarray;
+     struct BookArray newbookarray;
     newbookarray.length=0;
-    newbookarray.array= malloc(sizeof(struct Book)); 
+    newbookarray.array= malloc(10*sizeof(struct Book)); 
+    for(int i=0;i<10;i++)
+        {
 
+        newbookarray.array[i].title= (char*)malloc(20*sizeof(char));   
+        newbookarray.array[i].authors= (char*)malloc(20*sizeof(char));     
+        }
     for (int i=0;i<library.length;i++)
         {
            if(library.array[i].year==year){
@@ -106,5 +120,17 @@ int add_book(struct Book book){
 
 
 int remove_book( struct Book book){
+    printf("%s",book.title);
+    printf("%s",book.authors);
+    printf("%d",book.year);
+
+    for (int i=0;i<library.length;i++){
+        if(strcmp(library.array[i].title,book.title)==0 &&
+        strcmp(library.array[i].authors,book.authors)==0 &&
+        library.array[i].year==book.year){
+            library.array[i]=library.array[library.length-1];
+        }
+    }
+    library.length--;
 return 0;
 }
