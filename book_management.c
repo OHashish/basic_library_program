@@ -4,6 +4,18 @@
 #include <string.h>
 
 extern struct BookArray library;
+
+int library_init(){
+        library.length=0;
+         library.array= (struct Book*)malloc(1000*sizeof(struct Book));    
+        for(int i=0;i<1000;i++)
+        {
+
+        library.array[i].title= (char*)malloc(20*sizeof(char));   
+        library.array[i].authors= (char*)malloc(20*sizeof(char));     
+        }
+}
+
  int store_books( FILE *file){
          file=fopen("books.txt","w");
 		for (int i=0;i<library.length;i++)

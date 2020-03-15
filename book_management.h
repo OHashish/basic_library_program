@@ -19,7 +19,7 @@ struct BookArray {
 };
 
 struct BookArray library;
-
+int library_init();
 
 //saves the database of books in the specified file
 //returns 0 if books were stored correctly, or an error code otherwise

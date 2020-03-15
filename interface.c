@@ -7,10 +7,11 @@
 #include <stdlib.h>
 #include <string.h>
 extern struct BookArray library;
+extern struct BorrowArray borrow_set;
 static void search_book_interface(){
 	int choice;
 	do{
-	printf("\nPlease enter next action:\n1) Search by title\n2) Search by author\n3) Search by year\n4) Quit\nchoice: ");
+	printf("\nPlease enter next action:\n1) Search by title\n2) Search by author\n3) Search by year\n4) Go Back\nchoice: ");
 		scanf("%d",&choice);
 	
 		switch (choice) {
@@ -96,7 +97,8 @@ static void search_book_interface(){
 }	
 static void user_actions_interface(){
 	int choice;
-	printf("\nPlease enter next action:\n1) Search for book\n2) Borrow book\n3) Return Book\nchoice: ");
+	do {
+	printf("\nPlease enter next action:\n1) Search for book\n2) Borrow book\n3) Return Book\n4) Log Out\nchoice: ");
 		scanf("%d",&choice);
 
 		switch (choice) {
@@ -106,40 +108,42 @@ static void user_actions_interface(){
 				break;
 			}
 			case 2:{
-				struct BookU book;
-				char *username;
-				book.title=(char*) malloc(30*sizeof(char));
-				username=(char*) malloc(20*sizeof(char));
+				struct Borrow Book;
+				
+				Book.title=(char*) malloc(30*sizeof(char));
+				Book.user=(char*) malloc(20*sizeof(char));
 				
 
 				printf("Enter book title you want to borrow:");
-				scanf("%s",book.title);
+				scanf("%s",Book.title);
 
 				printf("Enter your username:");
-				scanf("%s",username);
+				scanf("%s",Book.user);
 
-				borrow_book(username,book);
+				borrow_book(Book);
 				break;
 			}
 			case 3:{	
-				struct BookU book;
-				char *username;
-				book.title=(char*) malloc(30*sizeof(char));
-				username=(char*) malloc(20*sizeof(char));
+				struct Borrow Book;
+				
+				Book.title=(char*) malloc(30*sizeof(char));
+				Book.user=(char*) malloc(20*sizeof(char));
 				
 
 				printf("Enter book title you want to return:");
-				scanf("%s",book.title);
+				scanf("%s",Book.title);
 
 				printf("Enter your username:");
-				scanf("%s",username);		
-				return_book(username,book);
+				scanf("%s",Book.user);		
+				return_book(Book);
 			 	break;
 			}
-
+			case 4:
+			break;
 			default:
 				printf("Sorry, that doesn't seem to be an option\n");
 		}
+	}while(choice!=4);
 }	
 static void librarian_actions_interface(){
 	int choice;
@@ -293,12 +297,9 @@ static void librarian_actions_interface(){
 }
 void run_interface() {
 	library_init();
+	borrow_set_init();
 	FILE *file;
 	load_books(file);
-	// printf("0:%s    ",library.array[0].title);
-    //       printf("1:%s    ",library.array[1].title);
-    //        printf("2:%s    ",library.array[2].title);
-    //         printf("3:%s    \n",library.array[3].title);
 	main_menu();
 	store_books(file);
 

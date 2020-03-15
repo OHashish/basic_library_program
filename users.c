@@ -10,7 +10,7 @@
 
 int register_user(struct User u) {
         FILE *fp;
-		fp=fopen("user_login_data.txt","a");
+		fp=fopen("/home/csunix/sc19orss/comp1921/sc19orss/build/user_login_data.txt","a");
         fprintf(fp,"\n%s %s",u.username,u.password);
         fclose(fp);
         printf("Registered successfully!!!");
@@ -23,7 +23,7 @@ int login_user(struct User u) {
         char line_of_string[200];
          c.username=(char*) malloc(20*sizeof(char));
 	     c.password=(char*) malloc(20*sizeof(char));
-		 fp=fopen("user_login_data.txt","r");
+		 fp=fopen("/home/csunix/sc19orss/comp1921/sc19orss/build/user_login_data.txt","r");
            
             while ((fgets(line_of_string, sizeof(line_of_string), fp)) != NULL)
             {
@@ -47,7 +47,7 @@ int login_librarian(char *librarian_pass){
     FILE *fp;
     char *comp;
     comp=(char*) malloc(20*sizeof(char));
-	fp=fopen("librarian_pass.txt","r");
+	fp=fopen("/home/csunix/sc19orss/comp1921/sc19orss/build/librarian_pass.txt","r");
            
     fscanf(fp,"%s",comp);          
             

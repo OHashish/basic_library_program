@@ -4,15 +4,20 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct BookU {
+struct Borrow {
 		char *title; 
-		char *authors; 
-		unsigned int year;
+		char *user;
 };
-int library_init();
-int borrow_book(char *user,struct BookU book);
+struct BorrowArray{
+		struct Borrow* array;
+		unsigned int length;
+};
+struct BorrowArray borrow_set;
 
-int return_book(char *user,struct BookU book);
+int book_set_init();
+int borrow_book(struct Borrow);
+
+int return_book(struct Borrow);
 
 
 #endif
