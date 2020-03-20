@@ -120,7 +120,8 @@ static void user_actions_interface(){
 				printf("Enter your username:");
 				scanf("%s",Book.user);
 
-				borrow_book(Book);
+				if(borrow_book(Book))
+				printf("Book Borrowed.Enjoy!");
 				break;
 			}
 			case 3:{	
@@ -134,8 +135,14 @@ static void user_actions_interface(){
 				scanf("%s",Book.title);
 
 				printf("Enter your username:");
-				scanf("%s",Book.user);		
-				return_book(Book);
+				scanf("%s",Book.user);
+
+				if(return_book(Book))	
+				printf("Book Returned.");
+				else
+				printf("User didn't borrow a book.");
+					
+				
 			 	break;
 			}
 			case 4:
@@ -169,7 +176,8 @@ static void librarian_actions_interface(){
 
 				printf("Enter number of copies:");
 				scanf("%u",&book.copies);
-				 add_book(book);
+				 if(add_book(book))
+				 printf("Book Added Successfully.");
 				 
 				break;
 			}
@@ -187,8 +195,15 @@ static void librarian_actions_interface(){
 
 				printf("Enter year of production:");
 				scanf("%d",&book.year);
-
-				remove_book(book);
+				
+				if(remove_book(book)){
+					printf("Book Removed Successfully.");
+				}
+				else
+				{
+					printf("Book Not Found.");
+				}
+				
 				break;
 			}
 			case 3:

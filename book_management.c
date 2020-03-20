@@ -20,7 +20,7 @@ int library_init(){
          file=fopen("books.txt","w");
 		for (int i=0;i<library.length;i++)
         {
-            fprintf(file,"%s,%s,%d,%d\n",library.array[i].title,library.array[i].authors,library.array[i].year,library.array[i].copies);
+            fprintf(file,"%s,%s,%d,%d,\n",library.array[i].title,library.array[i].authors,library.array[i].year,library.array[i].copies);
         }
     
          fclose(file);
@@ -34,7 +34,7 @@ int load_books(FILE *file){
     token=(char*) malloc(30*sizeof(char));
     char line[40];
        
-         while(fgets(line, sizeof(line), file) )
+         while(fgets(line, sizeof(line), file)!=NULL )
          {  
              
              token=(char*) malloc(20*sizeof(char));
@@ -95,7 +95,7 @@ struct BookArray find_book_by_title(const char *title){
             newbookarray.length++;
            }
         }
-        printf("%d",newbookarray.length);
+        
     return newbookarray;
 }
 
@@ -128,21 +128,21 @@ int add_book(struct Book book){
     library.array[library.length].year=book.year;
     library.array[library.length].copies=book.copies;
     library.length++;
+    return 1;
 }
 
 
 int remove_book( struct Book book){
-    printf("%s",book.title);
-    printf("%s",book.authors);
-    printf("%d",book.year);
 
     for (int i=0;i<library.length;i++){
         if(strcmp(library.array[i].title,book.title)==0 &&
         strcmp(library.array[i].authors,book.authors)==0 &&
         library.array[i].year==book.year){
             library.array[i]=library.array[library.length-1];
+            library.length--;
+            return 1;
         }
     }
-    library.length--;
+    
 return 0;
 }

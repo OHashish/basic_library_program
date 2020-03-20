@@ -20,9 +20,9 @@ int borrow_book(struct Borrow book){
     FILE *file;
     file=fopen("/home/csunix/sc19orss/comp1921/sc19orss/build/book_loan.txt", "a");
     
-    fprintf(file,"%s,%s\n",book.title,book.user);
+    fprintf(file,"%s,%s,\n",book.title,book.user);
     fclose(file);
-    return 0;
+    return 1;
 }
 
 int return_book(struct Borrow book){
@@ -31,8 +31,10 @@ int return_book(struct Borrow book){
     char *token;
     token=(char*) malloc(30*sizeof(char));
     char line[40];
-       
-    while(fgets(line, sizeof(line), file) )
+    borrow_set.length=0;
+    int flag=0;
+
+    while(fgets(line, sizeof(line), file)!=NULL )
         {  
             token=(char*) malloc(20*sizeof(char));
             token = strtok(line,",");
@@ -50,19 +52,23 @@ int return_book(struct Borrow book){
         if(strcmp(borrow_set.array[i].title,book.title)==0 &&
         strcmp(borrow_set.array[i].user,book.user)==0){
             borrow_set.array[i]=borrow_set.array[borrow_set.length-1];
+            borrow_set.length--;
+            flag =1;
         }
     }
-    borrow_set.length--;
+    
 
 
 
     file=fopen("/home/csunix/sc19orss/comp1921/sc19orss/build/book_loan.txt","w");
 		for (int i=0;i<borrow_set.length;i++)
         {
-            fprintf(file,"%s,%s\n",borrow_set.array[i].title,borrow_set.array[i].user);
+            fprintf(file,"%s,%s,\n",borrow_set.array[i].title,borrow_set.array[i].user);
         }
     
          fclose(file);
-       
+    if (flag) 
+    return 1;
+    else 
     return 0;
 }

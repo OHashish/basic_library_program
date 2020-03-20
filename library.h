@@ -14,7 +14,7 @@ struct BorrowArray{
 };
 struct BorrowArray borrow_set;
 
-int book_set_init();
+int borrow_set_init();
 int borrow_book(struct Borrow);
 
 int return_book(struct Borrow);
