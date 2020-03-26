@@ -342,6 +342,12 @@ static void librarian_actions_interface(){
  void main_menu(){
 
 	int choice; //exit
+	FILE *file;
+	
+	file=fopen("../books.txt", "r");
+	load_books(file);
+	file=fopen("../book_loan.txt", "r");
+	load_loans(file);
 
 	do {
 
@@ -365,23 +371,18 @@ static void librarian_actions_interface(){
 		}
 
 	} while (choice != 3);
-
+file=fopen("../books.txt","w");
+	store_books(file);
+	file=fopen("../book_loan.txt", "w");
+	store_loans(file);
 	return;
 }
 void run_interface() {
 	library_init();
 	borrow_set_init();
-	FILE *file;
 	
-	file=fopen("../books.txt", "r");
-	load_books(file);
-	file=fopen("../book_loan.txt", "r");
-	load_loans(file);
 	main_menu();
-	file=fopen("../books.txt","w");
-	store_books(file);
-	file=fopen("../book_loan.txt", "w");
-	store_loans(file);
+	
 
 	return;
 }

@@ -20,6 +20,8 @@ void test_add_book() {
 	book.year=1999;
 	 int res;
 	 res=add_book(book);
+	 TEST_ASSERT_NOT_NULL_MESSAGE(book.title,"Book title is NULL");
+	 TEST_ASSERT_NOT_NULL_MESSAGE(book.authors,"Book author is NULL"); 
 	 TEST_ASSERT_EQUAL_INT_MESSAGE (1, library.length,"No book was added.");
 	TEST_ASSERT_EQUAL_PTR_MESSAGE(library.array[library.length-1].title,book.title,"Add book added the wrong book");
 	TEST_ASSERT_EQUAL_INT_MESSAGE (0, res,"error occured in add book");
@@ -84,6 +86,8 @@ void test_remove_book() {
 	 int length;
 	 length= library.length;
 	 res=remove_book(book);
+	 TEST_ASSERT_NOT_NULL_MESSAGE(book.title,"Book title is NULL");
+	 TEST_ASSERT_NOT_NULL_MESSAGE(book.authors,"Book author is NULL"); 
 	TEST_ASSERT_EQUAL_INT_MESSAGE (length-1, library.length,"No book was removed."); 
 	TEST_ASSERT_EQUAL_INT_MESSAGE (0, res,"error occured in remove book");
 }
@@ -110,9 +114,12 @@ void test_find_book_title() {
 	library.array[library.length].copies=8;
 	library.length++;
 
+	char *title =(char*)malloc(30*sizeof(char));
+	title="Leeds";
+	TEST_ASSERT_NOT_NULL_MESSAGE(title,"Book title is NULL");
 	
-	
-	newbookarray=find_book_by_title("Leeds");
+	newbookarray=find_book_by_title(title);
+	TEST_ASSERT_NOT_EQUAL_MESSAGE (0, newbookarray.length,"No book was added");
 	TEST_ASSERT_EQUAL_STRING_MESSAGE (library.array[0].title, newbookarray.array[0].title,"find book by title returned the wrong title");
 	
 }
@@ -139,10 +146,15 @@ void test_find_book_authors() {
 	library.array[library.length].copies=8;
 	library.length++;
 
-	
-	newbookarray=find_book_by_author("Phillips");
+	char *author =(char*)malloc(30*sizeof(char));
+	author="Phillips";
+	TEST_ASSERT_NOT_NULL_MESSAGE(author,"Book author is NULL");
+	newbookarray=find_book_by_author(author);
 	TEST_ASSERT_EQUAL_STRING_MESSAGE (library.array[0].title, newbookarray.array[0].title,"find book by author returned the wrong book");
-	newbookarray=find_book_by_author("Matt");
+	author="Matt";
+	TEST_ASSERT_NOT_NULL_MESSAGE(author,"Book author is NULL");
+	TEST_ASSERT_NOT_EQUAL_MESSAGE (0, newbookarray.length,"No book was added");
+	newbookarray=find_book_by_author(author);
 	TEST_ASSERT_EQUAL_STRING_MESSAGE (library.array[0].title, newbookarray.array[0].title,"find book by author returned the wrong author");
 	
 }
@@ -177,8 +189,10 @@ void test_find_book_year() {
 	
 
 	newbookarray=find_book_by_year(1980);
+	TEST_ASSERT_NOT_EQUAL_MESSAGE (0, newbookarray.length,"No book was added");
 	TEST_ASSERT_EQUAL_STRING_MESSAGE (library.array[0].title, newbookarray.array[0].title,"find book by year returned the wrong book");
 	newbookarray=find_book_by_year(1999);
+	TEST_ASSERT_NOT_EQUAL_MESSAGE (0, newbookarray.length,"No book was added");
 	TEST_ASSERT_EQUAL_INT_MESSAGE (library.array[1].year, newbookarray.array[0].year,"find book by year returned the wrong books");
 	TEST_ASSERT_EQUAL_INT_MESSAGE (library.array[2].year, newbookarray.array[1].year,"find book by year returned the wrong books");
 }
