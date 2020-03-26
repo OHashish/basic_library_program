@@ -1,0 +1,3943 @@
+
+;; Function library_init (library_init, funcdef_no=0, decl_uid=2215, cgraph_uid=0, symbol_order=1)
+
+Partition 0: size 4 align 4
+	i_12
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":9 -1
+     (nil))
+(insn 6 5 7 2 (set (reg:DI 5 di)
+        (const_int 72000 [0x11940])) "/home/hashish/sc19orss/book_management.c":10 -1
+     (nil))
+(call_insn 7 6 8 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f948cc6c600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":10 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 8 7 9 2 (set (reg/f:DI 99)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":10 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 99)
+        (nil)))
+(insn 9 8 10 2 (set (reg/f:DI 87 [ _1 ])
+        (reg/f:DI 99)) "/home/hashish/sc19orss/book_management.c":10 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])
+        (reg/f:DI 87 [ _1 ])) "/home/hashish/sc19orss/book_management.c":10 -1
+     (nil))
+(insn 11 10 12 2 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":11 -1
+     (nil))
+(jump_insn 12 11 13 2 (set (pc)
+        (label_ref 46)) "/home/hashish/sc19orss/book_management.c":11 -1
+     (nil)
+ -> 46)
+(barrier 13 12 48)
+(code_label 48 13 14 4 3 (nil) [1 uses])
+(note 14 48 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 4 (set (reg/f:DI 88 [ _2 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":14 -1
+     (nil))
+(insn 16 15 17 4 (set (reg:SI 100)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":14 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:DI 89 [ _3 ])
+        (sign_extend:DI (reg:SI 100))) "/home/hashish/sc19orss/book_management.c":14 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:DI 101)
+        (reg:DI 89 [ _3 ])) "/home/hashish/sc19orss/book_management.c":14 -1
+     (nil))
+(insn 19 18 20 4 (parallel [
+            (set (reg:DI 101)
+                (ashift:DI (reg:DI 101)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":14 -1
+     (nil))
+(insn 20 19 21 4 (parallel [
+            (set (reg:DI 101)
+                (plus:DI (reg:DI 101)
+                    (reg:DI 89 [ _3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":14 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 89 [ _3 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 21 20 22 4 (parallel [
+            (set (reg:DI 102)
+                (ashift:DI (reg:DI 101)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":14 -1
+     (nil))
+(insn 22 21 23 4 (set (reg:DI 101)
+        (reg:DI 102)) "/home/hashish/sc19orss/book_management.c":14 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 89 [ _3 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 23 22 24 4 (set (reg:DI 90 [ _4 ])
+        (reg:DI 101)) "/home/hashish/sc19orss/book_management.c":14 -1
+     (nil))
+(insn 24 23 25 4 (parallel [
+            (set (reg/f:DI 91 [ _5 ])
+                (plus:DI (reg/f:DI 88 [ _2 ])
+                    (reg:DI 90 [ _4 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":14 -1
+     (nil))
+(insn 25 24 26 4 (set (reg:DI 5 di)
+        (const_int 30 [0x1e])) "/home/hashish/sc19orss/book_management.c":14 -1
+     (nil))
+(call_insn 26 25 27 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f948cc6c600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":14 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 27 26 28 4 (set (reg/f:DI 103)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":14 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 103)
+        (nil)))
+(insn 28 27 29 4 (set (reg/f:DI 92 [ _6 ])
+        (reg/f:DI 103)) "/home/hashish/sc19orss/book_management.c":14 -1
+     (nil))
+(insn 29 28 30 4 (set (mem/f:DI (reg/f:DI 91 [ _5 ]) [5 _5->title+0 S8 A64])
+        (reg/f:DI 92 [ _6 ])) "/home/hashish/sc19orss/book_management.c":14 -1
+     (nil))
+(insn 30 29 31 4 (set (reg/f:DI 93 [ _7 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":15 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:SI 104)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":15 -1
+     (nil))
+(insn 32 31 33 4 (set (reg:DI 94 [ _8 ])
+        (sign_extend:DI (reg:SI 104))) "/home/hashish/sc19orss/book_management.c":15 -1
+     (nil))
+(insn 33 32 34 4 (set (reg:DI 105)
+        (reg:DI 94 [ _8 ])) "/home/hashish/sc19orss/book_management.c":15 -1
+     (nil))
+(insn 34 33 35 4 (parallel [
+            (set (reg:DI 105)
+                (ashift:DI (reg:DI 105)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":15 -1
+     (nil))
+(insn 35 34 36 4 (parallel [
+            (set (reg:DI 105)
+                (plus:DI (reg:DI 105)
+                    (reg:DI 94 [ _8 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":15 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 94 [ _8 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 36 35 37 4 (parallel [
+            (set (reg:DI 106)
+                (ashift:DI (reg:DI 105)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":15 -1
+     (nil))
+(insn 37 36 38 4 (set (reg:DI 105)
+        (reg:DI 106)) "/home/hashish/sc19orss/book_management.c":15 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 94 [ _8 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 38 37 39 4 (set (reg:DI 95 [ _9 ])
+        (reg:DI 105)) "/home/hashish/sc19orss/book_management.c":15 -1
+     (nil))
+(insn 39 38 40 4 (parallel [
+            (set (reg/f:DI 96 [ _10 ])
+                (plus:DI (reg/f:DI 93 [ _7 ])
+                    (reg:DI 95 [ _9 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":15 -1
+     (nil))
+(insn 40 39 41 4 (set (reg:DI 5 di)
+        (const_int 30 [0x1e])) "/home/hashish/sc19orss/book_management.c":15 -1
+     (nil))
+(call_insn 41 40 42 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f948cc6c600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":15 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 42 41 43 4 (set (reg/f:DI 107)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":15 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 107)
+        (nil)))
+(insn 43 42 44 4 (set (reg/f:DI 97 [ _11 ])
+        (reg/f:DI 107)) "/home/hashish/sc19orss/book_management.c":15 -1
+     (nil))
+(insn 44 43 45 4 (set (mem/f:DI (plus:DI (reg/f:DI 96 [ _10 ])
+                (const_int 8 [0x8])) [5 _10->authors+0 S8 A64])
+        (reg/f:DI 97 [ _11 ])) "/home/hashish/sc19orss/book_management.c":15 -1
+     (nil))
+(insn 45 44 46 4 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":11 -1
+     (nil))
+(code_label 46 45 47 5 2 (nil) [1 uses])
+(note 47 46 49 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 49 47 50 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])
+            (const_int 2999 [0xbb7]))) "/home/hashish/sc19orss/book_management.c":11 -1
+     (nil))
+(jump_insn 50 49 51 5 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 48)
+            (pc))) "/home/hashish/sc19orss/book_management.c":11 -1
+     (nil)
+ -> 48)
+(note 51 50 54 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 54 51 55 6 (clobber (reg/i:SI 0 ax)) "/home/hashish/sc19orss/book_management.c":17 -1
+     (nil))
+(insn 55 54 58 6 (clobber (reg:SI 98 [ <retval> ])) "/home/hashish/sc19orss/book_management.c":17 -1
+     (nil))
+(insn 58 55 53 6 (const_int 0 [0]) "/home/hashish/sc19orss/book_management.c":17 -1
+     (nil))
+(insn 53 58 56 6 (set (reg/i:SI 0 ax)
+        (reg:SI 98 [ <retval> ])) "/home/hashish/sc19orss/book_management.c":17 -1
+     (nil))
+(insn 56 53 0 6 (use (reg/i:SI 0 ax)) "/home/hashish/sc19orss/book_management.c":17 -1
+     (nil))
+
+;; Function store_books (store_books, funcdef_no=1, decl_uid=2217, cgraph_uid=1, symbol_order=2)
+
+Partition 0: size 4 align 4
+	i_23
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+Removing jump 79.
+Merging block 8 into block 6...
+Merged blocks 6 and 8.
+Merged 6 and 8 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [6 file+0 S8 A64])
+        (reg:DI 5 di [ file ])) "/home/hashish/sc19orss/book_management.c":19 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":21 -1
+     (nil))
+(jump_insn 7 6 8 2 (set (pc)
+        (label_ref 64)) "/home/hashish/sc19orss/book_management.c":21 -1
+     (nil)
+ -> 64)
+(barrier 8 7 68)
+(code_label 68 8 9 4 6 (nil) [1 uses])
+(note 9 68 10 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 10 9 11 4 (set (reg/f:DI 87 [ _1 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 11 10 12 4 (set (reg:SI 111)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 12 11 13 4 (set (reg:DI 88 [ _2 ])
+        (sign_extend:DI (reg:SI 111))) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 13 12 14 4 (set (reg:DI 112)
+        (reg:DI 88 [ _2 ])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 14 13 15 4 (parallel [
+            (set (reg:DI 112)
+                (ashift:DI (reg:DI 112)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 15 14 16 4 (parallel [
+            (set (reg:DI 112)
+                (plus:DI (reg:DI 112)
+                    (reg:DI 88 [ _2 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":23 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 88 [ _2 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 16 15 17 4 (parallel [
+            (set (reg:DI 113)
+                (ashift:DI (reg:DI 112)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:DI 112)
+        (reg:DI 113)) "/home/hashish/sc19orss/book_management.c":23 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 88 [ _2 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 18 17 19 4 (set (reg:DI 89 [ _3 ])
+        (reg:DI 112)) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 19 18 20 4 (parallel [
+            (set (reg/f:DI 90 [ _4 ])
+                (plus:DI (reg/f:DI 87 [ _1 ])
+                    (reg:DI 89 [ _3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 20 19 21 4 (set (reg:SI 91 [ _5 ])
+        (mem:SI (plus:DI (reg/f:DI 90 [ _4 ])
+                (const_int 20 [0x14])) [3 _4->copies+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 21 20 22 4 (set (reg/f:DI 92 [ _6 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 22 21 23 4 (set (reg:SI 114)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 23 22 24 4 (set (reg:DI 93 [ _7 ])
+        (sign_extend:DI (reg:SI 114))) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 24 23 25 4 (set (reg:DI 115)
+        (reg:DI 93 [ _7 ])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 25 24 26 4 (parallel [
+            (set (reg:DI 115)
+                (ashift:DI (reg:DI 115)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 26 25 27 4 (parallel [
+            (set (reg:DI 115)
+                (plus:DI (reg:DI 115)
+                    (reg:DI 93 [ _7 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":23 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 93 [ _7 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 27 26 28 4 (parallel [
+            (set (reg:DI 116)
+                (ashift:DI (reg:DI 115)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:DI 115)
+        (reg:DI 116)) "/home/hashish/sc19orss/book_management.c":23 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 93 [ _7 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 29 28 30 4 (set (reg:DI 94 [ _8 ])
+        (reg:DI 115)) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 30 29 31 4 (parallel [
+            (set (reg/f:DI 95 [ _9 ])
+                (plus:DI (reg/f:DI 92 [ _6 ])
+                    (reg:DI 94 [ _8 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:SI 96 [ _10 ])
+        (mem:SI (plus:DI (reg/f:DI 95 [ _9 ])
+                (const_int 16 [0x10])) [3 _9->year+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 32 31 33 4 (set (reg/f:DI 97 [ _11 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 33 32 34 4 (set (reg:SI 117)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 34 33 35 4 (set (reg:DI 98 [ _12 ])
+        (sign_extend:DI (reg:SI 117))) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 35 34 36 4 (set (reg:DI 118)
+        (reg:DI 98 [ _12 ])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 36 35 37 4 (parallel [
+            (set (reg:DI 118)
+                (ashift:DI (reg:DI 118)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 37 36 38 4 (parallel [
+            (set (reg:DI 118)
+                (plus:DI (reg:DI 118)
+                    (reg:DI 98 [ _12 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":23 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 98 [ _12 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 38 37 39 4 (parallel [
+            (set (reg:DI 119)
+                (ashift:DI (reg:DI 118)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 39 38 40 4 (set (reg:DI 118)
+        (reg:DI 119)) "/home/hashish/sc19orss/book_management.c":23 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 98 [ _12 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 40 39 41 4 (set (reg:DI 99 [ _13 ])
+        (reg:DI 118)) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 41 40 42 4 (parallel [
+            (set (reg/f:DI 100 [ _14 ])
+                (plus:DI (reg/f:DI 97 [ _11 ])
+                    (reg:DI 99 [ _13 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 42 41 43 4 (set (reg/f:DI 101 [ _15 ])
+        (mem/f:DI (plus:DI (reg/f:DI 100 [ _14 ])
+                (const_int 8 [0x8])) [5 _14->authors+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 43 42 44 4 (set (reg/f:DI 102 [ _16 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 44 43 45 4 (set (reg:SI 120)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 45 44 46 4 (set (reg:DI 103 [ _17 ])
+        (sign_extend:DI (reg:SI 120))) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 46 45 47 4 (set (reg:DI 121)
+        (reg:DI 103 [ _17 ])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 47 46 48 4 (parallel [
+            (set (reg:DI 121)
+                (ashift:DI (reg:DI 121)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 48 47 49 4 (parallel [
+            (set (reg:DI 121)
+                (plus:DI (reg:DI 121)
+                    (reg:DI 103 [ _17 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":23 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 103 [ _17 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 49 48 50 4 (parallel [
+            (set (reg:DI 122)
+                (ashift:DI (reg:DI 121)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 50 49 51 4 (set (reg:DI 121)
+        (reg:DI 122)) "/home/hashish/sc19orss/book_management.c":23 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 103 [ _17 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 51 50 52 4 (set (reg:DI 104 [ _18 ])
+        (reg:DI 121)) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 52 51 53 4 (parallel [
+            (set (reg/f:DI 105 [ _19 ])
+                (plus:DI (reg/f:DI 102 [ _16 ])
+                    (reg:DI 104 [ _18 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 53 52 54 4 (set (reg/f:DI 106 [ _20 ])
+        (mem/f:DI (reg/f:DI 105 [ _19 ]) [5 _19->title+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 54 53 55 4 (set (reg:DI 123)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [6 file+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 55 54 56 4 (set (reg:SI 38 r9)
+        (reg:SI 91 [ _5 ])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 56 55 57 4 (set (reg:SI 37 r8)
+        (reg:SI 96 [ _10 ])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 57 56 58 4 (set (reg:DI 2 cx)
+        (reg/f:DI 101 [ _15 ])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 58 57 59 4 (set (reg:DI 1 dx)
+        (reg/f:DI 106 [ _20 ])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 59 58 60 4 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f948cdab480 *.LC0>)) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 60 59 61 4 (set (reg:DI 5 di)
+        (reg:DI 123)) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(insn 61 60 62 4 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil))
+(call_insn 62 61 63 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fprintf") [flags 0x41]  <function_decl 0x7f948cc4b600 fprintf>) [0 __builtin_fprintf S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":23 -1
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (expr_list:SI (use (reg:SI 37 r8))
+                            (expr_list:SI (use (reg:SI 38 r9))
+                                (nil)))))))))
+(insn 63 62 64 4 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":21 -1
+     (nil))
+(code_label 64 63 65 5 5 (nil) [1 uses])
+(note 65 64 66 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 66 65 67 5 (set (reg:SI 107 [ _21 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":21 -1
+     (nil))
+(insn 67 66 69 5 (set (reg:SI 108 [ i.0_22 ])
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":21 -1
+     (nil))
+(insn 69 67 70 5 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 107 [ _21 ])
+            (reg:SI 108 [ i.0_22 ]))) "/home/hashish/sc19orss/book_management.c":21 -1
+     (nil))
+(jump_insn 70 69 71 5 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 68)
+            (pc))) "/home/hashish/sc19orss/book_management.c":21 -1
+     (nil)
+ -> 68)
+(note 71 70 72 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 72 71 73 6 (set (reg:DI 124)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [6 file+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":26 -1
+     (nil))
+(insn 73 72 74 6 (set (reg:DI 5 di)
+        (reg:DI 124)) "/home/hashish/sc19orss/book_management.c":26 -1
+     (nil))
+(call_insn 74 73 75 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f948cd2e200 fclose>) [0 fclose S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":26 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 75 74 78 6 (set (reg:SI 109 [ _29 ])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":27 -1
+     (nil))
+(insn 78 75 82 6 (set (reg:SI 110 [ <retval> ])
+        (reg:SI 109 [ _29 ])) "/home/hashish/sc19orss/book_management.c":27 -1
+     (nil))
+(insn 82 78 83 6 (set (reg/i:SI 0 ax)
+        (reg:SI 110 [ <retval> ])) "/home/hashish/sc19orss/book_management.c":29 -1
+     (nil))
+(insn 83 82 0 6 (use (reg/i:SI 0 ax)) "/home/hashish/sc19orss/book_management.c":29 -1
+     (nil))
+
+;; Function load_books (load_books, funcdef_no=2, decl_uid=2219, cgraph_uid=2, symbol_order=3)
+
+Partition 1: size 200 align 16
+	line
+Partition 0: size 8 align 8
+	token_33
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+Removing jump 124.
+Merging block 8 into block 6...
+Merged blocks 6 and 8.
+Merged 6 and 8 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -232 [0xffffffffffffff18])) [6 file+0 S8 A64])
+        (reg:DI 5 di [ file ])) "/home/hashish/sc19orss/book_management.c":31 -1
+     (nil))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 7 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [7 D.2343+0 S8 A64])
+                (unspec:DI [
+                        (const_int 40 [0x28])
+                    ] UNSPEC_SP_TLS_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":31 -1
+     (nil))
+(insn 7 4 8 2 (set (reg:DI 5 di)
+        (const_int 30 [0x1e])) "/home/hashish/sc19orss/book_management.c":34 -1
+     (nil))
+(call_insn 8 7 9 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f948cc6c600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":34 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 9 8 10 2 (set (reg/f:DI 118)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":34 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 118)
+        (nil)))
+(insn 10 9 11 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -216 [0xffffffffffffff28])) [5 token+0 S8 A64])
+        (reg/f:DI 118)) "/home/hashish/sc19orss/book_management.c":34 -1
+     (nil))
+(jump_insn 11 10 12 2 (set (pc)
+        (label_ref 104)) "/home/hashish/sc19orss/book_management.c":37 -1
+     (nil)
+ -> 104)
+(barrier 12 11 113)
+(code_label 113 12 13 4 10 (nil) [1 uses])
+(note 13 113 14 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 14 13 15 4 (set (reg:DI 5 di)
+        (const_int 100 [0x64])) "/home/hashish/sc19orss/book_management.c":40 -1
+     (nil))
+(call_insn 15 14 16 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f948cc6c600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":40 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 16 15 17 4 (set (reg/f:DI 119)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":40 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 119)
+        (nil)))
+(insn 17 16 18 4 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -216 [0xffffffffffffff28])) [5 token+0 S8 A64])
+        (reg/f:DI 119)) "/home/hashish/sc19orss/book_management.c":40 -1
+     (nil))
+(insn 18 17 19 4 (parallel [
+            (set (reg:DI 120)
+                (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -208 [0xffffffffffffff30])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":41 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f948cdabab0 *.LC1>)) "/home/hashish/sc19orss/book_management.c":41 -1
+     (nil))
+(insn 20 19 21 4 (set (reg:DI 5 di)
+        (reg:DI 120)) "/home/hashish/sc19orss/book_management.c":41 -1
+     (nil))
+(call_insn 21 20 22 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f948cd55900 strtok>) [0 strtok S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":41 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 22 21 23 4 (set (reg:DI 121)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":41 -1
+     (nil))
+(insn 23 22 24 4 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -216 [0xffffffffffffff28])) [5 token+0 S8 A64])
+        (reg:DI 121)) "/home/hashish/sc19orss/book_management.c":41 -1
+     (nil))
+(insn 24 23 25 4 (set (reg/f:DI 87 [ _1 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":42 -1
+     (nil))
+(insn 25 24 26 4 (set (reg:SI 88 [ _2 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":42 -1
+     (nil))
+(insn 26 25 27 4 (set (reg:DI 89 [ _3 ])
+        (zero_extend:DI (reg:SI 88 [ _2 ]))) "/home/hashish/sc19orss/book_management.c":42 -1
+     (nil))
+(insn 27 26 28 4 (set (reg:DI 122)
+        (reg:DI 89 [ _3 ])) "/home/hashish/sc19orss/book_management.c":42 -1
+     (nil))
+(insn 28 27 29 4 (parallel [
+            (set (reg:DI 122)
+                (ashift:DI (reg:DI 122)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":42 -1
+     (nil))
+(insn 29 28 30 4 (parallel [
+            (set (reg:DI 122)
+                (plus:DI (reg:DI 122)
+                    (reg:DI 89 [ _3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":42 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 89 [ _3 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 30 29 31 4 (parallel [
+            (set (reg:DI 123)
+                (ashift:DI (reg:DI 122)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":42 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:DI 122)
+        (reg:DI 123)) "/home/hashish/sc19orss/book_management.c":42 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 89 [ _3 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 32 31 33 4 (set (reg:DI 90 [ _4 ])
+        (reg:DI 122)) "/home/hashish/sc19orss/book_management.c":42 -1
+     (nil))
+(insn 33 32 34 4 (parallel [
+            (set (reg/f:DI 91 [ _5 ])
+                (plus:DI (reg/f:DI 87 [ _1 ])
+                    (reg:DI 90 [ _4 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":42 -1
+     (nil))
+(insn 34 33 35 4 (set (reg/f:DI 92 [ _6 ])
+        (mem/f:DI (reg/f:DI 91 [ _5 ]) [5 _5->title+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":42 -1
+     (nil))
+(insn 35 34 36 4 (set (reg:DI 124)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -216 [0xffffffffffffff28])) [5 token+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":42 -1
+     (nil))
+(insn 36 35 37 4 (set (reg:DI 4 si)
+        (reg:DI 124)) "/home/hashish/sc19orss/book_management.c":42 -1
+     (nil))
+(insn 37 36 38 4 (set (reg:DI 5 di)
+        (reg/f:DI 92 [ _6 ])) "/home/hashish/sc19orss/book_management.c":42 -1
+     (nil))
+(call_insn 38 37 39 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcpy") [flags 0x41]  <function_decl 0x7f948cc47f00 strcpy>) [0 __builtin_strcpy S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":42 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (set (reg:DI 0 ax)
+            (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (nil)))))
+(insn 39 38 40 4 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f948cdabab0 *.LC1>)) "/home/hashish/sc19orss/book_management.c":43 -1
+     (nil))
+(insn 40 39 41 4 (set (reg:DI 5 di)
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":43 -1
+     (nil))
+(call_insn 41 40 42 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f948cd55900 strtok>) [0 strtok S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":43 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 42 41 43 4 (set (reg:DI 125)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":43 -1
+     (nil))
+(insn 43 42 44 4 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -216 [0xffffffffffffff28])) [5 token+0 S8 A64])
+        (reg:DI 125)) "/home/hashish/sc19orss/book_management.c":43 -1
+     (nil))
+(insn 44 43 45 4 (set (reg/f:DI 93 [ _7 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":44 -1
+     (nil))
+(insn 45 44 46 4 (set (reg:SI 94 [ _8 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":44 -1
+     (nil))
+(insn 46 45 47 4 (set (reg:DI 95 [ _9 ])
+        (zero_extend:DI (reg:SI 94 [ _8 ]))) "/home/hashish/sc19orss/book_management.c":44 -1
+     (nil))
+(insn 47 46 48 4 (set (reg:DI 126)
+        (reg:DI 95 [ _9 ])) "/home/hashish/sc19orss/book_management.c":44 -1
+     (nil))
+(insn 48 47 49 4 (parallel [
+            (set (reg:DI 126)
+                (ashift:DI (reg:DI 126)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":44 -1
+     (nil))
+(insn 49 48 50 4 (parallel [
+            (set (reg:DI 126)
+                (plus:DI (reg:DI 126)
+                    (reg:DI 95 [ _9 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":44 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 95 [ _9 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 50 49 51 4 (parallel [
+            (set (reg:DI 127)
+                (ashift:DI (reg:DI 126)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":44 -1
+     (nil))
+(insn 51 50 52 4 (set (reg:DI 126)
+        (reg:DI 127)) "/home/hashish/sc19orss/book_management.c":44 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 95 [ _9 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 52 51 53 4 (set (reg:DI 96 [ _10 ])
+        (reg:DI 126)) "/home/hashish/sc19orss/book_management.c":44 -1
+     (nil))
+(insn 53 52 54 4 (parallel [
+            (set (reg/f:DI 97 [ _11 ])
+                (plus:DI (reg/f:DI 93 [ _7 ])
+                    (reg:DI 96 [ _10 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":44 -1
+     (nil))
+(insn 54 53 55 4 (set (reg/f:DI 98 [ _12 ])
+        (mem/f:DI (plus:DI (reg/f:DI 97 [ _11 ])
+                (const_int 8 [0x8])) [5 _11->authors+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":44 -1
+     (nil))
+(insn 55 54 56 4 (set (reg:DI 128)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -216 [0xffffffffffffff28])) [5 token+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":44 -1
+     (nil))
+(insn 56 55 57 4 (set (reg:DI 4 si)
+        (reg:DI 128)) "/home/hashish/sc19orss/book_management.c":44 -1
+     (nil))
+(insn 57 56 58 4 (set (reg:DI 5 di)
+        (reg/f:DI 98 [ _12 ])) "/home/hashish/sc19orss/book_management.c":44 -1
+     (nil))
+(call_insn 58 57 59 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcpy") [flags 0x41]  <function_decl 0x7f948cc47f00 strcpy>) [0 __builtin_strcpy S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":44 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (set (reg:DI 0 ax)
+            (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (nil)))))
+(insn 59 58 60 4 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f948cdabab0 *.LC1>)) "/home/hashish/sc19orss/book_management.c":45 -1
+     (nil))
+(insn 60 59 61 4 (set (reg:DI 5 di)
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":45 -1
+     (nil))
+(call_insn 61 60 62 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f948cd55900 strtok>) [0 strtok S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":45 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 62 61 63 4 (set (reg:DI 129)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":45 -1
+     (nil))
+(insn 63 62 64 4 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -216 [0xffffffffffffff28])) [5 token+0 S8 A64])
+        (reg:DI 129)) "/home/hashish/sc19orss/book_management.c":45 -1
+     (nil))
+(insn 64 63 65 4 (set (reg:DI 130)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -216 [0xffffffffffffff28])) [5 token+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":46 -1
+     (nil))
+(insn 65 64 66 4 (set (reg:DI 5 di)
+        (reg:DI 130)) "/home/hashish/sc19orss/book_management.c":46 -1
+     (nil))
+(call_insn/i 66 65 67 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f948cd43900 atoi>) [0 atoi S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":46 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 67 66 68 4 (set (reg:SI 99 [ _13 ])
+        (reg:SI 0 ax)) "/home/hashish/sc19orss/book_management.c":46 -1
+     (nil))
+(insn 68 67 69 4 (set (reg/f:DI 100 [ _14 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":46 -1
+     (nil))
+(insn 69 68 70 4 (set (reg:SI 101 [ _15 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":46 -1
+     (nil))
+(insn 70 69 71 4 (set (reg:DI 102 [ _16 ])
+        (zero_extend:DI (reg:SI 101 [ _15 ]))) "/home/hashish/sc19orss/book_management.c":46 -1
+     (nil))
+(insn 71 70 72 4 (set (reg:DI 131)
+        (reg:DI 102 [ _16 ])) "/home/hashish/sc19orss/book_management.c":46 -1
+     (nil))
+(insn 72 71 73 4 (parallel [
+            (set (reg:DI 131)
+                (ashift:DI (reg:DI 131)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":46 -1
+     (nil))
+(insn 73 72 74 4 (parallel [
+            (set (reg:DI 131)
+                (plus:DI (reg:DI 131)
+                    (reg:DI 102 [ _16 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":46 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 102 [ _16 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 74 73 75 4 (parallel [
+            (set (reg:DI 132)
+                (ashift:DI (reg:DI 131)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":46 -1
+     (nil))
+(insn 75 74 76 4 (set (reg:DI 131)
+        (reg:DI 132)) "/home/hashish/sc19orss/book_management.c":46 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 102 [ _16 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 76 75 77 4 (set (reg:DI 103 [ _17 ])
+        (reg:DI 131)) "/home/hashish/sc19orss/book_management.c":46 -1
+     (nil))
+(insn 77 76 78 4 (parallel [
+            (set (reg/f:DI 104 [ _18 ])
+                (plus:DI (reg/f:DI 100 [ _14 ])
+                    (reg:DI 103 [ _17 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":46 -1
+     (nil))
+(insn 78 77 79 4 (set (reg:SI 105 [ _19 ])
+        (reg:SI 99 [ _13 ])) "/home/hashish/sc19orss/book_management.c":46 -1
+     (nil))
+(insn 79 78 80 4 (set (mem:SI (plus:DI (reg/f:DI 104 [ _18 ])
+                (const_int 16 [0x10])) [3 _18->year+0 S4 A64])
+        (reg:SI 105 [ _19 ])) "/home/hashish/sc19orss/book_management.c":46 -1
+     (nil))
+(insn 80 79 81 4 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f948cdabab0 *.LC1>)) "/home/hashish/sc19orss/book_management.c":47 -1
+     (nil))
+(insn 81 80 82 4 (set (reg:DI 5 di)
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":47 -1
+     (nil))
+(call_insn 82 81 83 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f948cd55900 strtok>) [0 strtok S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":47 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 83 82 84 4 (set (reg:DI 133)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":47 -1
+     (nil))
+(insn 84 83 85 4 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -216 [0xffffffffffffff28])) [5 token+0 S8 A64])
+        (reg:DI 133)) "/home/hashish/sc19orss/book_management.c":47 -1
+     (nil))
+(insn 85 84 86 4 (set (reg:DI 134)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -216 [0xffffffffffffff28])) [5 token+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":48 -1
+     (nil))
+(insn 86 85 87 4 (set (reg:DI 5 di)
+        (reg:DI 134)) "/home/hashish/sc19orss/book_management.c":48 -1
+     (nil))
+(call_insn/i 87 86 88 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f948cd43900 atoi>) [0 atoi S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":48 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 88 87 89 4 (set (reg:SI 106 [ _20 ])
+        (reg:SI 0 ax)) "/home/hashish/sc19orss/book_management.c":48 -1
+     (nil))
+(insn 89 88 90 4 (set (reg/f:DI 107 [ _21 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":48 -1
+     (nil))
+(insn 90 89 91 4 (set (reg:SI 108 [ _22 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":48 -1
+     (nil))
+(insn 91 90 92 4 (set (reg:DI 109 [ _23 ])
+        (zero_extend:DI (reg:SI 108 [ _22 ]))) "/home/hashish/sc19orss/book_management.c":48 -1
+     (nil))
+(insn 92 91 93 4 (set (reg:DI 135)
+        (reg:DI 109 [ _23 ])) "/home/hashish/sc19orss/book_management.c":48 -1
+     (nil))
+(insn 93 92 94 4 (parallel [
+            (set (reg:DI 135)
+                (ashift:DI (reg:DI 135)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":48 -1
+     (nil))
+(insn 94 93 95 4 (parallel [
+            (set (reg:DI 135)
+                (plus:DI (reg:DI 135)
+                    (reg:DI 109 [ _23 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":48 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 109 [ _23 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 95 94 96 4 (parallel [
+            (set (reg:DI 136)
+                (ashift:DI (reg:DI 135)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":48 -1
+     (nil))
+(insn 96 95 97 4 (set (reg:DI 135)
+        (reg:DI 136)) "/home/hashish/sc19orss/book_management.c":48 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 109 [ _23 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 97 96 98 4 (set (reg:DI 110 [ _24 ])
+        (reg:DI 135)) "/home/hashish/sc19orss/book_management.c":48 -1
+     (nil))
+(insn 98 97 99 4 (parallel [
+            (set (reg/f:DI 111 [ _25 ])
+                (plus:DI (reg/f:DI 107 [ _21 ])
+                    (reg:DI 110 [ _24 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":48 -1
+     (nil))
+(insn 99 98 100 4 (set (reg:SI 112 [ _26 ])
+        (reg:SI 106 [ _20 ])) "/home/hashish/sc19orss/book_management.c":48 -1
+     (nil))
+(insn 100 99 101 4 (set (mem:SI (plus:DI (reg/f:DI 111 [ _25 ])
+                (const_int 20 [0x14])) [3 _25->copies+0 S4 A32])
+        (reg:SI 112 [ _26 ])) "/home/hashish/sc19orss/book_management.c":48 -1
+     (nil))
+(insn 101 100 102 4 (set (reg:SI 113 [ _27 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":49 -1
+     (nil))
+(insn 102 101 103 4 (parallel [
+            (set (reg:SI 114 [ _28 ])
+                (plus:SI (reg:SI 113 [ _27 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":49 -1
+     (nil))
+(insn 103 102 104 4 (set (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])
+        (reg:SI 114 [ _28 ])) "/home/hashish/sc19orss/book_management.c":49 -1
+     (nil))
+(code_label 104 103 105 5 9 (nil) [1 uses])
+(note 105 104 106 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 106 105 107 5 (set (reg:DI 137)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -232 [0xffffffffffffff18])) [6 file+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":37 -1
+     (nil))
+(insn 107 106 108 5 (parallel [
+            (set (reg:DI 138)
+                (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -208 [0xffffffffffffff30])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":37 -1
+     (nil))
+(insn 108 107 109 5 (set (reg:DI 1 dx)
+        (reg:DI 137)) "/home/hashish/sc19orss/book_management.c":37 -1
+     (nil))
+(insn 109 108 110 5 (set (reg:SI 4 si)
+        (const_int 200 [0xc8])) "/home/hashish/sc19orss/book_management.c":37 -1
+     (nil))
+(insn 110 109 111 5 (set (reg:DI 5 di)
+        (reg:DI 138)) "/home/hashish/sc19orss/book_management.c":37 -1
+     (nil))
+(call_insn 111 110 112 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fgets") [flags 0x41]  <function_decl 0x7f948cd3a300 fgets>) [0 fgets S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":37 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 112 111 114 5 (set (reg/f:DI 115 [ _29 ])
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":37 -1
+     (nil))
+(insn 114 112 115 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 115 [ _29 ])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":37 -1
+     (nil))
+(jump_insn 115 114 116 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 113)
+            (pc))) "/home/hashish/sc19orss/book_management.c":37 -1
+     (nil)
+ -> 113)
+(note 116 115 117 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 117 116 118 6 (set (reg:DI 139)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -232 [0xffffffffffffff18])) [6 file+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":52 -1
+     (nil))
+(insn 118 117 119 6 (set (reg:DI 5 di)
+        (reg:DI 139)) "/home/hashish/sc19orss/book_management.c":52 -1
+     (nil))
+(call_insn 119 118 120 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f948cd2e200 fclose>) [0 fclose S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":52 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 120 119 123 6 (set (reg:SI 116 [ _37 ])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":53 -1
+     (nil))
+(insn 123 120 127 6 (set (reg:SI 117 [ <retval> ])
+        (reg:SI 116 [ _37 ])) "/home/hashish/sc19orss/book_management.c":53 -1
+     (nil))
+(insn 127 123 128 6 (set (reg/i:SI 0 ax)
+        (reg:SI 117 [ <retval> ])) "/home/hashish/sc19orss/book_management.c":54 -1
+     (nil))
+(insn 128 127 129 6 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [7 D.2343+0 S8 A64])
+                        (const_int 40 [0x28])
+                    ] UNSPEC_SP_TLS_TEST))
+            (clobber (scratch:DI))
+        ]) "/home/hashish/sc19orss/book_management.c":54 -1
+     (nil))
+(jump_insn 129 128 135 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 132)
+            (pc))) "/home/hashish/sc19orss/book_management.c":54 -1
+     (nil)
+ -> 132)
+(note 135 129 130 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(call_insn 130 135 131 9 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f948cda0900 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":54 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (expr_list:REG_NORETURN (const_int 0 [0])
+            (expr_list:REG_EH_REGION (const_int 0 [0])
+                (nil))))
+    (nil))
+(barrier 131 130 132)
+(code_label 132 131 136 10 12 (nil) [1 uses])
+(note 136 132 133 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 133 136 0 10 (use (reg/i:SI 0 ax)) "/home/hashish/sc19orss/book_management.c":54 -1
+     (nil))
+
+;; Function find_book_by_author (find_book_by_author, funcdef_no=3, decl_uid=2227, cgraph_uid=3, symbol_order=4)
+
+Partition 4: size 200 align 16
+	line
+Partition 3: size 16 align 16
+	newbookarray
+Partition 0: size 8 align 8
+	token_35
+Partition 2: size 4 align 4
+	i_37
+Partition 1: size 4 align 4
+	i_36
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 15 into block 14...
+Merged blocks 14 and 15.
+Merged 14 and 15 without moving.
+Removing jump 160.
+Merging block 16 into block 14...
+Merged blocks 14 and 16.
+Merged 14 and 16 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -248 [0xffffffffffffff08])) [5 author+0 S8 A64])
+        (reg:DI 5 di [ author ])) "/home/hashish/sc19orss/book_management.c":56 -1
+     (nil))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 7 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [7 D.2346+0 S8 A64])
+                (unspec:DI [
+                        (const_int 40 [0x28])
+                    ] UNSPEC_SP_TLS_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":56 -1
+     (nil))
+(insn 7 4 8 2 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -216 [0xffffffffffffff28])) [3 newbookarray.length+0 S4 A64])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":59 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:DI 5 di)
+        (const_int 1440 [0x5a0])) "/home/hashish/sc19orss/book_management.c":60 -1
+     (nil))
+(call_insn 9 8 10 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f948cc6c600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":60 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 10 9 11 2 (set (reg/f:DI 123)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":60 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 123)
+        (nil)))
+(insn 11 10 12 2 (set (reg/f:DI 87 [ _1 ])
+        (reg/f:DI 123)) "/home/hashish/sc19orss/book_management.c":60 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -224 [0xffffffffffffff20])) [2 newbookarray.array+0 S8 A64])
+        (reg/f:DI 87 [ _1 ])) "/home/hashish/sc19orss/book_management.c":60 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 5 di)
+        (const_int 1440 [0x5a0])) "/home/hashish/sc19orss/book_management.c":61 -1
+     (nil))
+(call_insn 14 13 15 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f948cc6c600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":61 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 15 14 16 2 (set (reg/f:DI 124)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":61 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 124)
+        (nil)))
+(insn 16 15 17 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -232 [0xffffffffffffff18])) [5 token+0 S8 A64])
+        (reg/f:DI 124)) "/home/hashish/sc19orss/book_management.c":61 -1
+     (nil))
+(insn 17 16 18 2 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -240 [0xffffffffffffff10])) [3 i+0 S4 A32])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":63 -1
+     (nil))
+(jump_insn 18 17 19 2 (set (pc)
+        (label_ref 64)) "/home/hashish/sc19orss/book_management.c":63 -1
+     (nil)
+ -> 64)
+(barrier 19 18 66)
+(code_label 66 19 20 4 15 (nil) [1 uses])
+(note 20 66 21 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 4 (set (reg/f:DI 88 [ _2 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -224 [0xffffffffffffff20])) [2 newbookarray.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":66 -1
+     (nil))
+(insn 22 21 23 4 (set (reg:SI 125)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -240 [0xffffffffffffff10])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":66 -1
+     (nil))
+(insn 23 22 24 4 (set (reg:DI 89 [ _3 ])
+        (sign_extend:DI (reg:SI 125))) "/home/hashish/sc19orss/book_management.c":66 -1
+     (nil))
+(insn 24 23 25 4 (set (reg:DI 126)
+        (reg:DI 89 [ _3 ])) "/home/hashish/sc19orss/book_management.c":66 -1
+     (nil))
+(insn 25 24 26 4 (parallel [
+            (set (reg:DI 126)
+                (ashift:DI (reg:DI 126)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":66 -1
+     (nil))
+(insn 26 25 27 4 (parallel [
+            (set (reg:DI 126)
+                (plus:DI (reg:DI 126)
+                    (reg:DI 89 [ _3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":66 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 89 [ _3 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 27 26 28 4 (parallel [
+            (set (reg:DI 127)
+                (ashift:DI (reg:DI 126)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":66 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:DI 126)
+        (reg:DI 127)) "/home/hashish/sc19orss/book_management.c":66 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 89 [ _3 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 29 28 30 4 (set (reg:DI 90 [ _4 ])
+        (reg:DI 126)) "/home/hashish/sc19orss/book_management.c":66 -1
+     (nil))
+(insn 30 29 31 4 (parallel [
+            (set (reg/f:DI 91 [ _5 ])
+                (plus:DI (reg/f:DI 88 [ _2 ])
+                    (reg:DI 90 [ _4 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":66 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:DI 5 di)
+        (const_int 50 [0x32])) "/home/hashish/sc19orss/book_management.c":66 -1
+     (nil))
+(call_insn 32 31 33 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f948cc6c600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":66 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 33 32 34 4 (set (reg/f:DI 128)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":66 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 128)
+        (nil)))
+(insn 34 33 35 4 (set (reg/f:DI 92 [ _6 ])
+        (reg/f:DI 128)) "/home/hashish/sc19orss/book_management.c":66 -1
+     (nil))
+(insn 35 34 36 4 (set (mem/f:DI (reg/f:DI 91 [ _5 ]) [5 _5->title+0 S8 A64])
+        (reg/f:DI 92 [ _6 ])) "/home/hashish/sc19orss/book_management.c":66 -1
+     (nil))
+(insn 36 35 37 4 (set (reg/f:DI 93 [ _7 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -224 [0xffffffffffffff20])) [2 newbookarray.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":67 -1
+     (nil))
+(insn 37 36 38 4 (set (reg:SI 129)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -240 [0xffffffffffffff10])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":67 -1
+     (nil))
+(insn 38 37 39 4 (set (reg:DI 94 [ _8 ])
+        (sign_extend:DI (reg:SI 129))) "/home/hashish/sc19orss/book_management.c":67 -1
+     (nil))
+(insn 39 38 40 4 (set (reg:DI 130)
+        (reg:DI 94 [ _8 ])) "/home/hashish/sc19orss/book_management.c":67 -1
+     (nil))
+(insn 40 39 41 4 (parallel [
+            (set (reg:DI 130)
+                (ashift:DI (reg:DI 130)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":67 -1
+     (nil))
+(insn 41 40 42 4 (parallel [
+            (set (reg:DI 130)
+                (plus:DI (reg:DI 130)
+                    (reg:DI 94 [ _8 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":67 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 94 [ _8 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 42 41 43 4 (parallel [
+            (set (reg:DI 131)
+                (ashift:DI (reg:DI 130)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":67 -1
+     (nil))
+(insn 43 42 44 4 (set (reg:DI 130)
+        (reg:DI 131)) "/home/hashish/sc19orss/book_management.c":67 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 94 [ _8 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 44 43 45 4 (set (reg:DI 95 [ _9 ])
+        (reg:DI 130)) "/home/hashish/sc19orss/book_management.c":67 -1
+     (nil))
+(insn 45 44 46 4 (parallel [
+            (set (reg/f:DI 96 [ _10 ])
+                (plus:DI (reg/f:DI 93 [ _7 ])
+                    (reg:DI 95 [ _9 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":67 -1
+     (nil))
+(insn 46 45 47 4 (set (reg/f:DI 132)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f948c9bc240 *.LC2>)) "/home/hashish/sc19orss/book_management.c":67 -1
+     (nil))
+(insn 47 46 48 4 (set (mem/f:DI (reg/f:DI 96 [ _10 ]) [5 _10->title+0 S8 A64])
+        (reg/f:DI 132)) "/home/hashish/sc19orss/book_management.c":67 -1
+     (nil))
+(insn 48 47 49 4 (set (reg/f:DI 97 [ _11 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -224 [0xffffffffffffff20])) [2 newbookarray.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":68 -1
+     (nil))
+(insn 49 48 50 4 (set (reg:SI 133)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -240 [0xffffffffffffff10])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":68 -1
+     (nil))
+(insn 50 49 51 4 (set (reg:DI 98 [ _12 ])
+        (sign_extend:DI (reg:SI 133))) "/home/hashish/sc19orss/book_management.c":68 -1
+     (nil))
+(insn 51 50 52 4 (set (reg:DI 134)
+        (reg:DI 98 [ _12 ])) "/home/hashish/sc19orss/book_management.c":68 -1
+     (nil))
+(insn 52 51 53 4 (parallel [
+            (set (reg:DI 134)
+                (ashift:DI (reg:DI 134)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":68 -1
+     (nil))
+(insn 53 52 54 4 (parallel [
+            (set (reg:DI 134)
+                (plus:DI (reg:DI 134)
+                    (reg:DI 98 [ _12 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":68 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 98 [ _12 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 54 53 55 4 (parallel [
+            (set (reg:DI 135)
+                (ashift:DI (reg:DI 134)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":68 -1
+     (nil))
+(insn 55 54 56 4 (set (reg:DI 134)
+        (reg:DI 135)) "/home/hashish/sc19orss/book_management.c":68 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 98 [ _12 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 56 55 57 4 (set (reg:DI 99 [ _13 ])
+        (reg:DI 134)) "/home/hashish/sc19orss/book_management.c":68 -1
+     (nil))
+(insn 57 56 58 4 (parallel [
+            (set (reg/f:DI 100 [ _14 ])
+                (plus:DI (reg/f:DI 97 [ _11 ])
+                    (reg:DI 99 [ _13 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":68 -1
+     (nil))
+(insn 58 57 59 4 (set (reg:DI 5 di)
+        (const_int 50 [0x32])) "/home/hashish/sc19orss/book_management.c":68 -1
+     (nil))
+(call_insn 59 58 60 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f948cc6c600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":68 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 60 59 61 4 (set (reg/f:DI 136)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":68 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 136)
+        (nil)))
+(insn 61 60 62 4 (set (reg/f:DI 101 [ _15 ])
+        (reg/f:DI 136)) "/home/hashish/sc19orss/book_management.c":68 -1
+     (nil))
+(insn 62 61 63 4 (set (mem/f:DI (plus:DI (reg/f:DI 100 [ _14 ])
+                (const_int 8 [0x8])) [5 _14->authors+0 S8 A64])
+        (reg/f:DI 101 [ _15 ])) "/home/hashish/sc19orss/book_management.c":68 -1
+     (nil))
+(insn 63 62 64 4 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -240 [0xffffffffffffff10])) [3 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -240 [0xffffffffffffff10])) [3 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":63 -1
+     (nil))
+(code_label 64 63 65 5 14 (nil) [1 uses])
+(note 65 64 67 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 67 65 68 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -240 [0xffffffffffffff10])) [3 i+0 S4 A32])
+            (const_int 59 [0x3b]))) "/home/hashish/sc19orss/book_management.c":63 -1
+     (nil))
+(jump_insn 68 67 69 5 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 66)
+            (pc))) "/home/hashish/sc19orss/book_management.c":63 -1
+     (nil)
+ -> 66)
+(note 69 68 70 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 70 69 71 6 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -236 [0xffffffffffffff14])) [3 i+0 S4 A32])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":71 -1
+     (nil))
+(jump_insn 71 70 72 6 (set (pc)
+        (label_ref 148)) "/home/hashish/sc19orss/book_management.c":71 -1
+     (nil)
+ -> 148)
+(barrier 72 71 152)
+(code_label 152 72 73 7 20 (nil) [1 uses])
+(note 73 152 74 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 74 73 75 7 (set (reg/f:DI 102 [ _16 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":73 -1
+     (nil))
+(insn 75 74 76 7 (set (reg:SI 137)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -236 [0xffffffffffffff14])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":73 -1
+     (nil))
+(insn 76 75 77 7 (set (reg:DI 103 [ _17 ])
+        (sign_extend:DI (reg:SI 137))) "/home/hashish/sc19orss/book_management.c":73 -1
+     (nil))
+(insn 77 76 78 7 (set (reg:DI 138)
+        (reg:DI 103 [ _17 ])) "/home/hashish/sc19orss/book_management.c":73 -1
+     (nil))
+(insn 78 77 79 7 (parallel [
+            (set (reg:DI 138)
+                (ashift:DI (reg:DI 138)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":73 -1
+     (nil))
+(insn 79 78 80 7 (parallel [
+            (set (reg:DI 138)
+                (plus:DI (reg:DI 138)
+                    (reg:DI 103 [ _17 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":73 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 103 [ _17 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 80 79 81 7 (parallel [
+            (set (reg:DI 139)
+                (ashift:DI (reg:DI 138)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":73 -1
+     (nil))
+(insn 81 80 82 7 (set (reg:DI 138)
+        (reg:DI 139)) "/home/hashish/sc19orss/book_management.c":73 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 103 [ _17 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 82 81 83 7 (set (reg:DI 104 [ _18 ])
+        (reg:DI 138)) "/home/hashish/sc19orss/book_management.c":73 -1
+     (nil))
+(insn 83 82 84 7 (parallel [
+            (set (reg/f:DI 105 [ _19 ])
+                (plus:DI (reg/f:DI 102 [ _16 ])
+                    (reg:DI 104 [ _18 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":73 -1
+     (nil))
+(insn 84 83 85 7 (set (reg/f:DI 106 [ _20 ])
+        (mem/f:DI (plus:DI (reg/f:DI 105 [ _19 ])
+                (const_int 8 [0x8])) [5 _19->authors+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":73 -1
+     (nil))
+(insn 85 84 86 7 (parallel [
+            (set (reg:DI 140)
+                (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -208 [0xffffffffffffff30])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":73 -1
+     (nil))
+(insn 86 85 87 7 (set (reg:DI 4 si)
+        (reg/f:DI 106 [ _20 ])) "/home/hashish/sc19orss/book_management.c":73 -1
+     (nil))
+(insn 87 86 88 7 (set (reg:DI 5 di)
+        (reg:DI 140)) "/home/hashish/sc19orss/book_management.c":73 -1
+     (nil))
+(call_insn 88 87 89 7 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcpy") [flags 0x41]  <function_decl 0x7f948cc47f00 strcpy>) [0 __builtin_strcpy S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":73 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (set (reg:DI 0 ax)
+            (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (nil)))))
+(insn 89 88 90 7 (parallel [
+            (set (reg:DI 141)
+                (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -208 [0xffffffffffffff30])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":74 -1
+     (nil))
+(insn 90 89 91 7 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f948c9bc2d0 *.LC3>)) "/home/hashish/sc19orss/book_management.c":74 -1
+     (nil))
+(insn 91 90 92 7 (set (reg:DI 5 di)
+        (reg:DI 141)) "/home/hashish/sc19orss/book_management.c":74 -1
+     (nil))
+(call_insn 92 91 93 7 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f948cd55900 strtok>) [0 strtok S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":74 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 93 92 94 7 (set (reg:DI 142)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":74 -1
+     (nil))
+(insn 94 93 95 7 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -232 [0xffffffffffffff18])) [5 token+0 S8 A64])
+        (reg:DI 142)) "/home/hashish/sc19orss/book_management.c":74 -1
+     (nil))
+(jump_insn 95 94 96 7 (set (pc)
+        (label_ref 141)) "/home/hashish/sc19orss/book_management.c":75 -1
+     (nil)
+ -> 141)
+(barrier 96 95 143)
+(code_label 143 96 97 8 19 (nil) [1 uses])
+(note 97 143 98 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 98 97 99 8 (set (reg:DI 143)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -248 [0xffffffffffffff08])) [5 author+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":78 -1
+     (nil))
+(insn 99 98 100 8 (set (reg:DI 144)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -232 [0xffffffffffffff18])) [5 token+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":78 -1
+     (nil))
+(insn 100 99 101 8 (set (reg:DI 4 si)
+        (reg:DI 143)) "/home/hashish/sc19orss/book_management.c":78 -1
+     (nil))
+(insn 101 100 102 8 (set (reg:DI 5 di)
+        (reg:DI 144)) "/home/hashish/sc19orss/book_management.c":78 -1
+     (nil))
+(call_insn/i 102 101 103 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f948cc47d00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":78 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 103 102 104 8 (set (reg:SI 107 [ _21 ])
+        (reg:SI 0 ax)) "/home/hashish/sc19orss/book_management.c":78 -1
+     (nil))
+(insn 104 103 105 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 107 [ _21 ])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":78 -1
+     (nil))
+(jump_insn 105 104 106 8 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 134)
+            (pc))) "/home/hashish/sc19orss/book_management.c":78 -1
+     (nil)
+ -> 134)
+(note 106 105 107 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 107 106 108 9 (set (reg/f:DI 108 [ _22 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 108 107 109 9 (set (reg:SI 145)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -236 [0xffffffffffffff14])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 109 108 110 9 (set (reg:DI 109 [ _23 ])
+        (sign_extend:DI (reg:SI 145))) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 110 109 111 9 (set (reg:DI 146)
+        (reg:DI 109 [ _23 ])) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 111 110 112 9 (parallel [
+            (set (reg:DI 146)
+                (ashift:DI (reg:DI 146)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 112 111 113 9 (parallel [
+            (set (reg:DI 146)
+                (plus:DI (reg:DI 146)
+                    (reg:DI 109 [ _23 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":80 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 109 [ _23 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 113 112 114 9 (parallel [
+            (set (reg:DI 147)
+                (ashift:DI (reg:DI 146)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 114 113 115 9 (set (reg:DI 146)
+        (reg:DI 147)) "/home/hashish/sc19orss/book_management.c":80 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 109 [ _23 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 115 114 116 9 (set (reg:DI 110 [ _24 ])
+        (reg:DI 146)) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 116 115 117 9 (parallel [
+            (set (reg/f:DI 111 [ _25 ])
+                (plus:DI (reg/f:DI 108 [ _22 ])
+                    (reg:DI 110 [ _24 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 117 116 118 9 (set (reg/f:DI 112 [ _26 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -224 [0xffffffffffffff20])) [2 newbookarray.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 118 117 119 9 (set (reg:SI 113 [ _27 ])
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -216 [0xffffffffffffff28])) [3 newbookarray.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 119 118 120 9 (set (reg:DI 114 [ _28 ])
+        (zero_extend:DI (reg:SI 113 [ _27 ]))) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 120 119 121 9 (set (reg:DI 148)
+        (reg:DI 114 [ _28 ])) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 121 120 122 9 (parallel [
+            (set (reg:DI 148)
+                (ashift:DI (reg:DI 148)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 122 121 123 9 (parallel [
+            (set (reg:DI 148)
+                (plus:DI (reg:DI 148)
+                    (reg:DI 114 [ _28 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":80 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 114 [ _28 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 123 122 124 9 (parallel [
+            (set (reg:DI 149)
+                (ashift:DI (reg:DI 148)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 124 123 125 9 (set (reg:DI 148)
+        (reg:DI 149)) "/home/hashish/sc19orss/book_management.c":80 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 114 [ _28 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 125 124 126 9 (set (reg:DI 115 [ _29 ])
+        (reg:DI 148)) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 126 125 127 9 (parallel [
+            (set (reg/f:DI 116 [ _30 ])
+                (plus:DI (reg/f:DI 112 [ _26 ])
+                    (reg:DI 115 [ _29 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 127 126 128 9 (set (reg:TI 150)
+        (mem:TI (reg/f:DI 111 [ _25 ]) [4 *_25+0 S16 A64])) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 128 127 129 9 (set (mem:TI (reg/f:DI 116 [ _30 ]) [4 *_30+0 S16 A64])
+        (reg:TI 150)) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 129 128 130 9 (set (reg:DI 151)
+        (mem:DI (plus:DI (reg/f:DI 111 [ _25 ])
+                (const_int 16 [0x10])) [4 *_25+16 S8 A64])) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 130 129 131 9 (set (mem:DI (plus:DI (reg/f:DI 116 [ _30 ])
+                (const_int 16 [0x10])) [4 *_30+16 S8 A64])
+        (reg:DI 151)) "/home/hashish/sc19orss/book_management.c":80 -1
+     (nil))
+(insn 131 130 132 9 (set (reg:SI 117 [ _31 ])
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -216 [0xffffffffffffff28])) [3 newbookarray.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":81 -1
+     (nil))
+(insn 132 131 133 9 (parallel [
+            (set (reg:SI 118 [ _32 ])
+                (plus:SI (reg:SI 117 [ _31 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":81 -1
+     (nil))
+(insn 133 132 134 9 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -216 [0xffffffffffffff28])) [3 newbookarray.length+0 S4 A64])
+        (reg:SI 118 [ _32 ])) "/home/hashish/sc19orss/book_management.c":81 -1
+     (nil))
+(code_label 134 133 135 10 18 (nil) [1 uses])
+(note 135 134 136 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 136 135 137 10 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f948c9bc2d0 *.LC3>)) "/home/hashish/sc19orss/book_management.c":84 -1
+     (nil))
+(insn 137 136 138 10 (set (reg:DI 5 di)
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":84 -1
+     (nil))
+(call_insn 138 137 139 10 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f948cd55900 strtok>) [0 strtok S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":84 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 139 138 140 10 (set (reg:DI 152)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":84 -1
+     (nil))
+(insn 140 139 141 10 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -232 [0xffffffffffffff18])) [5 token+0 S8 A64])
+        (reg:DI 152)) "/home/hashish/sc19orss/book_management.c":84 -1
+     (nil))
+(code_label 141 140 142 11 17 (nil) [1 uses])
+(note 142 141 144 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 144 142 145 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -232 [0xffffffffffffff18])) [5 token+0 S8 A64])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":75 -1
+     (nil))
+(jump_insn 145 144 146 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 143)
+            (pc))) "/home/hashish/sc19orss/book_management.c":75 -1
+     (nil)
+ -> 143)
+(note 146 145 147 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 147 146 148 12 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -236 [0xffffffffffffff14])) [3 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -236 [0xffffffffffffff14])) [3 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":71 -1
+     (nil))
+(code_label 148 147 149 13 16 (nil) [1 uses])
+(note 149 148 150 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 150 149 151 13 (set (reg:SI 119 [ _33 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":71 -1
+     (nil))
+(insn 151 150 153 13 (set (reg:SI 120 [ i.1_34 ])
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -236 [0xffffffffffffff14])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":71 -1
+     (nil))
+(insn 153 151 154 13 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 119 [ _33 ])
+            (reg:SI 120 [ i.1_34 ]))) "/home/hashish/sc19orss/book_management.c":71 -1
+     (nil))
+(jump_insn 154 153 155 13 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 152)
+            (pc))) "/home/hashish/sc19orss/book_management.c":71 -1
+     (nil)
+ -> 152)
+(note 155 154 156 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 156 155 159 14 (set (reg:TI 121 [ D.2311 ])
+        (mem/c:TI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -224 [0xffffffffffffff20])) [1 newbookarray+0 S16 A64])) "/home/hashish/sc19orss/book_management.c":87 -1
+     (nil))
+(insn 159 156 163 14 (set (reg:TI 122 [ <retval> ])
+        (reg:TI 121 [ D.2311 ])) "/home/hashish/sc19orss/book_management.c":87 -1
+     (nil))
+(insn 163 159 164 14 (set (reg/i:TI 0 ax)
+        (reg:TI 122 [ <retval> ])) "/home/hashish/sc19orss/book_management.c":89 -1
+     (nil))
+(insn 164 163 165 14 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [7 D.2346+0 S8 A64])
+                        (const_int 40 [0x28])
+                    ] UNSPEC_SP_TLS_TEST))
+            (clobber (scratch:DI))
+        ]) "/home/hashish/sc19orss/book_management.c":89 -1
+     (nil))
+(jump_insn 165 164 171 14 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 168)
+            (pc))) "/home/hashish/sc19orss/book_management.c":89 -1
+     (nil)
+ -> 168)
+(note 171 165 166 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(call_insn 166 171 167 17 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f948cda0900 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":89 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (expr_list:REG_NORETURN (const_int 0 [0])
+            (expr_list:REG_EH_REGION (const_int 0 [0])
+                (nil))))
+    (nil))
+(barrier 167 166 168)
+(code_label 168 167 172 18 22 (nil) [1 uses])
+(note 172 168 169 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 169 172 0 18 (use (reg/i:TI 0 ax)) "/home/hashish/sc19orss/book_management.c":89 -1
+     (nil))
+
+;; Function find_book_by_title (find_book_by_title, funcdef_no=4, decl_uid=2225, cgraph_uid=4, symbol_order=5)
+
+Partition 2: size 16 align 16
+	newbookarray
+Partition 1: size 4 align 4
+	i_36
+Partition 0: size 4 align 4
+	i_35
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 12 into block 11...
+Merged blocks 11 and 12.
+Merged 11 and 12 without moving.
+Removing jump 130.
+Merging block 13 into block 11...
+Merged blocks 11 and 13.
+Merged 11 and 13 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [5 title+0 S8 A64])
+        (reg:DI 5 di [ title ])) "/home/hashish/sc19orss/book_management.c":92 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [3 newbookarray.length+0 S4 A64])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":95 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 5 di)
+        (const_int 1200 [0x4b0])) "/home/hashish/sc19orss/book_management.c":96 -1
+     (nil))
+(call_insn 8 7 9 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f948cc6c600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":96 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 9 8 10 2 (set (reg/f:DI 123)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":96 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 123)
+        (nil)))
+(insn 10 9 11 2 (set (reg/f:DI 87 [ _1 ])
+        (reg/f:DI 123)) "/home/hashish/sc19orss/book_management.c":96 -1
+     (nil))
+(insn 11 10 12 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 newbookarray.array+0 S8 A64])
+        (reg/f:DI 87 [ _1 ])) "/home/hashish/sc19orss/book_management.c":96 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 i+0 S4 A32])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":97 -1
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (label_ref 59)) "/home/hashish/sc19orss/book_management.c":97 -1
+     (nil)
+ -> 59)
+(barrier 14 13 61)
+(code_label 61 14 15 4 25 (nil) [1 uses])
+(note 15 61 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 17 4 (set (reg/f:DI 88 [ _2 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 newbookarray.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":100 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:SI 124)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":100 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:DI 89 [ _3 ])
+        (sign_extend:DI (reg:SI 124))) "/home/hashish/sc19orss/book_management.c":100 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:DI 125)
+        (reg:DI 89 [ _3 ])) "/home/hashish/sc19orss/book_management.c":100 -1
+     (nil))
+(insn 20 19 21 4 (parallel [
+            (set (reg:DI 125)
+                (ashift:DI (reg:DI 125)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":100 -1
+     (nil))
+(insn 21 20 22 4 (parallel [
+            (set (reg:DI 125)
+                (plus:DI (reg:DI 125)
+                    (reg:DI 89 [ _3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":100 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 89 [ _3 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 22 21 23 4 (parallel [
+            (set (reg:DI 126)
+                (ashift:DI (reg:DI 125)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":100 -1
+     (nil))
+(insn 23 22 24 4 (set (reg:DI 125)
+        (reg:DI 126)) "/home/hashish/sc19orss/book_management.c":100 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 89 [ _3 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 24 23 25 4 (set (reg:DI 90 [ _4 ])
+        (reg:DI 125)) "/home/hashish/sc19orss/book_management.c":100 -1
+     (nil))
+(insn 25 24 26 4 (parallel [
+            (set (reg/f:DI 91 [ _5 ])
+                (plus:DI (reg/f:DI 88 [ _2 ])
+                    (reg:DI 90 [ _4 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":100 -1
+     (nil))
+(insn 26 25 27 4 (set (reg:DI 5 di)
+        (const_int 50 [0x32])) "/home/hashish/sc19orss/book_management.c":100 -1
+     (nil))
+(call_insn 27 26 28 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f948cc6c600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":100 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 28 27 29 4 (set (reg/f:DI 127)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":100 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 127)
+        (nil)))
+(insn 29 28 30 4 (set (reg/f:DI 92 [ _6 ])
+        (reg/f:DI 127)) "/home/hashish/sc19orss/book_management.c":100 -1
+     (nil))
+(insn 30 29 31 4 (set (mem/f:DI (reg/f:DI 91 [ _5 ]) [5 _5->title+0 S8 A64])
+        (reg/f:DI 92 [ _6 ])) "/home/hashish/sc19orss/book_management.c":100 -1
+     (nil))
+(insn 31 30 32 4 (set (reg/f:DI 93 [ _7 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 newbookarray.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":101 -1
+     (nil))
+(insn 32 31 33 4 (set (reg:SI 128)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":101 -1
+     (nil))
+(insn 33 32 34 4 (set (reg:DI 94 [ _8 ])
+        (sign_extend:DI (reg:SI 128))) "/home/hashish/sc19orss/book_management.c":101 -1
+     (nil))
+(insn 34 33 35 4 (set (reg:DI 129)
+        (reg:DI 94 [ _8 ])) "/home/hashish/sc19orss/book_management.c":101 -1
+     (nil))
+(insn 35 34 36 4 (parallel [
+            (set (reg:DI 129)
+                (ashift:DI (reg:DI 129)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":101 -1
+     (nil))
+(insn 36 35 37 4 (parallel [
+            (set (reg:DI 129)
+                (plus:DI (reg:DI 129)
+                    (reg:DI 94 [ _8 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":101 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 94 [ _8 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 37 36 38 4 (parallel [
+            (set (reg:DI 130)
+                (ashift:DI (reg:DI 129)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":101 -1
+     (nil))
+(insn 38 37 39 4 (set (reg:DI 129)
+        (reg:DI 130)) "/home/hashish/sc19orss/book_management.c":101 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 94 [ _8 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 39 38 40 4 (set (reg:DI 95 [ _9 ])
+        (reg:DI 129)) "/home/hashish/sc19orss/book_management.c":101 -1
+     (nil))
+(insn 40 39 41 4 (parallel [
+            (set (reg/f:DI 96 [ _10 ])
+                (plus:DI (reg/f:DI 93 [ _7 ])
+                    (reg:DI 95 [ _9 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":101 -1
+     (nil))
+(insn 41 40 42 4 (set (reg/f:DI 131)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f948c9bc240 *.LC2>)) "/home/hashish/sc19orss/book_management.c":101 -1
+     (nil))
+(insn 42 41 43 4 (set (mem/f:DI (reg/f:DI 96 [ _10 ]) [5 _10->title+0 S8 A64])
+        (reg/f:DI 131)) "/home/hashish/sc19orss/book_management.c":101 -1
+     (nil))
+(insn 43 42 44 4 (set (reg/f:DI 97 [ _11 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 newbookarray.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":102 -1
+     (nil))
+(insn 44 43 45 4 (set (reg:SI 132)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":102 -1
+     (nil))
+(insn 45 44 46 4 (set (reg:DI 98 [ _12 ])
+        (sign_extend:DI (reg:SI 132))) "/home/hashish/sc19orss/book_management.c":102 -1
+     (nil))
+(insn 46 45 47 4 (set (reg:DI 133)
+        (reg:DI 98 [ _12 ])) "/home/hashish/sc19orss/book_management.c":102 -1
+     (nil))
+(insn 47 46 48 4 (parallel [
+            (set (reg:DI 133)
+                (ashift:DI (reg:DI 133)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":102 -1
+     (nil))
+(insn 48 47 49 4 (parallel [
+            (set (reg:DI 133)
+                (plus:DI (reg:DI 133)
+                    (reg:DI 98 [ _12 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":102 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 98 [ _12 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 49 48 50 4 (parallel [
+            (set (reg:DI 134)
+                (ashift:DI (reg:DI 133)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":102 -1
+     (nil))
+(insn 50 49 51 4 (set (reg:DI 133)
+        (reg:DI 134)) "/home/hashish/sc19orss/book_management.c":102 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 98 [ _12 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 51 50 52 4 (set (reg:DI 99 [ _13 ])
+        (reg:DI 133)) "/home/hashish/sc19orss/book_management.c":102 -1
+     (nil))
+(insn 52 51 53 4 (parallel [
+            (set (reg/f:DI 100 [ _14 ])
+                (plus:DI (reg/f:DI 97 [ _11 ])
+                    (reg:DI 99 [ _13 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":102 -1
+     (nil))
+(insn 53 52 54 4 (set (reg:DI 5 di)
+        (const_int 50 [0x32])) "/home/hashish/sc19orss/book_management.c":102 -1
+     (nil))
+(call_insn 54 53 55 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f948cc6c600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":102 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 55 54 56 4 (set (reg/f:DI 135)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":102 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 135)
+        (nil)))
+(insn 56 55 57 4 (set (reg/f:DI 101 [ _15 ])
+        (reg/f:DI 135)) "/home/hashish/sc19orss/book_management.c":102 -1
+     (nil))
+(insn 57 56 58 4 (set (mem/f:DI (plus:DI (reg/f:DI 100 [ _14 ])
+                (const_int 8 [0x8])) [5 _14->authors+0 S8 A64])
+        (reg/f:DI 101 [ _15 ])) "/home/hashish/sc19orss/book_management.c":102 -1
+     (nil))
+(insn 58 57 59 4 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -24 [0xffffffffffffffe8])) [3 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -24 [0xffffffffffffffe8])) [3 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":97 -1
+     (nil))
+(code_label 59 58 60 5 24 (nil) [1 uses])
+(note 60 59 62 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 62 60 63 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])) [3 i+0 S4 A32])
+            (const_int 49 [0x31]))) "/home/hashish/sc19orss/book_management.c":97 -1
+     (nil))
+(jump_insn 63 62 64 5 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 61)
+            (pc))) "/home/hashish/sc19orss/book_management.c":97 -1
+     (nil)
+ -> 61)
+(note 64 63 65 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 65 64 66 6 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [3 i+0 S4 A32])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":105 -1
+     (nil))
+(jump_insn 66 65 67 6 (set (pc)
+        (label_ref 118)) "/home/hashish/sc19orss/book_management.c":105 -1
+     (nil)
+ -> 118)
+(barrier 67 66 122)
+(code_label 122 67 68 7 28 (nil) [1 uses])
+(note 68 122 69 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 70 7 (set (reg/f:DI 102 [ _16 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":107 -1
+     (nil))
+(insn 70 69 71 7 (set (reg:SI 136)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":107 -1
+     (nil))
+(insn 71 70 72 7 (set (reg:DI 103 [ _17 ])
+        (sign_extend:DI (reg:SI 136))) "/home/hashish/sc19orss/book_management.c":107 -1
+     (nil))
+(insn 72 71 73 7 (set (reg:DI 137)
+        (reg:DI 103 [ _17 ])) "/home/hashish/sc19orss/book_management.c":107 -1
+     (nil))
+(insn 73 72 74 7 (parallel [
+            (set (reg:DI 137)
+                (ashift:DI (reg:DI 137)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":107 -1
+     (nil))
+(insn 74 73 75 7 (parallel [
+            (set (reg:DI 137)
+                (plus:DI (reg:DI 137)
+                    (reg:DI 103 [ _17 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":107 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 103 [ _17 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 75 74 76 7 (parallel [
+            (set (reg:DI 138)
+                (ashift:DI (reg:DI 137)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":107 -1
+     (nil))
+(insn 76 75 77 7 (set (reg:DI 137)
+        (reg:DI 138)) "/home/hashish/sc19orss/book_management.c":107 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 103 [ _17 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 77 76 78 7 (set (reg:DI 104 [ _18 ])
+        (reg:DI 137)) "/home/hashish/sc19orss/book_management.c":107 -1
+     (nil))
+(insn 78 77 79 7 (parallel [
+            (set (reg/f:DI 105 [ _19 ])
+                (plus:DI (reg/f:DI 102 [ _16 ])
+                    (reg:DI 104 [ _18 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":107 -1
+     (nil))
+(insn 79 78 80 7 (set (reg/f:DI 106 [ _20 ])
+        (mem/f:DI (reg/f:DI 105 [ _19 ]) [5 _19->title+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":107 -1
+     (nil))
+(insn 80 79 81 7 (set (reg:DI 139)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [5 title+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":107 -1
+     (nil))
+(insn 81 80 82 7 (set (reg:DI 4 si)
+        (reg:DI 139)) "/home/hashish/sc19orss/book_management.c":107 -1
+     (nil))
+(insn 82 81 83 7 (set (reg:DI 5 di)
+        (reg/f:DI 106 [ _20 ])) "/home/hashish/sc19orss/book_management.c":107 -1
+     (nil))
+(call_insn/i 83 82 84 7 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f948cc47d00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":107 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 84 83 85 7 (set (reg:SI 107 [ _21 ])
+        (reg:SI 0 ax)) "/home/hashish/sc19orss/book_management.c":107 -1
+     (nil))
+(insn 85 84 86 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 107 [ _21 ])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":107 -1
+     (nil))
+(jump_insn 86 85 87 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 115)
+            (pc))) "/home/hashish/sc19orss/book_management.c":107 -1
+     (nil)
+ -> 115)
+(note 87 86 88 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 88 87 89 8 (set (reg/f:DI 108 [ _22 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 89 88 90 8 (set (reg:SI 140)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 90 89 91 8 (set (reg:DI 109 [ _23 ])
+        (sign_extend:DI (reg:SI 140))) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 91 90 92 8 (set (reg:DI 141)
+        (reg:DI 109 [ _23 ])) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 92 91 93 8 (parallel [
+            (set (reg:DI 141)
+                (ashift:DI (reg:DI 141)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 93 92 94 8 (parallel [
+            (set (reg:DI 141)
+                (plus:DI (reg:DI 141)
+                    (reg:DI 109 [ _23 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":108 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 109 [ _23 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 94 93 95 8 (parallel [
+            (set (reg:DI 142)
+                (ashift:DI (reg:DI 141)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 95 94 96 8 (set (reg:DI 141)
+        (reg:DI 142)) "/home/hashish/sc19orss/book_management.c":108 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 109 [ _23 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 96 95 97 8 (set (reg:DI 110 [ _24 ])
+        (reg:DI 141)) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 97 96 98 8 (parallel [
+            (set (reg/f:DI 111 [ _25 ])
+                (plus:DI (reg/f:DI 108 [ _22 ])
+                    (reg:DI 110 [ _24 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 98 97 99 8 (set (reg/f:DI 112 [ _26 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 newbookarray.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 99 98 100 8 (set (reg:SI 113 [ _27 ])
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [3 newbookarray.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 100 99 101 8 (set (reg:DI 114 [ _28 ])
+        (zero_extend:DI (reg:SI 113 [ _27 ]))) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 101 100 102 8 (set (reg:DI 143)
+        (reg:DI 114 [ _28 ])) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 102 101 103 8 (parallel [
+            (set (reg:DI 143)
+                (ashift:DI (reg:DI 143)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 103 102 104 8 (parallel [
+            (set (reg:DI 143)
+                (plus:DI (reg:DI 143)
+                    (reg:DI 114 [ _28 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":108 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 114 [ _28 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 104 103 105 8 (parallel [
+            (set (reg:DI 144)
+                (ashift:DI (reg:DI 143)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 105 104 106 8 (set (reg:DI 143)
+        (reg:DI 144)) "/home/hashish/sc19orss/book_management.c":108 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 114 [ _28 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 106 105 107 8 (set (reg:DI 115 [ _29 ])
+        (reg:DI 143)) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 107 106 108 8 (parallel [
+            (set (reg/f:DI 116 [ _30 ])
+                (plus:DI (reg/f:DI 112 [ _26 ])
+                    (reg:DI 115 [ _29 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 108 107 109 8 (set (reg:TI 145)
+        (mem:TI (reg/f:DI 111 [ _25 ]) [4 *_25+0 S16 A64])) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 109 108 110 8 (set (mem:TI (reg/f:DI 116 [ _30 ]) [4 *_30+0 S16 A64])
+        (reg:TI 145)) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 110 109 111 8 (set (reg:DI 146)
+        (mem:DI (plus:DI (reg/f:DI 111 [ _25 ])
+                (const_int 16 [0x10])) [4 *_25+16 S8 A64])) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 111 110 112 8 (set (mem:DI (plus:DI (reg/f:DI 116 [ _30 ])
+                (const_int 16 [0x10])) [4 *_30+16 S8 A64])
+        (reg:DI 146)) "/home/hashish/sc19orss/book_management.c":108 -1
+     (nil))
+(insn 112 111 113 8 (set (reg:SI 117 [ _31 ])
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [3 newbookarray.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":109 -1
+     (nil))
+(insn 113 112 114 8 (parallel [
+            (set (reg:SI 118 [ _32 ])
+                (plus:SI (reg:SI 117 [ _31 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":109 -1
+     (nil))
+(insn 114 113 115 8 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [3 newbookarray.length+0 S4 A64])
+        (reg:SI 118 [ _32 ])) "/home/hashish/sc19orss/book_management.c":109 -1
+     (nil))
+(code_label 115 114 116 9 27 (nil) [1 uses])
+(note 116 115 117 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 117 116 118 9 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -20 [0xffffffffffffffec])) [3 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -20 [0xffffffffffffffec])) [3 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":105 -1
+     (nil))
+(code_label 118 117 119 10 26 (nil) [1 uses])
+(note 119 118 120 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 120 119 121 10 (set (reg:SI 119 [ _33 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":105 -1
+     (nil))
+(insn 121 120 123 10 (set (reg:SI 120 [ i.2_34 ])
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":105 -1
+     (nil))
+(insn 123 121 124 10 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 119 [ _33 ])
+            (reg:SI 120 [ i.2_34 ]))) "/home/hashish/sc19orss/book_management.c":105 -1
+     (nil))
+(jump_insn 124 123 125 10 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 122)
+            (pc))) "/home/hashish/sc19orss/book_management.c":105 -1
+     (nil)
+ -> 122)
+(note 125 124 126 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 126 125 129 11 (set (reg:TI 121 [ D.2316 ])
+        (mem/c:TI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 newbookarray+0 S16 A64])) "/home/hashish/sc19orss/book_management.c":113 -1
+     (nil))
+(insn 129 126 133 11 (set (reg:TI 122 [ <retval> ])
+        (reg:TI 121 [ D.2316 ])) "/home/hashish/sc19orss/book_management.c":113 -1
+     (nil))
+(insn 133 129 134 11 (set (reg/i:TI 0 ax)
+        (reg:TI 122 [ <retval> ])) "/home/hashish/sc19orss/book_management.c":114 -1
+     (nil))
+(insn 134 133 0 11 (use (reg/i:TI 0 ax)) "/home/hashish/sc19orss/book_management.c":114 -1
+     (nil))
+
+;; Function find_book_by_year (find_book_by_year, funcdef_no=5, decl_uid=2229, cgraph_uid=5, symbol_order=6)
+
+Partition 2: size 16 align 16
+	newbookarray
+Partition 1: size 4 align 4
+	i_35
+Partition 0: size 4 align 4
+	i_34
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 12 into block 11...
+Merged blocks 11 and 12.
+Merged 11 and 12 without moving.
+Removing jump 125.
+Merging block 13 into block 11...
+Merged blocks 11 and 13.
+Merged 11 and 13 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -36 [0xffffffffffffffdc])) [3 year+0 S4 A32])
+        (reg:SI 5 di [ year ])) "/home/hashish/sc19orss/book_management.c":117 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [3 newbookarray.length+0 S4 A64])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":120 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 5 di)
+        (const_int 1200 [0x4b0])) "/home/hashish/sc19orss/book_management.c":121 -1
+     (nil))
+(call_insn 8 7 9 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f948cc6c600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":121 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 9 8 10 2 (set (reg/f:DI 122)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":121 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 122)
+        (nil)))
+(insn 10 9 11 2 (set (reg/f:DI 87 [ _1 ])
+        (reg/f:DI 122)) "/home/hashish/sc19orss/book_management.c":121 -1
+     (nil))
+(insn 11 10 12 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 newbookarray.array+0 S8 A64])
+        (reg/f:DI 87 [ _1 ])) "/home/hashish/sc19orss/book_management.c":121 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 i+0 S4 A32])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":122 -1
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (label_ref 59)) "/home/hashish/sc19orss/book_management.c":122 -1
+     (nil)
+ -> 59)
+(barrier 14 13 61)
+(code_label 61 14 15 4 32 (nil) [1 uses])
+(note 15 61 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 17 4 (set (reg/f:DI 88 [ _2 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 newbookarray.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":125 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:SI 123)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":125 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:DI 89 [ _3 ])
+        (sign_extend:DI (reg:SI 123))) "/home/hashish/sc19orss/book_management.c":125 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:DI 124)
+        (reg:DI 89 [ _3 ])) "/home/hashish/sc19orss/book_management.c":125 -1
+     (nil))
+(insn 20 19 21 4 (parallel [
+            (set (reg:DI 124)
+                (ashift:DI (reg:DI 124)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":125 -1
+     (nil))
+(insn 21 20 22 4 (parallel [
+            (set (reg:DI 124)
+                (plus:DI (reg:DI 124)
+                    (reg:DI 89 [ _3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":125 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 89 [ _3 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 22 21 23 4 (parallel [
+            (set (reg:DI 125)
+                (ashift:DI (reg:DI 124)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":125 -1
+     (nil))
+(insn 23 22 24 4 (set (reg:DI 124)
+        (reg:DI 125)) "/home/hashish/sc19orss/book_management.c":125 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 89 [ _3 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 24 23 25 4 (set (reg:DI 90 [ _4 ])
+        (reg:DI 124)) "/home/hashish/sc19orss/book_management.c":125 -1
+     (nil))
+(insn 25 24 26 4 (parallel [
+            (set (reg/f:DI 91 [ _5 ])
+                (plus:DI (reg/f:DI 88 [ _2 ])
+                    (reg:DI 90 [ _4 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":125 -1
+     (nil))
+(insn 26 25 27 4 (set (reg:DI 5 di)
+        (const_int 50 [0x32])) "/home/hashish/sc19orss/book_management.c":125 -1
+     (nil))
+(call_insn 27 26 28 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f948cc6c600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":125 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 28 27 29 4 (set (reg/f:DI 126)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":125 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 126)
+        (nil)))
+(insn 29 28 30 4 (set (reg/f:DI 92 [ _6 ])
+        (reg/f:DI 126)) "/home/hashish/sc19orss/book_management.c":125 -1
+     (nil))
+(insn 30 29 31 4 (set (mem/f:DI (reg/f:DI 91 [ _5 ]) [5 _5->title+0 S8 A64])
+        (reg/f:DI 92 [ _6 ])) "/home/hashish/sc19orss/book_management.c":125 -1
+     (nil))
+(insn 31 30 32 4 (set (reg/f:DI 93 [ _7 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 newbookarray.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":126 -1
+     (nil))
+(insn 32 31 33 4 (set (reg:SI 127)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":126 -1
+     (nil))
+(insn 33 32 34 4 (set (reg:DI 94 [ _8 ])
+        (sign_extend:DI (reg:SI 127))) "/home/hashish/sc19orss/book_management.c":126 -1
+     (nil))
+(insn 34 33 35 4 (set (reg:DI 128)
+        (reg:DI 94 [ _8 ])) "/home/hashish/sc19orss/book_management.c":126 -1
+     (nil))
+(insn 35 34 36 4 (parallel [
+            (set (reg:DI 128)
+                (ashift:DI (reg:DI 128)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":126 -1
+     (nil))
+(insn 36 35 37 4 (parallel [
+            (set (reg:DI 128)
+                (plus:DI (reg:DI 128)
+                    (reg:DI 94 [ _8 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":126 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 94 [ _8 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 37 36 38 4 (parallel [
+            (set (reg:DI 129)
+                (ashift:DI (reg:DI 128)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":126 -1
+     (nil))
+(insn 38 37 39 4 (set (reg:DI 128)
+        (reg:DI 129)) "/home/hashish/sc19orss/book_management.c":126 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 94 [ _8 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 39 38 40 4 (set (reg:DI 95 [ _9 ])
+        (reg:DI 128)) "/home/hashish/sc19orss/book_management.c":126 -1
+     (nil))
+(insn 40 39 41 4 (parallel [
+            (set (reg/f:DI 96 [ _10 ])
+                (plus:DI (reg/f:DI 93 [ _7 ])
+                    (reg:DI 95 [ _9 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":126 -1
+     (nil))
+(insn 41 40 42 4 (set (reg/f:DI 130)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f948c9bc240 *.LC2>)) "/home/hashish/sc19orss/book_management.c":126 -1
+     (nil))
+(insn 42 41 43 4 (set (mem/f:DI (reg/f:DI 96 [ _10 ]) [5 _10->title+0 S8 A64])
+        (reg/f:DI 130)) "/home/hashish/sc19orss/book_management.c":126 -1
+     (nil))
+(insn 43 42 44 4 (set (reg/f:DI 97 [ _11 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 newbookarray.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":127 -1
+     (nil))
+(insn 44 43 45 4 (set (reg:SI 131)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":127 -1
+     (nil))
+(insn 45 44 46 4 (set (reg:DI 98 [ _12 ])
+        (sign_extend:DI (reg:SI 131))) "/home/hashish/sc19orss/book_management.c":127 -1
+     (nil))
+(insn 46 45 47 4 (set (reg:DI 132)
+        (reg:DI 98 [ _12 ])) "/home/hashish/sc19orss/book_management.c":127 -1
+     (nil))
+(insn 47 46 48 4 (parallel [
+            (set (reg:DI 132)
+                (ashift:DI (reg:DI 132)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":127 -1
+     (nil))
+(insn 48 47 49 4 (parallel [
+            (set (reg:DI 132)
+                (plus:DI (reg:DI 132)
+                    (reg:DI 98 [ _12 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":127 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 98 [ _12 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 49 48 50 4 (parallel [
+            (set (reg:DI 133)
+                (ashift:DI (reg:DI 132)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":127 -1
+     (nil))
+(insn 50 49 51 4 (set (reg:DI 132)
+        (reg:DI 133)) "/home/hashish/sc19orss/book_management.c":127 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 98 [ _12 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 51 50 52 4 (set (reg:DI 99 [ _13 ])
+        (reg:DI 132)) "/home/hashish/sc19orss/book_management.c":127 -1
+     (nil))
+(insn 52 51 53 4 (parallel [
+            (set (reg/f:DI 100 [ _14 ])
+                (plus:DI (reg/f:DI 97 [ _11 ])
+                    (reg:DI 99 [ _13 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":127 -1
+     (nil))
+(insn 53 52 54 4 (set (reg:DI 5 di)
+        (const_int 50 [0x32])) "/home/hashish/sc19orss/book_management.c":127 -1
+     (nil))
+(call_insn 54 53 55 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f948cc6c600 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":127 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 55 54 56 4 (set (reg/f:DI 134)
+        (reg:DI 0 ax)) "/home/hashish/sc19orss/book_management.c":127 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 134)
+        (nil)))
+(insn 56 55 57 4 (set (reg/f:DI 101 [ _15 ])
+        (reg/f:DI 134)) "/home/hashish/sc19orss/book_management.c":127 -1
+     (nil))
+(insn 57 56 58 4 (set (mem/f:DI (plus:DI (reg/f:DI 100 [ _14 ])
+                (const_int 8 [0x8])) [5 _14->authors+0 S8 A64])
+        (reg/f:DI 101 [ _15 ])) "/home/hashish/sc19orss/book_management.c":127 -1
+     (nil))
+(insn 58 57 59 4 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -24 [0xffffffffffffffe8])) [3 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -24 [0xffffffffffffffe8])) [3 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":122 -1
+     (nil))
+(code_label 59 58 60 5 31 (nil) [1 uses])
+(note 60 59 62 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 62 60 63 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])) [3 i+0 S4 A32])
+            (const_int 49 [0x31]))) "/home/hashish/sc19orss/book_management.c":122 -1
+     (nil))
+(jump_insn 63 62 64 5 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 61)
+            (pc))) "/home/hashish/sc19orss/book_management.c":122 -1
+     (nil)
+ -> 61)
+(note 64 63 65 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 65 64 66 6 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [3 i+0 S4 A32])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":129 -1
+     (nil))
+(jump_insn 66 65 67 6 (set (pc)
+        (label_ref 113)) "/home/hashish/sc19orss/book_management.c":129 -1
+     (nil)
+ -> 113)
+(barrier 67 66 117)
+(code_label 117 67 68 7 35 (nil) [1 uses])
+(note 68 117 69 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 70 7 (set (reg/f:DI 102 [ _16 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":131 -1
+     (nil))
+(insn 70 69 71 7 (set (reg:SI 135)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":131 -1
+     (nil))
+(insn 71 70 72 7 (set (reg:DI 103 [ _17 ])
+        (sign_extend:DI (reg:SI 135))) "/home/hashish/sc19orss/book_management.c":131 -1
+     (nil))
+(insn 72 71 73 7 (set (reg:DI 136)
+        (reg:DI 103 [ _17 ])) "/home/hashish/sc19orss/book_management.c":131 -1
+     (nil))
+(insn 73 72 74 7 (parallel [
+            (set (reg:DI 136)
+                (ashift:DI (reg:DI 136)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":131 -1
+     (nil))
+(insn 74 73 75 7 (parallel [
+            (set (reg:DI 136)
+                (plus:DI (reg:DI 136)
+                    (reg:DI 103 [ _17 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":131 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 103 [ _17 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 75 74 76 7 (parallel [
+            (set (reg:DI 137)
+                (ashift:DI (reg:DI 136)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":131 -1
+     (nil))
+(insn 76 75 77 7 (set (reg:DI 136)
+        (reg:DI 137)) "/home/hashish/sc19orss/book_management.c":131 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 103 [ _17 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 77 76 78 7 (set (reg:DI 104 [ _18 ])
+        (reg:DI 136)) "/home/hashish/sc19orss/book_management.c":131 -1
+     (nil))
+(insn 78 77 79 7 (parallel [
+            (set (reg/f:DI 105 [ _19 ])
+                (plus:DI (reg/f:DI 102 [ _16 ])
+                    (reg:DI 104 [ _18 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":131 -1
+     (nil))
+(insn 79 78 80 7 (set (reg:SI 106 [ _20 ])
+        (mem:SI (plus:DI (reg/f:DI 105 [ _19 ])
+                (const_int 16 [0x10])) [3 _19->year+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":131 -1
+     (nil))
+(insn 80 79 81 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -36 [0xffffffffffffffdc])) [3 year+0 S4 A32])
+            (reg:SI 106 [ _20 ]))) "/home/hashish/sc19orss/book_management.c":131 -1
+     (nil))
+(jump_insn 81 80 82 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 110)
+            (pc))) "/home/hashish/sc19orss/book_management.c":131 -1
+     (nil)
+ -> 110)
+(note 82 81 83 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 83 82 84 8 (set (reg/f:DI 107 [ _21 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 84 83 85 8 (set (reg:SI 138)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 85 84 86 8 (set (reg:DI 108 [ _22 ])
+        (sign_extend:DI (reg:SI 138))) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 86 85 87 8 (set (reg:DI 139)
+        (reg:DI 108 [ _22 ])) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 87 86 88 8 (parallel [
+            (set (reg:DI 139)
+                (ashift:DI (reg:DI 139)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 88 87 89 8 (parallel [
+            (set (reg:DI 139)
+                (plus:DI (reg:DI 139)
+                    (reg:DI 108 [ _22 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":132 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 108 [ _22 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 89 88 90 8 (parallel [
+            (set (reg:DI 140)
+                (ashift:DI (reg:DI 139)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 90 89 91 8 (set (reg:DI 139)
+        (reg:DI 140)) "/home/hashish/sc19orss/book_management.c":132 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 108 [ _22 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 91 90 92 8 (set (reg:DI 109 [ _23 ])
+        (reg:DI 139)) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 92 91 93 8 (parallel [
+            (set (reg/f:DI 110 [ _24 ])
+                (plus:DI (reg/f:DI 107 [ _21 ])
+                    (reg:DI 109 [ _23 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 93 92 94 8 (set (reg/f:DI 111 [ _25 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 newbookarray.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 94 93 95 8 (set (reg:SI 112 [ _26 ])
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [3 newbookarray.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 95 94 96 8 (set (reg:DI 113 [ _27 ])
+        (zero_extend:DI (reg:SI 112 [ _26 ]))) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 96 95 97 8 (set (reg:DI 141)
+        (reg:DI 113 [ _27 ])) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 97 96 98 8 (parallel [
+            (set (reg:DI 141)
+                (ashift:DI (reg:DI 141)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 98 97 99 8 (parallel [
+            (set (reg:DI 141)
+                (plus:DI (reg:DI 141)
+                    (reg:DI 113 [ _27 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":132 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 113 [ _27 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 99 98 100 8 (parallel [
+            (set (reg:DI 142)
+                (ashift:DI (reg:DI 141)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 100 99 101 8 (set (reg:DI 141)
+        (reg:DI 142)) "/home/hashish/sc19orss/book_management.c":132 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 113 [ _27 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 101 100 102 8 (set (reg:DI 114 [ _28 ])
+        (reg:DI 141)) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 102 101 103 8 (parallel [
+            (set (reg/f:DI 115 [ _29 ])
+                (plus:DI (reg/f:DI 111 [ _25 ])
+                    (reg:DI 114 [ _28 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 103 102 104 8 (set (reg:TI 143)
+        (mem:TI (reg/f:DI 110 [ _24 ]) [4 *_24+0 S16 A64])) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 104 103 105 8 (set (mem:TI (reg/f:DI 115 [ _29 ]) [4 *_29+0 S16 A64])
+        (reg:TI 143)) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 105 104 106 8 (set (reg:DI 144)
+        (mem:DI (plus:DI (reg/f:DI 110 [ _24 ])
+                (const_int 16 [0x10])) [4 *_24+16 S8 A64])) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 106 105 107 8 (set (mem:DI (plus:DI (reg/f:DI 115 [ _29 ])
+                (const_int 16 [0x10])) [4 *_29+16 S8 A64])
+        (reg:DI 144)) "/home/hashish/sc19orss/book_management.c":132 -1
+     (nil))
+(insn 107 106 108 8 (set (reg:SI 116 [ _30 ])
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [3 newbookarray.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":133 -1
+     (nil))
+(insn 108 107 109 8 (parallel [
+            (set (reg:SI 117 [ _31 ])
+                (plus:SI (reg:SI 116 [ _30 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":133 -1
+     (nil))
+(insn 109 108 110 8 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [3 newbookarray.length+0 S4 A64])
+        (reg:SI 117 [ _31 ])) "/home/hashish/sc19orss/book_management.c":133 -1
+     (nil))
+(code_label 110 109 111 9 34 (nil) [1 uses])
+(note 111 110 112 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 112 111 113 9 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -20 [0xffffffffffffffec])) [3 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -20 [0xffffffffffffffec])) [3 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":129 -1
+     (nil))
+(code_label 113 112 114 10 33 (nil) [1 uses])
+(note 114 113 115 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 115 114 116 10 (set (reg:SI 118 [ _32 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":129 -1
+     (nil))
+(insn 116 115 118 10 (set (reg:SI 119 [ i.3_33 ])
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":129 -1
+     (nil))
+(insn 118 116 119 10 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 118 [ _32 ])
+            (reg:SI 119 [ i.3_33 ]))) "/home/hashish/sc19orss/book_management.c":129 -1
+     (nil))
+(jump_insn 119 118 120 10 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 117)
+            (pc))) "/home/hashish/sc19orss/book_management.c":129 -1
+     (nil)
+ -> 117)
+(note 120 119 121 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 121 120 124 11 (set (reg:TI 120 [ D.2321 ])
+        (mem/c:TI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 newbookarray+0 S16 A64])) "/home/hashish/sc19orss/book_management.c":136 -1
+     (nil))
+(insn 124 121 128 11 (set (reg:TI 121 [ <retval> ])
+        (reg:TI 120 [ D.2321 ])) "/home/hashish/sc19orss/book_management.c":136 -1
+     (nil))
+(insn 128 124 129 11 (set (reg/i:TI 0 ax)
+        (reg:TI 121 [ <retval> ])) "/home/hashish/sc19orss/book_management.c":137 -1
+     (nil))
+(insn 129 128 0 11 (use (reg/i:TI 0 ax)) "/home/hashish/sc19orss/book_management.c":137 -1
+     (nil))
+
+;; Function add_book (add_book, funcdef_no=6, decl_uid=2221, cgraph_uid=6, symbol_order=7)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 60.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:DI 87 [ _1 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":141 -1
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 88 [ _2 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":141 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 89 [ _3 ])
+        (zero_extend:DI (reg:SI 88 [ _2 ]))) "/home/hashish/sc19orss/book_management.c":141 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:DI 115)
+        (reg:DI 89 [ _3 ])) "/home/hashish/sc19orss/book_management.c":141 -1
+     (nil))
+(insn 9 8 10 2 (parallel [
+            (set (reg:DI 115)
+                (ashift:DI (reg:DI 115)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":141 -1
+     (nil))
+(insn 10 9 11 2 (parallel [
+            (set (reg:DI 115)
+                (plus:DI (reg:DI 115)
+                    (reg:DI 89 [ _3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":141 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 89 [ _3 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 11 10 12 2 (parallel [
+            (set (reg:DI 116)
+                (ashift:DI (reg:DI 115)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":141 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 115)
+        (reg:DI 116)) "/home/hashish/sc19orss/book_management.c":141 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 89 [ _3 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 13 12 14 2 (set (reg:DI 90 [ _4 ])
+        (reg:DI 115)) "/home/hashish/sc19orss/book_management.c":141 -1
+     (nil))
+(insn 14 13 15 2 (parallel [
+            (set (reg/f:DI 91 [ _5 ])
+                (plus:DI (reg/f:DI 87 [ _1 ])
+                    (reg:DI 90 [ _4 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":141 -1
+     (nil))
+(insn 15 14 16 2 (set (reg/f:DI 92 [ _6 ])
+        (mem/f/c:DI (reg/f:DI 81 virtual-incoming-args) [5 book.title+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":141 -1
+     (nil))
+(insn 16 15 17 2 (set (mem/f:DI (reg/f:DI 91 [ _5 ]) [5 _5->title+0 S8 A64])
+        (reg/f:DI 92 [ _6 ])) "/home/hashish/sc19orss/book_management.c":141 -1
+     (nil))
+(insn 17 16 18 2 (set (reg/f:DI 93 [ _7 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":142 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 94 [ _8 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":142 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:DI 95 [ _9 ])
+        (zero_extend:DI (reg:SI 94 [ _8 ]))) "/home/hashish/sc19orss/book_management.c":142 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:DI 117)
+        (reg:DI 95 [ _9 ])) "/home/hashish/sc19orss/book_management.c":142 -1
+     (nil))
+(insn 21 20 22 2 (parallel [
+            (set (reg:DI 117)
+                (ashift:DI (reg:DI 117)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":142 -1
+     (nil))
+(insn 22 21 23 2 (parallel [
+            (set (reg:DI 117)
+                (plus:DI (reg:DI 117)
+                    (reg:DI 95 [ _9 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":142 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 95 [ _9 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 23 22 24 2 (parallel [
+            (set (reg:DI 118)
+                (ashift:DI (reg:DI 117)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":142 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:DI 117)
+        (reg:DI 118)) "/home/hashish/sc19orss/book_management.c":142 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 95 [ _9 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 25 24 26 2 (set (reg:DI 96 [ _10 ])
+        (reg:DI 117)) "/home/hashish/sc19orss/book_management.c":142 -1
+     (nil))
+(insn 26 25 27 2 (parallel [
+            (set (reg/f:DI 97 [ _11 ])
+                (plus:DI (reg/f:DI 93 [ _7 ])
+                    (reg:DI 96 [ _10 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":142 -1
+     (nil))
+(insn 27 26 28 2 (set (reg/f:DI 98 [ _12 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [5 book.authors+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":142 -1
+     (nil))
+(insn 28 27 29 2 (set (mem/f:DI (plus:DI (reg/f:DI 97 [ _11 ])
+                (const_int 8 [0x8])) [5 _11->authors+0 S8 A64])
+        (reg/f:DI 98 [ _12 ])) "/home/hashish/sc19orss/book_management.c":142 -1
+     (nil))
+(insn 29 28 30 2 (set (reg/f:DI 99 [ _13 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":143 -1
+     (nil))
+(insn 30 29 31 2 (set (reg:SI 100 [ _14 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":143 -1
+     (nil))
+(insn 31 30 32 2 (set (reg:DI 101 [ _15 ])
+        (zero_extend:DI (reg:SI 100 [ _14 ]))) "/home/hashish/sc19orss/book_management.c":143 -1
+     (nil))
+(insn 32 31 33 2 (set (reg:DI 119)
+        (reg:DI 101 [ _15 ])) "/home/hashish/sc19orss/book_management.c":143 -1
+     (nil))
+(insn 33 32 34 2 (parallel [
+            (set (reg:DI 119)
+                (ashift:DI (reg:DI 119)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":143 -1
+     (nil))
+(insn 34 33 35 2 (parallel [
+            (set (reg:DI 119)
+                (plus:DI (reg:DI 119)
+                    (reg:DI 101 [ _15 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":143 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 101 [ _15 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 35 34 36 2 (parallel [
+            (set (reg:DI 120)
+                (ashift:DI (reg:DI 119)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":143 -1
+     (nil))
+(insn 36 35 37 2 (set (reg:DI 119)
+        (reg:DI 120)) "/home/hashish/sc19orss/book_management.c":143 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 101 [ _15 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 37 36 38 2 (set (reg:DI 102 [ _16 ])
+        (reg:DI 119)) "/home/hashish/sc19orss/book_management.c":143 -1
+     (nil))
+(insn 38 37 39 2 (parallel [
+            (set (reg/f:DI 103 [ _17 ])
+                (plus:DI (reg/f:DI 99 [ _13 ])
+                    (reg:DI 102 [ _16 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":143 -1
+     (nil))
+(insn 39 38 40 2 (set (reg:SI 104 [ _18 ])
+        (mem/c:SI (plus:DI (reg/f:DI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [3 book.year+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":143 -1
+     (nil))
+(insn 40 39 41 2 (set (mem:SI (plus:DI (reg/f:DI 103 [ _17 ])
+                (const_int 16 [0x10])) [3 _17->year+0 S4 A64])
+        (reg:SI 104 [ _18 ])) "/home/hashish/sc19orss/book_management.c":143 -1
+     (nil))
+(insn 41 40 42 2 (set (reg/f:DI 105 [ _19 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":144 -1
+     (nil))
+(insn 42 41 43 2 (set (reg:SI 106 [ _20 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":144 -1
+     (nil))
+(insn 43 42 44 2 (set (reg:DI 107 [ _21 ])
+        (zero_extend:DI (reg:SI 106 [ _20 ]))) "/home/hashish/sc19orss/book_management.c":144 -1
+     (nil))
+(insn 44 43 45 2 (set (reg:DI 121)
+        (reg:DI 107 [ _21 ])) "/home/hashish/sc19orss/book_management.c":144 -1
+     (nil))
+(insn 45 44 46 2 (parallel [
+            (set (reg:DI 121)
+                (ashift:DI (reg:DI 121)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":144 -1
+     (nil))
+(insn 46 45 47 2 (parallel [
+            (set (reg:DI 121)
+                (plus:DI (reg:DI 121)
+                    (reg:DI 107 [ _21 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":144 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 107 [ _21 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 47 46 48 2 (parallel [
+            (set (reg:DI 122)
+                (ashift:DI (reg:DI 121)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":144 -1
+     (nil))
+(insn 48 47 49 2 (set (reg:DI 121)
+        (reg:DI 122)) "/home/hashish/sc19orss/book_management.c":144 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 107 [ _21 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 49 48 50 2 (set (reg:DI 108 [ _22 ])
+        (reg:DI 121)) "/home/hashish/sc19orss/book_management.c":144 -1
+     (nil))
+(insn 50 49 51 2 (parallel [
+            (set (reg/f:DI 109 [ _23 ])
+                (plus:DI (reg/f:DI 105 [ _19 ])
+                    (reg:DI 108 [ _22 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":144 -1
+     (nil))
+(insn 51 50 52 2 (set (reg:SI 110 [ _24 ])
+        (mem/c:SI (plus:DI (reg/f:DI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [3 book.copies+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":144 -1
+     (nil))
+(insn 52 51 53 2 (set (mem:SI (plus:DI (reg/f:DI 109 [ _23 ])
+                (const_int 20 [0x14])) [3 _23->copies+0 S4 A32])
+        (reg:SI 110 [ _24 ])) "/home/hashish/sc19orss/book_management.c":144 -1
+     (nil))
+(insn 53 52 54 2 (set (reg:SI 111 [ _25 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":145 -1
+     (nil))
+(insn 54 53 55 2 (parallel [
+            (set (reg:SI 112 [ _26 ])
+                (plus:SI (reg:SI 111 [ _25 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":145 -1
+     (nil))
+(insn 55 54 56 2 (set (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])
+        (reg:SI 112 [ _26 ])) "/home/hashish/sc19orss/book_management.c":145 -1
+     (nil))
+(insn 56 55 59 2 (set (reg:SI 113 [ _33 ])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":146 -1
+     (nil))
+(insn 59 56 63 2 (set (reg:SI 114 [ <retval> ])
+        (reg:SI 113 [ _33 ])) "/home/hashish/sc19orss/book_management.c":146 -1
+     (nil))
+(insn 63 59 64 2 (set (reg/i:SI 0 ax)
+        (reg:SI 114 [ <retval> ])) "/home/hashish/sc19orss/book_management.c":147 -1
+     (nil))
+(insn 64 63 0 2 (use (reg/i:SI 0 ax)) "/home/hashish/sc19orss/book_management.c":147 -1
+     (nil))
+
+;; Function remove_book (remove_book, funcdef_no=7, decl_uid=2223, cgraph_uid=7, symbol_order=8)
+
+Partition 0: size 4 align 4
+	i_35
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 108.
+Merging block 12 into block 11...
+Merged blocks 11 and 12.
+Merged 11 and 12 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":152 -1
+     (nil))
+(jump_insn 6 5 7 2 (set (pc)
+        (label_ref 96)) "/home/hashish/sc19orss/book_management.c":152 -1
+     (nil)
+ -> 96)
+(barrier 7 6 100)
+(code_label 100 7 8 4 43 (nil) [1 uses])
+(note 8 100 9 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 9 8 10 4 (set (reg/f:DI 87 [ _1 ])
+        (mem/f/c:DI (reg/f:DI 81 virtual-incoming-args) [5 book.title+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":153 -1
+     (nil))
+(insn 10 9 11 4 (set (reg/f:DI 88 [ _2 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":153 -1
+     (nil))
+(insn 11 10 12 4 (set (reg:SI 123)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":153 -1
+     (nil))
+(insn 12 11 13 4 (set (reg:DI 89 [ _3 ])
+        (sign_extend:DI (reg:SI 123))) "/home/hashish/sc19orss/book_management.c":153 -1
+     (nil))
+(insn 13 12 14 4 (set (reg:DI 124)
+        (reg:DI 89 [ _3 ])) "/home/hashish/sc19orss/book_management.c":153 -1
+     (nil))
+(insn 14 13 15 4 (parallel [
+            (set (reg:DI 124)
+                (ashift:DI (reg:DI 124)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":153 -1
+     (nil))
+(insn 15 14 16 4 (parallel [
+            (set (reg:DI 124)
+                (plus:DI (reg:DI 124)
+                    (reg:DI 89 [ _3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":153 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 89 [ _3 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 16 15 17 4 (parallel [
+            (set (reg:DI 125)
+                (ashift:DI (reg:DI 124)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":153 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:DI 124)
+        (reg:DI 125)) "/home/hashish/sc19orss/book_management.c":153 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 89 [ _3 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 18 17 19 4 (set (reg:DI 90 [ _4 ])
+        (reg:DI 124)) "/home/hashish/sc19orss/book_management.c":153 -1
+     (nil))
+(insn 19 18 20 4 (parallel [
+            (set (reg/f:DI 91 [ _5 ])
+                (plus:DI (reg/f:DI 88 [ _2 ])
+                    (reg:DI 90 [ _4 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":153 -1
+     (nil))
+(insn 20 19 21 4 (set (reg/f:DI 92 [ _6 ])
+        (mem/f:DI (reg/f:DI 91 [ _5 ]) [5 _5->title+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":153 -1
+     (nil))
+(insn 21 20 22 4 (set (reg:DI 4 si)
+        (reg/f:DI 87 [ _1 ])) "/home/hashish/sc19orss/book_management.c":153 -1
+     (nil))
+(insn 22 21 23 4 (set (reg:DI 5 di)
+        (reg/f:DI 92 [ _6 ])) "/home/hashish/sc19orss/book_management.c":153 -1
+     (nil))
+(call_insn/i 23 22 24 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f948cc47d00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":153 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 24 23 25 4 (set (reg:SI 93 [ _7 ])
+        (reg:SI 0 ax)) "/home/hashish/sc19orss/book_management.c":153 -1
+     (nil))
+(insn 25 24 26 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 93 [ _7 ])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":153 -1
+     (nil))
+(jump_insn 26 25 27 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 93)
+            (pc))) "/home/hashish/sc19orss/book_management.c":153 -1
+     (nil)
+ -> 93)
+(note 27 26 28 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 28 27 29 5 (set (reg/f:DI 94 [ _8 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [5 book.authors+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":154 -1
+     (nil))
+(insn 29 28 30 5 (set (reg/f:DI 95 [ _9 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":154 -1
+     (nil))
+(insn 30 29 31 5 (set (reg:SI 126)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":154 -1
+     (nil))
+(insn 31 30 32 5 (set (reg:DI 96 [ _10 ])
+        (sign_extend:DI (reg:SI 126))) "/home/hashish/sc19orss/book_management.c":154 -1
+     (nil))
+(insn 32 31 33 5 (set (reg:DI 127)
+        (reg:DI 96 [ _10 ])) "/home/hashish/sc19orss/book_management.c":154 -1
+     (nil))
+(insn 33 32 34 5 (parallel [
+            (set (reg:DI 127)
+                (ashift:DI (reg:DI 127)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":154 -1
+     (nil))
+(insn 34 33 35 5 (parallel [
+            (set (reg:DI 127)
+                (plus:DI (reg:DI 127)
+                    (reg:DI 96 [ _10 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":154 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 96 [ _10 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 35 34 36 5 (parallel [
+            (set (reg:DI 128)
+                (ashift:DI (reg:DI 127)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":154 -1
+     (nil))
+(insn 36 35 37 5 (set (reg:DI 127)
+        (reg:DI 128)) "/home/hashish/sc19orss/book_management.c":154 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 96 [ _10 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 37 36 38 5 (set (reg:DI 97 [ _11 ])
+        (reg:DI 127)) "/home/hashish/sc19orss/book_management.c":154 -1
+     (nil))
+(insn 38 37 39 5 (parallel [
+            (set (reg/f:DI 98 [ _12 ])
+                (plus:DI (reg/f:DI 95 [ _9 ])
+                    (reg:DI 97 [ _11 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":154 -1
+     (nil))
+(insn 39 38 40 5 (set (reg/f:DI 99 [ _13 ])
+        (mem/f:DI (plus:DI (reg/f:DI 98 [ _12 ])
+                (const_int 8 [0x8])) [5 _12->authors+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":154 -1
+     (nil))
+(insn 40 39 41 5 (set (reg:DI 4 si)
+        (reg/f:DI 94 [ _8 ])) "/home/hashish/sc19orss/book_management.c":154 -1
+     (nil))
+(insn 41 40 42 5 (set (reg:DI 5 di)
+        (reg/f:DI 99 [ _13 ])) "/home/hashish/sc19orss/book_management.c":154 -1
+     (nil))
+(call_insn/i 42 41 43 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f948cc47d00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":154 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 43 42 44 5 (set (reg:SI 100 [ _14 ])
+        (reg:SI 0 ax)) "/home/hashish/sc19orss/book_management.c":154 -1
+     (nil))
+(insn 44 43 45 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 100 [ _14 ])
+            (const_int 0 [0]))) "/home/hashish/sc19orss/book_management.c":153 -1
+     (nil))
+(jump_insn 45 44 46 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 93)
+            (pc))) "/home/hashish/sc19orss/book_management.c":153 -1
+     (nil)
+ -> 93)
+(note 46 45 47 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 47 46 48 6 (set (reg/f:DI 101 [ _15 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":155 -1
+     (nil))
+(insn 48 47 49 6 (set (reg:SI 129)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":155 -1
+     (nil))
+(insn 49 48 50 6 (set (reg:DI 102 [ _16 ])
+        (sign_extend:DI (reg:SI 129))) "/home/hashish/sc19orss/book_management.c":155 -1
+     (nil))
+(insn 50 49 51 6 (set (reg:DI 130)
+        (reg:DI 102 [ _16 ])) "/home/hashish/sc19orss/book_management.c":155 -1
+     (nil))
+(insn 51 50 52 6 (parallel [
+            (set (reg:DI 130)
+                (ashift:DI (reg:DI 130)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":155 -1
+     (nil))
+(insn 52 51 53 6 (parallel [
+            (set (reg:DI 130)
+                (plus:DI (reg:DI 130)
+                    (reg:DI 102 [ _16 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":155 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 102 [ _16 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 53 52 54 6 (parallel [
+            (set (reg:DI 131)
+                (ashift:DI (reg:DI 130)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":155 -1
+     (nil))
+(insn 54 53 55 6 (set (reg:DI 130)
+        (reg:DI 131)) "/home/hashish/sc19orss/book_management.c":155 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 102 [ _16 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 55 54 56 6 (set (reg:DI 103 [ _17 ])
+        (reg:DI 130)) "/home/hashish/sc19orss/book_management.c":155 -1
+     (nil))
+(insn 56 55 57 6 (parallel [
+            (set (reg/f:DI 104 [ _18 ])
+                (plus:DI (reg/f:DI 101 [ _15 ])
+                    (reg:DI 103 [ _17 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":155 -1
+     (nil))
+(insn 57 56 58 6 (set (reg:SI 105 [ _19 ])
+        (mem:SI (plus:DI (reg/f:DI 104 [ _18 ])
+                (const_int 16 [0x10])) [3 _18->year+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":155 -1
+     (nil))
+(insn 58 57 59 6 (set (reg:SI 106 [ _20 ])
+        (mem/c:SI (plus:DI (reg/f:DI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [3 book.year+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":155 -1
+     (nil))
+(insn 59 58 60 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 105 [ _19 ])
+            (reg:SI 106 [ _20 ]))) "/home/hashish/sc19orss/book_management.c":154 -1
+     (nil))
+(jump_insn 60 59 61 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 93)
+            (pc))) "/home/hashish/sc19orss/book_management.c":154 -1
+     (nil)
+ -> 93)
+(note 61 60 62 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 62 61 63 7 (set (reg/f:DI 107 [ _21 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 63 62 64 7 (set (reg:SI 108 [ _22 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 64 63 65 7 (parallel [
+            (set (reg:SI 109 [ _23 ])
+                (plus:SI (reg:SI 108 [ _22 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 65 64 66 7 (set (reg:DI 110 [ _24 ])
+        (zero_extend:DI (reg:SI 109 [ _23 ]))) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 66 65 67 7 (set (reg:DI 132)
+        (reg:DI 110 [ _24 ])) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 67 66 68 7 (parallel [
+            (set (reg:DI 132)
+                (ashift:DI (reg:DI 132)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 68 67 69 7 (parallel [
+            (set (reg:DI 132)
+                (plus:DI (reg:DI 132)
+                    (reg:DI 110 [ _24 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":156 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 110 [ _24 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 69 68 70 7 (parallel [
+            (set (reg:DI 133)
+                (ashift:DI (reg:DI 132)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 70 69 71 7 (set (reg:DI 132)
+        (reg:DI 133)) "/home/hashish/sc19orss/book_management.c":156 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 110 [ _24 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 71 70 72 7 (set (reg:DI 111 [ _25 ])
+        (reg:DI 132)) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 72 71 73 7 (parallel [
+            (set (reg/f:DI 112 [ _26 ])
+                (plus:DI (reg/f:DI 107 [ _21 ])
+                    (reg:DI 111 [ _25 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 73 72 74 7 (set (reg/f:DI 113 [ _27 ])
+        (mem/f/c:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>) [2 library.array+0 S8 A64])) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 74 73 75 7 (set (reg:SI 134)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 75 74 76 7 (set (reg:DI 114 [ _28 ])
+        (sign_extend:DI (reg:SI 134))) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 76 75 77 7 (set (reg:DI 135)
+        (reg:DI 114 [ _28 ])) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 77 76 78 7 (parallel [
+            (set (reg:DI 135)
+                (ashift:DI (reg:DI 135)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 78 77 79 7 (parallel [
+            (set (reg:DI 135)
+                (plus:DI (reg:DI 135)
+                    (reg:DI 114 [ _28 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":156 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 114 [ _28 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 79 78 80 7 (parallel [
+            (set (reg:DI 136)
+                (ashift:DI (reg:DI 135)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 80 79 81 7 (set (reg:DI 135)
+        (reg:DI 136)) "/home/hashish/sc19orss/book_management.c":156 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 114 [ _28 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 81 80 82 7 (set (reg:DI 115 [ _29 ])
+        (reg:DI 135)) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 82 81 83 7 (parallel [
+            (set (reg/f:DI 116 [ _30 ])
+                (plus:DI (reg/f:DI 113 [ _27 ])
+                    (reg:DI 115 [ _29 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 83 82 84 7 (set (reg:TI 137)
+        (mem:TI (reg/f:DI 112 [ _26 ]) [4 *_26+0 S16 A64])) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 84 83 85 7 (set (mem:TI (reg/f:DI 116 [ _30 ]) [4 *_30+0 S16 A64])
+        (reg:TI 137)) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 85 84 86 7 (set (reg:DI 138)
+        (mem:DI (plus:DI (reg/f:DI 112 [ _26 ])
+                (const_int 16 [0x10])) [4 *_26+16 S8 A64])) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 86 85 87 7 (set (mem:DI (plus:DI (reg/f:DI 116 [ _30 ])
+                (const_int 16 [0x10])) [4 *_30+16 S8 A64])
+        (reg:DI 138)) "/home/hashish/sc19orss/book_management.c":156 -1
+     (nil))
+(insn 87 86 88 7 (set (reg:SI 117 [ _31 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":157 -1
+     (nil))
+(insn 88 87 89 7 (parallel [
+            (set (reg:SI 118 [ _32 ])
+                (plus:SI (reg:SI 117 [ _31 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":157 -1
+     (nil))
+(insn 89 88 90 7 (set (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])
+        (reg:SI 118 [ _32 ])) "/home/hashish/sc19orss/book_management.c":157 -1
+     (nil))
+(insn 90 89 91 7 (set (reg:SI 121 [ _36 ])
+        (const_int 0 [0])) "/home/hashish/sc19orss/book_management.c":158 -1
+     (nil))
+(jump_insn 91 90 92 7 (set (pc)
+        (label_ref 105)) "/home/hashish/sc19orss/book_management.c":158 -1
+     (nil)
+ -> 105)
+(barrier 92 91 93)
+(code_label 93 92 94 8 41 (nil) [3 uses])
+(note 94 93 95 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 95 94 96 8 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/home/hashish/sc19orss/book_management.c":152 -1
+     (nil))
+(code_label 96 95 97 9 40 (nil) [1 uses])
+(note 97 96 98 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 98 97 99 9 (set (reg:SI 119 [ _33 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("library") [flags 0x2]  <var_decl 0x7f948ccf7990 library>)
+                    (const_int 8 [0x8]))) [3 library.length+0 S4 A64])) "/home/hashish/sc19orss/book_management.c":152 -1
+     (nil))
+(insn 99 98 101 9 (set (reg:SI 120 [ i.4_34 ])
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 i+0 S4 A32])) "/home/hashish/sc19orss/book_management.c":152 -1
+     (nil))
+(insn 101 99 102 9 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 119 [ _33 ])
+            (reg:SI 120 [ i.4_34 ]))) "/home/hashish/sc19orss/book_management.c":152 -1
+     (nil))
+(jump_insn 102 101 103 9 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 100)
+            (pc))) "/home/hashish/sc19orss/book_management.c":152 -1
+     (nil)
+ -> 100)
+(note 103 102 104 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 104 103 105 10 (set (reg:SI 121 [ _36 ])
+        (const_int 1 [0x1])) "/home/hashish/sc19orss/book_management.c":162 -1
+     (nil))
+(code_label 105 104 106 11 42 (nil) [1 uses])
+(note 106 105 107 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 107 106 111 11 (set (reg:SI 122 [ <retval> ])
+        (reg:SI 121 [ _36 ])) -1
+     (nil))
+(insn 111 107 112 11 (set (reg/i:SI 0 ax)
+        (reg:SI 122 [ <retval> ])) "/home/hashish/sc19orss/book_management.c":163 -1
+     (nil))
+(insn 112 111 0 11 (use (reg/i:SI 0 ax)) "/home/hashish/sc19orss/book_management.c":163 -1
+     (nil))

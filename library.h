@@ -18,6 +18,7 @@ int borrow_set_init();
 int borrow_book(struct Borrow);
 
 int return_book(struct Borrow);
-
+int load_loans(FILE *file);
+int store_loans(FILE *file);
 
 #endif

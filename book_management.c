@@ -7,20 +7,20 @@ extern struct BookArray library;
 
 int library_init(){
         library.length=0;
-         library.array= (struct Book*)malloc(1000*sizeof(struct Book));    
-        for(int i=0;i<1000;i++)
+         library.array= (struct Book*)malloc(3000*sizeof(struct Book));    
+        for(int i=0;i<3000;i++)
         {
 
-        library.array[i].title= (char*)malloc(20*sizeof(char));   
-        library.array[i].authors= (char*)malloc(20*sizeof(char));     
+        library.array[i].title= (char*)malloc(30*sizeof(char));   
+        library.array[i].authors= (char*)malloc(30*sizeof(char));     
         }
 }
 
  int store_books( FILE *file){
-         file=fopen("books.txt","w");
+         
 		for (int i=0;i<library.length;i++)
         {
-            fprintf(file,"%s,%s,%d,%d,\n",library.array[i].title,library.array[i].authors,library.array[i].year,library.array[i].copies);
+            fprintf(file,"%s|%s|%d|%d|\n",library.array[i].title,library.array[i].authors,library.array[i].year,library.array[i].copies);
         }
     
          fclose(file);
@@ -29,22 +29,22 @@ int library_init(){
  }
 
 int load_books(FILE *file){
-    file=fopen("/home/csunix/sc19orss/comp1921/sc19orss/build/books.txt", "r");
+    
     char *token;
     token=(char*) malloc(30*sizeof(char));
-    char line[40];
+    char line[200];
        
-         while(fgets(line, sizeof(line), file)!=NULL )
+         while(fgets(line, 200, file) !=NULL)
          {  
              
-             token=(char*) malloc(20*sizeof(char));
-            token = strtok(line,",");
+             token=(char*) malloc(100*sizeof(char));
+            token = strtok(line,"|");
             strcpy(library.array[library.length].title,token);
-            token = strtok(NULL,",");
+            token = strtok(NULL,"|");
             strcpy(library.array[library.length].authors,token);
-            token = strtok(NULL,",");
+            token = strtok(NULL,"|");
             library.array[library.length].year=atoi(token);
-            token = strtok(NULL,",");
+            token = strtok(NULL,"|");
             library.array[library.length].copies=atoi(token);
             library.length++;
              
@@ -57,22 +57,35 @@ struct BookArray find_book_by_author(const char *author){
     
      struct BookArray newbookarray;
     newbookarray.length=0;
-    newbookarray.array= malloc(10*sizeof(struct Book)); 
-    for(int i=0;i<10;i++)
-        {
+    newbookarray.array= malloc(60*sizeof(struct Book)); 
+     char *token= malloc(60*sizeof(struct Book)); 
+     char line[200];
+    for(int i=0;i<60;i++)
+    {
 
-        newbookarray.array[i].title= (char*)malloc(20*sizeof(char));   
-        newbookarray.array[i].authors= (char*)malloc(20*sizeof(char));     
-        }
+        newbookarray.array[i].title= (char*)malloc(50*sizeof(char)); 
+        newbookarray.array[i].title= "";  
+        newbookarray.array[i].authors= (char*)malloc(50*sizeof(char));     
+    }
 
     for (int i=0;i<library.length;i++)
+    {   
+        strcpy(line,library.array[i].authors);
+        token=strtok(line,",");
+        while(token !=NULL)
         {
-           if(strcmp(library.array[i].authors,author)==0){
+
+        if(strcmp(token,author)==0)
+        {
             newbookarray.array[newbookarray.length]=library.array[i];
             newbookarray.length++;
-           }
+            
         }
+        token =strtok(NULL,",");
+        }
+    }
     return newbookarray;
+    
 }
 
 
@@ -80,12 +93,13 @@ struct BookArray find_book_by_title(const char *title){
     
     struct BookArray newbookarray;
     newbookarray.length=0;
-    newbookarray.array= malloc(10*sizeof(struct Book)); 
-    for(int i=0;i<10;i++)
+    newbookarray.array= malloc(50*sizeof(struct Book)); 
+    for(int i=0;i<50;i++)
         {
 
-        newbookarray.array[i].title= (char*)malloc(20*sizeof(char));   
-        newbookarray.array[i].authors= (char*)malloc(20*sizeof(char));     
+        newbookarray.array[i].title= (char*)malloc(50*sizeof(char));  
+        newbookarray.array[i].title= "";
+        newbookarray.array[i].authors= (char*)malloc(50*sizeof(char));     
         }
 
     for (int i=0;i<library.length;i++)
@@ -104,12 +118,13 @@ struct BookArray find_book_by_year(unsigned int year){
     
      struct BookArray newbookarray;
     newbookarray.length=0;
-    newbookarray.array= malloc(10*sizeof(struct Book)); 
-    for(int i=0;i<10;i++)
+    newbookarray.array= malloc(50*sizeof(struct Book)); 
+    for(int i=0;i<50;i++)
         {
 
-        newbookarray.array[i].title= (char*)malloc(20*sizeof(char));   
-        newbookarray.array[i].authors= (char*)malloc(20*sizeof(char));     
+        newbookarray.array[i].title= (char*)malloc(50*sizeof(char));   
+        newbookarray.array[i].title= "";
+        newbookarray.array[i].authors= (char*)malloc(50*sizeof(char));     
         }
     for (int i=0;i<library.length;i++)
         {
@@ -128,7 +143,7 @@ int add_book(struct Book book){
     library.array[library.length].year=book.year;
     library.array[library.length].copies=book.copies;
     library.length++;
-    return 1;
+    return 0;
 }
 
 
@@ -140,9 +155,9 @@ int remove_book( struct Book book){
         library.array[i].year==book.year){
             library.array[i]=library.array[library.length-1];
             library.length--;
-            return 1;
+            return 0;
         }
     }
     
-return 0;
+return 1;
 }

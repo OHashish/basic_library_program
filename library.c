@@ -18,23 +18,51 @@ int borrow_set_init(){
 }
 int borrow_book(struct Borrow book){
     FILE *file;
-    file=fopen("/home/csunix/sc19orss/comp1921/sc19orss/build/book_loan.txt", "a");
     
-    fprintf(file,"%s,%s,\n",book.title,book.user);
+    char line_of_string[200];
+
+    file=fopen("../user_login_data.txt","r");
+    if (file==NULL) 
+    {
+        printf("Login file returned a null pointer ");
+        return -2;
+    } 
+    char *token;
+    token=(char*) malloc(60*sizeof(char));
+
+    while ((fgets(line_of_string, sizeof(line_of_string), file)) != NULL)
+    {
+
+        token=(char*) malloc(50*sizeof(char));
+        token = strtok(line_of_string,",");
+        if(strcmp(line_of_string,book.user)==0){
+           
+            borrow_set.array[borrow_set.length]=book;
+            borrow_set.length++;
+            return 0;
+        }
+
+    }
+        
+        
     fclose(file);
     return 1;
 }
 
-int return_book(struct Borrow book){
-    FILE *file;
-   file=fopen("/home/csunix/sc19orss/comp1921/sc19orss/build/book_loan.txt", "r");
+int load_loans(FILE *file){
+    
+   
+   if (file==NULL){
+       printf("Book loan file returned a Null Pointer");
+       return -1;
+   }
     char *token;
     token=(char*) malloc(30*sizeof(char));
-    char line[40];
+    char line[200];
     borrow_set.length=0;
-    int flag=0;
+    
 
-    while(fgets(line, sizeof(line), file)!=NULL )
+    while(fgets(line, 200, file)!=NULL )
         {  
             token=(char*) malloc(20*sizeof(char));
             token = strtok(line,",");
@@ -44,31 +72,33 @@ int return_book(struct Borrow book){
             borrow_set.length++;
              
         }
-    fclose(file);
+    
+    return 1;
 
-
-   
+}
+int return_book(struct Borrow book){   
     for (int i=0;i<borrow_set.length;i++){
         if(strcmp(borrow_set.array[i].title,book.title)==0 &&
         strcmp(borrow_set.array[i].user,book.user)==0){
             borrow_set.array[i]=borrow_set.array[borrow_set.length-1];
             borrow_set.length--;
-            flag =1;
+            return 1;
         }
     }
-    
+    return 0;
+}
 
-
-
-    file=fopen("/home/csunix/sc19orss/comp1921/sc19orss/build/book_loan.txt","w");
+int store_loans(FILE *file){
+   
+    if (file==NULL){
+       printf("Book loan file returned a Null Pointer");
+       return -1;
+   }
 		for (int i=0;i<borrow_set.length;i++)
         {
             fprintf(file,"%s,%s,\n",borrow_set.array[i].title,borrow_set.array[i].user);
         }
     
-         fclose(file);
-    if (flag) 
+        
     return 1;
-    else 
-    return 0;
 }

@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,9 +6,37 @@
 
 #IncludeRegexTransform: 
 
-/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.c
+../unity/include/unity.h
+unity_internals.h
+../unity/include/unity_internals.h
+
+../unity/include/unity_internals.h
+unity_config.h
+../unity/include/unity_config.h
+setjmp.h
+-
+math.h
+-
+stddef.h
+-
+stdarg.h
+-
+stdint.h
+-
+limits.h
+-
+stdio.h
+-
+stdio.h
+-
+time.h
+-
+time.h
+-
+
+/home/hashish/sc19orss/book_management.c
 book_management.h
-/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.h
+/home/hashish/sc19orss/book_management.h
 stdio.h
 -
 stdlib.h
@@ -16,7 +44,69 @@ stdlib.h
 string.h
 -
 
-/home/cserv1_a/soc_ug/sc19orss/comp1921/sc19orss/book_management.h
+/home/hashish/sc19orss/book_management.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+/home/hashish/sc19orss/library.c
+library.h
+/home/hashish/sc19orss/library.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+/home/hashish/sc19orss/library.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+/home/hashish/sc19orss/unit_tests.c
+unity.h
+/home/hashish/sc19orss/unity.h
+stdlib.h
+-
+string.h
+-
+assert.h
+/home/hashish/sc19orss/assert.h
+stdio.h
+-
+book_management.h
+/home/hashish/sc19orss/book_management.h
+library.h
+/home/hashish/sc19orss/library.h
+users.h
+/home/hashish/sc19orss/users.h
+
+/home/hashish/sc19orss/unity/src/unity.c
+unity.h
+/home/hashish/sc19orss/unity/src/unity.h
+stddef.h
+-
+avr/pgmspace.h
+-
+
+/home/hashish/sc19orss/users.c
+users.h
+/home/hashish/sc19orss/users.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+/home/hashish/sc19orss/users.h
 stdio.h
 -
 stdlib.h

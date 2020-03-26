@@ -10,6 +10,6 @@ include_directories(unity/include)
 
 add_executable(library main.c interface.c book_management.c library.c users.c)
 
-add_executable(unit_tests unit_tests.c book_management.c unity/src/unity.c)
+add_executable(unit_tests unit_tests.c book_management.c library.c users.c unity/src/unity.c)
 
 install(TARGETS library RUNTIME DESTINATION bin)
